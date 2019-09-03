@@ -1,3 +1,4 @@
+
 # Resources
 
 - Sean Davis introductory R course notes: <https://seandavi.github.io/ITR/> 
@@ -7,3 +8,4 @@
 - History of R+coursera course  <https://www.coursera.org/lecture/r-programming/overview-and-history-of-r-pAbaE> 
 - shiny tutorial with breast cancer data: <https://bioinformatics-core-shared-training.github.io/shiny-bioinformatics/tutorial> 
 - shiny app for bioconductor Genomic IRanges <https://bioconductor.org/packages/release/bioc/html/interactiveDisplay.html> 
+
