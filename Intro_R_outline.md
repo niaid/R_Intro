@@ -1,0 +1,353 @@
+
+  - [Introduction to R](#introduction-to-r)
+      - [A. Let’s Jump In](#a.-lets-jump-in)
+      - [B. Basic Data Structures](#b.-basic-data-structures)
+      - [C. File IO](#c.-file-io)
+      - [C. Base and Add-on Packages](#c.-base-and-add-on-packages)
+      - [D. Plotting and Visualization](#d.-plotting-and-visualization)
+      - [F. Control Flow](#f.-control-flow)
+
+# Introduction to R
+
+### A. Let’s Jump In
+
+**RStudio - the console, the editor, the environment, the files, help**
+
+  - This is the R console. It’s where you run commands in an interactive
+    fashion.
+    
+      - Error, warning, and informational output will also appear here.
+
+  - It’s the same console you would get if you just run `R` on the
+    command line.
+
+  - Working directory
+    
+      - Allows you to access/read/write files in a directory without
+        having to give the whole directory path. You can just give
+        filenames relative to that directory. Maybe right now this
+        doesn’t seem like a big deal. But, as you do more work in R,
+        you will see that it can get confusing to access files in lots
+        of different places
+    
+      - Best practices keep all of your work for a single project in a
+        single folder and make that your *working directory* EVEN BETTER
+        is to use an [RStudio
+        project](https://support.rstudio.com/hc/en-us/articles/200526207-Using-Projects)
+    
+      - Ordinarily you would make a new project. Today, we will check
+        out this class project from git:
+        
+        Upper right corner Project menu -\> Version Control -\> Git -\>
+        Repo URL: <https://github.com/niaid/R_Intro> -\> Create Project
+
+**Basic syntax in the console**
+
+Variables are assigned using an arrow `<-` or an equals sign `=`. `<-`
+is more common. Enter variable by itself to print, or use print
+statement.
+
+``` r
+a <- 5
+b <- 7
+c_variable_1 <- a + b
+print(c_variable_1)
+```
+
+Variable names have to follow some rules. - allowed characters:
+alphanumeric, ‘.’ and ’\_’ - *no spaces* - must start with a letter or
+‘.’ - if it starts with ‘.’, the second character cannot be a number -
+of any length - easiest if you use meaningful names, so your code is
+readable by others
+
+**Useful commands**
+
+  - `ls()`, `rm`, `View`, `head`, `sessionInfo`
+
+In an R session, objects are created in a workspace.
+
+``` r
+ls()
+rm(a,b)
+ls()
+```
+
+  - How do we get help?
+
+<!-- end list -->
+
+1.  Help pane with our mouse.
+2.  From the console:
+
+<!-- end list -->
+
+``` r
+?help
+```
+
+  - Help with errors
+
+<!-- end list -->
+
+``` r
+foo(5,3)
+```
+
+  - Search the internet\!
+      - stackoverflow.com - [Questions tagged with
+        R](https://stackoverflow.com/questions/tagged/r)
+      - [Cross Validated](https://stats.stackexchange.com/) -
+        <https://stats.stackexchange.com/>
+      - [Bioconductor Support Site](https://support.bioconductor.org/)
+      - Package author’s GitHub/GitLab/website may have an “Issues”
+        section
+      - [Common errors](http://varianceexplained.org/courses/errors/)
+
+**History**
+
+By default R saves all the commands you run in the console in a file
+called *.Rhistory* in your working directory. In RStudio, it shows up in
+the *History* pane.
+
+**Saving your work** By default the session is saved in a file called
+*.RData*. This file is a special R binary format. Because it starts with
+a ‘.’, you won’t see it if you do `ls` in your terminal, but it does
+show up in the RStudio Files browser. RStudio will also ask you if you
+want to save your workspace when you quit (can turn this off in Tools \>
+Global Options).
+
+``` r
+x <- 1:5
+save.image()
+rm(c_variable_1)
+load('.RData')
+```
+
+Non-default save location and saving single objects (also in same R
+binary format)
+
+``` r
+save.image("my.RData")
+saveRDS(x, "x.rds")
+y <- readRDS("x.rds")
+```
+
+**Writing a script**
+
+  - File -\> New File -\> R Script
+  - Paste commands from history
+  - Run from the command line. The first line of your script (shebang):
+
+<!-- end list -->
+
+``` bash
+#!/usr/bin/env Rscript
+```
+
+  - Then you can run in a terminal or command prompt:
+
+<!-- end list -->
+
+``` bash
+Rscript myscript.R
+```
+
+  - Comments start with a `#` character. These lines are not run. Even
+    better is to use `#'` - pound sign followed by apostrophe.
+  - Can use “knitr” button in RStudio to make a report.
+
+### B. Basic Data Structures
+
+#### Vectors
+
+  - The basic data structures in R are vectors, data frames, matrices,
+    lists, and functions. Add-on packages may implement their own
+    classes of data structures as well.
+  - Vectors are the simplest data structures in R.
+  - data types - character, numeric, factor, logical, `Inf`, `NA`,
+    `NULL`
+  - **numeric** vectors are collections of decimal numbers
+  - **character** vectors are collections of strings which should be in
+    single or double quotes to differentiate from variables in the
+    workspace
+
+<!-- end list -->
+
+``` r
+  num_vector <- c(7,3,4,6,2)
+  char_vector <- c("volleyball", "  badminton", "netball", "tennis")
+```
+
+  - **Accessing elements**
+
+<!-- end list -->
+
+``` r
+num_vector[3]
+num_vector[c(2,5)]
+num_vector[2:5]
+num_vector[-4]
+num_vector[4] <- 37.5
+```
+
+  - **Meta info about vectors**
+
+<!-- end list -->
+
+``` r
+y_float <- c(5, sqrt(7), 3/21)
+class(y_float)
+typeof(y_float)
+```
+
+  - **Head and tail**
+
+<!-- end list -->
+
+``` r
+months <- month.name #constant in R
+head(months)
+tail(months)
+```
+
+#### Vector operations
+
+Most operators/functions are vectorized - meaning they can take a vector
+of any length and perform the same operation element-wise.
+
+*Example*: manipulate strings (useful for data cleanup) - substitute,
+trim
+
+``` r
+gsub("a", "ae", char_vector)
+char_vector <- trimws(char_vector)
+```
+
+*Example*: arithmetic operations
+
+``` r
+x <- -1:12
+x
+5 + x/2
+y <- c(0.2, 0.5)
+x+y
+```
+
+  - What happened with `x+y`??
+      - shorter vectors are “recycled” in arithmetic operations, so *be
+        careful* if this is not what you intend.
+      - *Check* the length of vectors
+
+<!-- end list -->
+
+``` r
+length(x)
+length(y)
+```
+
+  - **Lists**
+    
+      - A **list** is a general type of vector. It can hold items from
+        any data types or class, and the items can have different
+        dimensions.
+          - a data.frame is just a special kind of list where all the
+            items are the same length
+      - useful along with `lapply` to iterate over many items
+
+  - **Data frames (& Matrices)**
+    
+      - A *data frame* is a list of items which all have the same
+        length. In the most common case, these items are vectors and
+        form columns of the data frame.
+      - index elements
+      - column and row names
+      - data types of individual elements
+
+### C. File IO
+
+**Reading in files**
+
+Weber, Anna M., et al. “A Blue Light Receptor That Mediates RNA Binding
+and Translational Regulation.” *Nature Chemical Biology*, Aug. 2019,
+pp. 1–8. *www.nature.com*,
+[doi:\[10.1038/s41589-019-0346-y](doi:%5B10.1038/s41589-019-0346-y)\](<https://doi.org/10.1038/s41589-019-0346-y>).
+([alt link](https://rdcu.be/bQhxo))
+
+[Supplementary
+Dataset 1](https://static-content.springer.com/esm/art%3A10.1038%2Fs41589-019-0346-y/MediaObjects/41589_2019_346_MOESM3_ESM.xlsx)
+- 41589\_2019\_346\_MOESM3\_ESM.xlsx
+
+[Supplementary Figure 6 -
+page 13](https://static-content.springer.com/esm/art%3A10.1038%2Fs41589-019-0346-y/MediaObjects/41589_2019_346_MOESM1_ESM.pdf#page=13)
+
+  - GUI: File -\> Import Dataset -\>
+  - Paste command in script
+
+**Writing tabular output**
+
+  - printing options
+    
+      - scipen
+    
+    > integer. A penalty to be applied when deciding to print numeric
+    > values in fixed or exponential notation. Positive values bias
+    > towards fixed and negative towards scientific notation: fixed
+    > notation will be preferred unless it is more than `scipen`digits
+    > wider.
+    
+      - in practice, if you don’t want scientific notation, set:
+    
+    <!-- end list -->
+    
+    ``` r
+    options(scipen=999)
+    ```
+    
+      - width - number of digits or characters before
+        truncation/rounding
+    
+    <!-- end list -->
+    
+    ``` r
+    getOption("width")
+    ```
+    
+      - Save data.frame to file
+
+<!-- end list -->
+
+``` r
+?write.csv
+write.csv(df, "mydata.csv", quote=FALSE)
+?write_excel_csv ## readr package
+```
+
+### C. Base and Add-on Packages
+
+  - base package
+      - basic statistics - mean, median, sd, factorial
+      - matrix operations
+  - how to install packages
+  - how to use functions from different packages
+  - install tidyr
+
+### D. Plotting and Visualization
+
+  - [ggplot2](http://ggplot2.tidyverse.org) package
+  - ggplot2 (and the tidyverse) prefers long to wide data.
+  - “long” data format puts the data being analyzed/plotted in separate
+    columns - one corresponding to each variable
+  - aesthetics
+
+<!-- end list -->
+
+``` r
+vignette("ggplot2-specs")
+```
+
+### F. Control Flow
+
+  - If statements - logical vectors, etc
+  - Functions
+  - Loops/Apply - simple for loops and also how to use lapply and apply
+  - debugging - `print`, `message`, `warn`, `stop`
