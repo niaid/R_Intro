@@ -194,7 +194,7 @@ length(y)
 ### C.  File IO
 **Reading in files**
 
-Weber, Anna M., et al. “A Blue Light Receptor That Mediates RNA Binding and Translational Regulation.” *Nature Chemical Biology*, Aug. 2019, pp. 1–8. *www.nature.com*, doi:[10.1038/s41589-019-0346-y](https://doi.org/10.1038/s41589-019-0346-y). ([alt link](https://rdcu.be/bQhxo))
+Weber, Anna M., et al. “A Blue Light Receptor That Mediates RNA Binding and Translational Regulation.” *Nature Chemical Biology*, Aug. 2019, pp. 1–8. *www.nature.com*, doi:[10.1038/s41589-019-0346-y](https://doi.org/10.1038/s41589-019-0346-y). ([alt link](https://rdcu.be/bQhxo)) ([Science Daily](https://www.sciencedaily.com/releases/2019/08/190826122012.htm))
 
 [Supplementary Dataset 1](https://static-content.springer.com/esm/art%3A10.1038%2Fs41589-019-0346-y/MediaObjects/41589_2019_346_MOESM3_ESM.xlsx) - 41589_2019_346_MOESM3_ESM.xlsx
 
@@ -246,6 +246,39 @@ write.csv(df, "mydata.csv", quote=FALSE)
 
 ```{r}
 vignette("ggplot2-specs")
+```
+
+#### Shiny!
+
+- [Example app for annotation of copy number variations](https://github.com/gzhmat/ShinyCNV)
+
+- Simple example modified from https://bookdown.org/yihui/rmarkdown/shiny-widgets.html#the-shinyapp-function
+
+```{r}
+library(shiny)
+clean <- readr::read_csv("fdata.csv")
+
+shinyApp(
+  ui = fluidPage(
+    fluidRow(style = "padding-bottom: 20px;",
+             column(4, selectInput('gr', 'Graph', sort(unique(clean$graph)), selected = "n"))
+    ),
+    fluidRow(
+      plotOutput('gexplot', height = "400px")
+    )
+  ),
+
+  server = function(input, output, session) {
+    ffdata <- reactive({
+      subset(clean, graph==input$gr)
+    })
+    output$gexplot = renderPlot(height = 400, {
+      ffdata() %>%
+        ggplot(aes(x=`selection cycle`, y=frequency, group=Aptamer, shape=Aptamer, color=Aptamer)) + geom_line() + geom_point() + scale_color_manual(values=c("black", "grey", "red", "orange", "violet")) + theme_bw() + ylab("frequency [%]")
+    })
+  }
+)
+
 ```
 
 
