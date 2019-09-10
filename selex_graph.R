@@ -66,4 +66,7 @@ fdata$graph[which(fdata$Aptamer %in% c("46", "04"))] <- "l"
 
 
 ggplot(fdata, aes(x=`selection cycle`, y=frequency, group=Aptamer, shape=Aptamer, color=Aptamer)) + geom_line() + geom_point() + theme_bw() + ylab("frequency [%]") + facet_wrap(~graph, scales="free_y") + scale_shape_manual(values=1:8)
+ggsave("facetplot.pdf")
 
+#' Save data.frame
+write.csv(fdata, "fdata.csv")
