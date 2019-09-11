@@ -354,6 +354,9 @@ vignette("ggplot2-specs")
   - Simple example modified from
     <https://bookdown.org/yihui/rmarkdown/shiny-widgets.html#the-shinyapp-function>
 
+  - Takes as input *fdata.csv* which is created as an output of
+    [selex\_graph.R](selex_graph.R)
+
 <!-- end list -->
 
 ``` r
