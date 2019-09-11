@@ -16,7 +16,7 @@ bioinformatics@niaid.nih.gov
 - [Intro_R_outline.md](Intro_R_outline.md) - class notes in markdown format viewable in GitHub
 - [Intro_R_outline.Rmd](Intro_R_outline.Rmd) - class notes in Rmarkdown format easier to use in RStudio
 - [41589_2019_346_MOESM3_ESM.xlsx](41589_2019_346_MOESM3_ESM.xlsx) - spreadsheet with dataset we used in the class
-- [selex_graph.R](selex_graph.R) - Script which makes the graphs from [this paper]((https://static-content.springer.com/esm/art%3A10.1038%2Fs41589-019-0346-y/MediaObjects/41589_2019_346_MOESM1_ESM.pdf#page=13))
+- [selex_graph.R](selex_graph.R) - Script which makes the graphs from [this paper](https://static-content.springer.com/esm/art%3A10.1038%2Fs41589-019-0346-y/MediaObjects/41589_2019_346_MOESM1_ESM.pdf#page=13)
 
 ## Resources
 
