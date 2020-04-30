@@ -33,5 +33,5 @@ bioinformatics@niaid.nih.gov
 
 ## Previous Classes
 
-- [2019 BCBB Bioinformatics Workshops at RML](https://github.com/niaid/R_Intro/tree/RML-2019) - [zipped download](https://github.com/niaid/R_Intro/archive/RML-2019.zip) of materials
+- [2019 BCBB Bioinformatics Workshops at RML](https://github.com/niaid/R_Intro/tree/RML-2019) - also can download [zipped materials](https://github.com/niaid/R_Intro/archive/RML-2019.zip)
 
