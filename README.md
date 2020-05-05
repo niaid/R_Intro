@@ -12,6 +12,7 @@ Instructors: Poorani Subramanian - , Jingwen Gu - jingwen.gu@nih.gov
 bioinformatics@niaid.nih.gov
 
 ## In this Repo
+- [MIS_2020](MIS_2020) - Material of Introduction to R and manipulate data using dplyr for MIS.
 - [package_install.R](package_install.R) - script to install the packages needed for this class.  To use, open the script in RStudio, and then click 'Source'.
 - [Intro_R_outline.md](Intro_R_outline.md) - class notes in markdown format viewable in GitHub
 - [Intro_R_outline.Rmd](Intro_R_outline.Rmd) - class notes in Rmarkdown format easier to use in RStudio
