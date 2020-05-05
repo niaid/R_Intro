@@ -13,7 +13,7 @@ bioinformatics@niaid.nih.gov
 
 ## In this Repo
 - [BirdNest.csv](BirdNest.csv) - Data of Introduction to R and manipulate data using dplyr for MIS.
-- [Intro_to_R.nb.html](Intro to R.nb.html) - Note of Introduction to R and manipulate data using dplyr for MIS.
+- [Intro_to_R.nb.html](Intro_to_R.nb.html) - Note of Introduction to R and manipulate data using dplyr for MIS.
 - [package_install.R](package_install.R) - script to install the packages needed for this class.  To use, open the script in RStudio, and then click 'Source'.
 
 ## Resources
