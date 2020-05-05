@@ -1,9 +1,9 @@
 
 # Introduction to R
 
-BCBB Bioinformatics Workshops at RML
+BCBB Bioinformatics Workshops to MIS
 
-10 September 2019, Room A322
+May 6, 2020, online webinar.
 
 Instructors: Poorani Subramanian - , Jingwen Gu - jingwen.gu@nih.gov
 
