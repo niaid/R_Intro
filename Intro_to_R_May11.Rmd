@@ -1,0 +1,273 @@
+---
+output: html_notebook
+---
+<br />  
+
+Two parts are included in this note: Introduction to Rstudio (0) and using dplyr to manipulate data (1-7). We will answer two questions during the class using what we learn together. In the end, there is a take home question you can practice it. If you have any questions, please contact bioinformatics@niaid.nih.gov, myself (jingwen.gu@nih.gov) or Poorani ().   
+<br />   
+
+#### Introduction to Rstudio
+
+##### 0.1 work directory  
+* set work directory: setwd("file_path")   
+* get work directory: getwd()  
+
+```{r eval=FALSE}
+setwd("/Users/guj3/Desktop/My training topics/Intro to R/")
+getwd()
+```
+<br />  
+
+##### 0.2 install R packages  
+* install by command 
+   
+```{r eval=FALSE}
+install.packages("readr") #install one package
+install.packages("dplyr")
+install.packages("Stat2Data")
+install.packages(c("readr", "dplyr", "Stat2Data")) # install multiple packages
+```
+* install in Packages panel  
+* manual install  
+<br />  
+
+Notes:   
+1. You only need to install the package once, call it (library the package) everytime when you want to use it.  
+2. When you want to make a comment, use "#", everything after "#"" in the line will not be executed.
+```{r}
+library(Stat2Data)  # library package before use it
+library(dplyr)
+```
+<br />   
+
+##### 0.3 import data   
+* use command (depend on file type)  
+```{r eval=FALSE}  
+library(readr)
+BirdNest <- read_csv("BirdNest.csv")  # read data from csv file
+
+# If you did not set work directory or would like to read in file from other folder instead of working directory, specify path above
+ 
+```
+* import from "Files" panel 
+* import build-in R data  
+```{r}
+library(Stat2Data)
+data(BirdNest)  # get BirdNest data
+```
+
+<br />  
+
+#####Introduction to **BirdNest**
+* Nest and species characteristics for North American passerines   
+* Amy R. Moore, as a student at Grinnell College in 1999, wanted to study the relationship between species characteristics and the type of nest a bird builds, using data collected from available sources. For the study, she collected data by species for 84 separate species of North American passerines. [Source](https://vincentarelbundock.github.io/Rdatasets/doc/Stat2Data/BirdNest.html)   
+<br /> 
+
+##### 0.4 basic functions to learn about your data   
+* describe data:  summary()
+* see all variable type: sapply(data, class)   
+* dimension of data: dim()  
+* column names and rownames: colnames(), rownames()    
+* missing values: is.na(),  complete.cases()       
+* data type: class()      
+* first six rows of the data:  head() or with number specified: head(data_name, n=10) 
+* ! indicates logical negation (NOT)
+* frequency table: table()   
+* see all unique values: unique()
+
+  
+```{r}
+summary(BirdNest) # describe data
+sapply(BirdNest, class) # check the type of each variable in BirdNest
+dim(BirdNest)  # dimension
+colnames(BirdNest) 
+BirdNest[!complete.cases(BirdNest),] # return all rows with missing value in BirdNest; use "complete.cases()" for non-missings; use "!" for negation (NOT)
+class(BirdNest)  # the type of the data set 
+head(BirdNest)  # first six rows
+table(BirdNest$Location) # return all unique value with frequency in Location variable of BirdNest
+unique(BirdNest$Location) # return all unique value in factor
+```
+<br />  
+
+#### Use dplyr to manipulate data
+
+##### 1. select 
+To select columns or drop columns of a data frame, use select(). 
+
+* Select desired variables
+```{r}
+#Select four columns: Length, Nesttype, Location, No.eggs from original data, return the first six rows.
+library(dplyr)
+select <- select(BirdNest, Length, Nesttype, Location, No.eggs)
+head(select)
+```
+
+* Drop undesired variables  
+```{r}
+#Remove two columns: Species and Common from original data  
+drop <- select(BirdNest,-(Species:Common))
+head(drop)
+```
+<br />     
+Note: You may want to set some criteria for variable inclusion when you have a lot of variables in your data.  
+
+```{r echo=FALSE, result = 'asis'}
+summary <- c("Select everything but ","Select range ",
+      "Select columns whose name contains a character string",
+      "Select columns whose name starts with a string",
+      "Select columns whose name ends with a string",
+      "Select columns whose name matches a regular expression",
+      "Select columns whose names are in a group of names"
+)
+usage <- c("-",":","contains()","start_with()","ends_with()","matches()","one_of()")
+
+table <- cbind(usage,summary)
+library(knitr)
+kable(table)
+
+```
+  
+```{r}
+# Select variables contain "nest" (default case insensitive)
+head(select(BirdNest, contains("nest")))
+
+```
+<br />   
+Alternative:  
+Use **grepl** to select pattern in the column names.  
+```{r}
+# Select variables contain "nest" (default case sensitive), does not use dplyr
+head(BirdNest[,grepl("nest", colnames(BirdNest), ignore.case = T)])
+```
+<br />   
+ 
+##### 2. filter  
+Use **filter** to select rows that meet criteria. you may use %in% when you have specified levels that would like the variable to be filtered on, however, when your criteria is blurred, you may use "grepl", to roughly search pattern in the variable and return the rows meet criteria.    
+```{r}
+#Select rows with Length more than 30
+filter(BirdNest, Length>30)
+
+#Select rows with No.eggs more than 6 and Location in "decid"
+filter(BirdNest, No.eggs>6 , Location %in% c("decid")) ## or Location=="decid" if just one level
+
+```
+<br />   
+  
+**Question:**
+Could you filter the rows with levels contains "Jay" in Common column? (hint: use grepl function)
+
+```{r}
+filter(BirdNest ,grepl("Jay",Common))
+
+```
+<br />  
+
+##### 3. mutate  
+When you want to create new columns based on the values in existing columns, for example, do calculation using existing variables, we’ll use the dplyr function mutate().  
+
+```{r}
+head(mutate(BirdNest, ratio = Incubate/Totcare))
+head(mutate(BirdNest, ratio = Incubate/Totcare, inverse = 1/ratio))
+head(mutate(BirdNest, cumsum_total = cumsum(Totcare)))
+head(mutate(BirdNest, nor_Nest = Nestling/mean(Nestling, na.rm=T))) # na.rm=T removes the missing value when calculating mean 
+```
+
+Note: create variables with criteria  
+
+```{r echo=FALSE, result = 'asis'}
+summary <- c("Elementwise minimum or maximum",
+      "Cumulative minimum and maximum ",
+      "Cumulative sum and product")
+usage <- c("pmin(), pmax()","cummin(), cummax()","cumsum(), cumprod()")
+
+table <- cbind(usage,summary)
+library(knitr)
+kable(table)
+
+```
+<br />  
+
+##### 4. pipes  
+Pipes can be used when you want to many things to the same data set. It takes the output of one function and send it directly to the next. Different layes can be added in the pipes. You will need to consider the order of adding the layers, because it needs to execute the analysis you plan and satisfy pipe logic.  
+
+Note: ctrl+shift+m for the **%>%** symbol for Mac.  
+
+```{r}
+head(select(BirdNest, Length, Nesttype, Location, No.eggs))
+# equals to
+head(BirdNest %>% select(Length, Nesttype, Location, No.eggs))
+
+head(filter(BirdNest, No.eggs>6 , Location %in% c("decid")))
+# equals to
+head(BirdNest %>% filter( No.eggs>6 , Location %in% c("decid")))
+
+# add layer
+BirdNest %>% 
+  filter( No.eggs>6 , Location %in% c("decid")) %>% 
+  select(Species, Common, No.eggs, Location)
+
+```
+<br />    
+
+##### 5. arrange  
+Arrange the rows of your data based according to the preferred order in the specified variable.
+```{r}
+# order the data by ascending length
+head(arrange(BirdNest, Length))
+head(arrange(BirdNest, Length, No.eggs)) 
+```
+<br />  
+
+**Question:**
+Could you output top 10 observations with largest length? 
+
+```{r}
+BirdNest %>%
+  arrange(desc(Length) ) %>% 
+  head(n = 10)
+
+```
+<br />  
+
+##### 6. summarise  
+When you want to create a summary across the data, summarise() function in dplyr package can be used. Generally, it often combines with group_by, which creates a summary by subgroups. 
+```{r}
+# to create a summery about average, variance of lengt, and count distinct egg color 
+BirdNest %>% summarise(mean_length = mean(Length), var_Length = var(Length), n_distict_color = n_distinct(Color))  
+
+# to create a summery respective to same fields above within each egg color.
+BirdNest %>% 
+  group_by(Color) %>% 
+  summarise(mean_length = mean(Length), var_Length = var(Length), n_distict_color = n_distinct(Color)) 
+
+```
+<br />  
+
+##### 7. group by  
+group_by() and summarise together can create a split-apply-combine analysis. group_by() splits the data into groups, summarise() provides summary function in each group and the summary for each subgroups are combined and returned.   
+
+Note:  
+Adding multiple variables in group_by() will return a summary with grouping by adding order.
+```{r}
+# create summary about mean and variance of legnth, number of distinct location by color and nesttype
+BirdNest %>% 
+  group_by(Color,Nesttype) %>% 
+  summarise(mean_length = mean(Length), num_obs = n(), n_distict_location = n_distinct(Location))
+```
+<br />  
+
+**Take home question:  **
+
+Could you create a summary about the largest ratio (ratio = Nestling / Totcare) by nest type (excluding "cavity" category) and present the result in a descending order?
+
+```{r }
+BirdNest %>% 
+  filter(!grepl("cavity",Nesttype)) %>% 
+  mutate(ratio = Nestling / Totcare) %>% 
+  group_by(Nesttype) %>% 
+  summarise(max_ratio = max(ratio, na.rm=T)) %>%
+  arrange(desc(max_ratio)) 
+
+```
+
+
