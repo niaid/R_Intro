@@ -3,12 +3,12 @@ output: html_notebook
 ---
 <br />  
 
-Two parts are included in this note: Introduction to Rstudio (0) and using dplyr to manipulate data (1-7). We will answer two questions during the class using what we learn together. In the end, there is a take home question you can practice it. If you have any questions, please contact bioinformatics@niaid.nih.gov, myself (jingwen.gu@nih.gov) or Poorani ().   
+Two parts are included in this note: Introduction to Rstudio (0) and using dplyr to manipulate data (1-7). We will answer two questions during the class using what we learn together. In the end, there is a take home question you can practice it. If you have any questions, please contact bioinformatics@niaid.nih.gov, myself (jingwen.gu@nih.gov) or Poorani.   
 <br />   
 
 #### Introduction to Rstudio
 
-##### 0.1 work directory  
+##### 0.1 work directory
 * set work directory: setwd("file_path")   
 * get work directory: getwd()  
 
@@ -269,5 +269,4 @@ BirdNest %>%
   arrange(desc(max_ratio)) 
 
 ```
-
 

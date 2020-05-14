@@ -5,7 +5,7 @@ BCBB Bioinformatics Workshops to MIS
 
 May 6, 2020, online webinar.
 
-Instructors: Jingwen Gu - jingwen.gu@nih.gov, Poorani Subramanian - 
+Instructors: Jingwen Gu - jingwen.gu@nih.gov, Poorani Subramanian
 
 [bioinformatics @NIAID](https://bioinformatics.niaid.nih.gov/)
 
