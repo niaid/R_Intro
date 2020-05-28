@@ -3,7 +3,7 @@
 
 BCBB Bioinformatics Workshops to MIS
 
-May 6, 2020, online webinar.
+May 6 & 28, 2020, online webinar.
 
 Instructors: Jingwen Gu - jingwen.gu@nih.gov, Poorani Subramanian
 
@@ -12,9 +12,14 @@ Instructors: Jingwen Gu - jingwen.gu@nih.gov, Poorani Subramanian
 bioinformatics@niaid.nih.gov
 
 ## In this Repo
-- [BirdNest.csv](BirdNest.csv) - Data of Introduction to R and manipulate data using dplyr for MIS.
-- [Intro_to_R.nb.html](Intro_to_R.nb.html) - Note of Introduction to R and manipulate data using dplyr for MIS.
 - [package_install.R](package_install.R) - script to install the packages needed for this class.  To use, open the script in RStudio, and then click 'Source'.
+- **Introduction to R and manipulate data using dplyr for MIS**
+  - [BirdNest.csv](BirdNest.csv) - Data
+  - [Intro_to_R.nb.html](Intro_to_R.nb.html) - Notes
+- **Introduction to plotting RNA-seq diff exp data**
+  - [Input data](https://proj-bip-prod-publicread.s3.amazonaws.com/training/R_Intro/plotting_rnaseq.zip)
+  - [Notes](plotting/notes.md)
+  - scripts: [clean_names.R](plotting/clean_names.R) - script to clean up and sort HOMER output; [notes.R](plotting/notes.R) - script to generate Notes output
 
 ## Resources
 

@@ -8,7 +8,7 @@ ipak <- function(pkg){
   sapply(pkg, require, character.only = TRUE)
 }
 # usage
-packages <- c("tidyverse", "shiny", "knitr", "rmarkdown","Stat2Data", "ggrepel", "NMF")
+packages <- c("tidyverse", "shiny", "knitr", "rmarkdown","Stat2Data", "ggrepel", "pheatmap")
 ipak(packages)
 
 
