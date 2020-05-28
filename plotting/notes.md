@@ -195,10 +195,12 @@ library(ggplot2)
 1.  start with ggplot function - specify data and “aesthetics”
 2.  add “geoms” which are the type of plot (points, lines, bars, etc)
 3.  add “scales” which further specify the aesthetics: axes, colors,
-    sizes *Aesthetics* map from variables in the data to components of
-    the graph.
+    sizes 
 
 <!-- end list -->
+
+*Aesthetics* map from variables in the data to components of
+    the graph.
 
 ``` r
 ggplot(diffexp, aes(x=`Log2 Fold Change`, y=`adj. p-value`)) + geom_point()
@@ -254,7 +256,7 @@ head(diffexp$badlog10, 20)
 
 Computing \(log(1+x)\) suffers when \(|x| << 1\). `log1p` was written to
 increase precision of this computation. We use it with the change of
-base formula to calculate \(-log_{10}(1 + \textit{p-value})\):
+base formula to calculate -log10(1 + *p-value*):
 
 ``` r
 diffexp$`-Log10 adj. p` <- -log1p(diffexp$`adj. p-value`)/log(10)

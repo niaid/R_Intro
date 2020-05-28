@@ -24,10 +24,11 @@ bioinformatics@niaid.nih.gov
 ## Resources
 
 - [R project](https://www.r-project.org/) - links to [CRAN](https://cran.r-project.org/) - repository for R packages and where you can download the R software
-  - On mac, you need admin privileges to install.  Can also install through NIAID's Self-Service app.
+  - On mac, you need admin privileges to install.  Can also install through NIAID's Self-Service or Software Center app.
 - [RStudio](https://www.rstudio.com/products/rstudio/download/#download)
 - [NIAID's RStudio Server](https://rstudio-pro.niaid.nih.gov/) 
 - Sean Davis introductory R course notes: <https://seandavi.github.io/ITR/> 
+- [Cookbook for R Graphs](http://www.cookbook-r.com/Graphs/) - **_super helpful_** site for learning how to make graphs in R
 - Lori Shepard Introduction to R and Bioconductor BioC2017 <https://github.com/Bioconductor/BiocIntro/tree/Bioc2017> 
 
 ## Previous Classes
