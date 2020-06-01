@@ -56,7 +56,7 @@ colnames(tpm)
 pheatmap(tpm[,9:12], show_rownames = F, scale = 'row')
 ```
 
-![](notes_files/figure-gfm/notes-unnamed-chunk-3-1.png)<!-- -->
+![](notes_files/figure-gfm/notes-unnamed-chunk-3-1.png)
 
 *tpm* has \~19k rows\! So takes some time. Uncomment line below to save
 heatmap as pdf.
@@ -135,7 +135,7 @@ setdiff(diffexp10$TranscriptID, tpm10$TranscriptID)
 pheatmap(tpm10[,9:12], labels_row = tpm10$gene, scale='row')
 ```
 
-![](notes_files/figure-gfm/notes-unnamed-chunk-7-1.pdf)<!-- -->
+[view heatmap](notes_files/figure-gfm/notes-unnamed-chunk-7-1.pdf)
 
 add some simple annotation to the columns
 
@@ -173,7 +173,7 @@ rownames(annotation_col) <- colnames(tpm10)[9:12]
 pheatmap(tpm10[,9:12], labels_row = tpm10$gene, scale='row', annotation_col = annotation_col)
 ```
 
-![](notes_files/figure-gfm/notes-unnamed-chunk-10-1.pdf)<!-- -->
+[view annotated heatmap](notes_files/figure-gfm/notes-unnamed-chunk-10-1.pdf)
 
 ## ggplot2
 
@@ -395,7 +395,7 @@ annotate or draw the dendrogram/clustering.
 ggplot(longtpm, aes(x=sample, y=gene, fill=TPM)) + geom_tile()
 ```
 
-![](notes_files/figure-gfm/notes-unnamed-chunk-27-1.pdf)<!-- -->
+[view ggplot heatmap](notes_files/figure-gfm/notes-unnamed-chunk-27-1.pdf)<!-- -->
 
 Can make cosmetic changes with `theme`.
 
@@ -405,7 +405,7 @@ Can make cosmetic changes with `theme`.
 ggplot(longtpm, aes(x=sample, y=gene, fill=TPM)) + geom_tile() + theme(axis.text.x = element_text(angle=90))
 ```
 
-![](notes_files/figure-gfm/notes-unnamed-chunk-28-1.pdf)<!-- -->
+[ggplot heatmap with theme](notes_files/figure-gfm/notes-unnamed-chunk-28-1.pdf)<!-- -->
 
 Save your theme to a variable, so you can re-use it over and over.
 
@@ -414,7 +414,7 @@ mytheme <- theme_minimal() + theme(axis.text.x = element_text(angle=90))
 ggplot(longtpm, aes(x=sample, y=gene, fill=TPM)) + geom_tile() + mytheme
 ```
 
-![](notes_files/figure-gfm/notes-unnamed-chunk-29-1.pdf)<!-- -->
+[ggplot heatmap with mytheme](notes_files/figure-gfm/notes-unnamed-chunk-29-1.pdf)<!-- -->
 
 ### More ways to plot
 
@@ -424,7 +424,7 @@ Histogram of p-values
 ggplot(diffexp, aes(x=`adj. p-value`)) + geom_histogram(binwidth = 0.01, fill="powderblue", color="grey30") + mytheme
 ```
 
-![](notes_files/figure-gfm/notes-unnamed-chunk-30-1.pdf)<!-- -->
+[view histogram](notes_files/figure-gfm/notes-unnamed-chunk-30-1.pdf)<!-- -->
 
 Can convert continuous scale to discrete scale by converting numerics to
 *factors*.
@@ -433,7 +433,7 @@ Can convert continuous scale to discrete scale by converting numerics to
 ggplot(diffexp[1:10,], aes(x=`Log2 Fold Change`, y=`-Log10 adj. p`, color=as.factor(`-Log10 adj. p`))) + geom_point() + mytheme
 ```
 
-![](notes_files/figure-gfm/notes-unnamed-chunk-31-1.pdf)<!-- -->
+[numeric to factor plot](notes_files/figure-gfm/notes-unnamed-chunk-31-1.pdf)<!-- -->
 
 ^ is silly example. But makes more sense with fewer values or by
 *binning*. Can use `cut`.
@@ -452,7 +452,7 @@ library(ggrepel)
 ggplot(diffexp[1:10,], aes(x=`Log2 Fold Change`, y=`-Log10 adj. p`, color=plabel)) + geom_point() + geom_text_repel(aes(label=gene))
 ```
 
-![](notes_files/figure-gfm/notes-unnamed-chunk-33-1.pdf)<!-- -->
+[view ggrepel labeled points](notes_files/figure-gfm/notes-unnamed-chunk-33-1.pdf)<!-- -->
 
 label only the top 10 points by giving `geom_text_repel` its own data
 argument. This will override the *data* argument of the main `ggplot`
