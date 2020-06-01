@@ -473,7 +473,7 @@ ggplot(diffexp, aes(x=`Log2 Fold Change`, y=`-Log10 adj. p`, color=plabel)) + ge
 
 ![](notes_files/figure-gfm/notes-unnamed-chunk-35-1.png)
 
-### Exercises
+## Exercises
 
 **Solution:** [notes page](https://proj-bip-prod-publicread.s3.amazonaws.com/training/R_Intro/exercise_solution_MIS2020.html) and [script](exercise_solution.R)
 
