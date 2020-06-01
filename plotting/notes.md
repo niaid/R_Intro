@@ -475,7 +475,7 @@ ggplot(diffexp, aes(x=`Log2 Fold Change`, y=`-Log10 adj. p`, color=plabel)) + ge
 
 ### Exercises
 
-[Solution notes](exercise_solution.md) & [script](exercise_solution.R)
+[Solution script](exercise_solution.R)
 
 1.  Plot scatterplot gene vs TPM using just the top 10 genes with each
     sample a different color.
