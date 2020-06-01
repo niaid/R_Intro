@@ -17,7 +17,7 @@ Contact: [bioinformatics @NIAID](https://bioinformatics.niaid.nih.gov/) or email
 - **Introduction to plotting with RNA-seq data**
   - [Input data](https://proj-bip-prod-publicread.s3.amazonaws.com/training/R_Intro/plotting_rnaseq.zip)
   - [Notes](plotting/notes.md)
-  - scripts: [clean_names.R](plotting/clean_names.R) - clean up and sort HOMER output; [notes.R](plotting/notes.R) - main notes with [exercise_solution.R](plotting/exercise_solution.R) 
+  - [plotting scripts](./plotting) also linked in Notes.
 
 ## Resources
 
