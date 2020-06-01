@@ -30,6 +30,6 @@ Contact: [bioinformatics @NIAID](https://bioinformatics.niaid.nih.gov/) or email
 - [NIAID's RStudio Server](https://rstudio-pro.niaid.nih.gov/) 
 
 ## Previous Classes
-
+- [Spring 2020 MIS RNA-seq seminars](https://github.com/niaid/R_Intro/tree/MIS-2020)
 - [2019 BCBB Bioinformatics Workshops at RML](https://github.com/niaid/R_Intro/tree/RML-2019) - also can download [zipped materials](https://github.com/niaid/R_Intro/archive/RML-2019.zip)
 
