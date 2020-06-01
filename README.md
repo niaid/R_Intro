@@ -7,19 +7,17 @@ May 6, 11 & 28, 2020, online webinar.
 
 Instructors: Jingwen Gu - jingwen.gu@nih.gov, Poorani Subramanian
 
-[bioinformatics @NIAID](https://bioinformatics.niaid.nih.gov/)
-
-bioinformatics@niaid.nih.gov
+Contact: [bioinformatics @NIAID](https://bioinformatics.niaid.nih.gov/) or email: bioinformatics@niaid.nih.gov
 
 ## In this Repo
 - [package_install.R](package_install.R) - script to install the packages needed for this class.  To use, open the script in RStudio, and then click 'Source'.
-- **Introduction to R and manipulate data using dplyr for MIS**
+- **Introduction to R and data manipulation using dplyr**
   - [BirdNest.csv](BirdNest.csv) - Data
   - [Intro_to_R.nb.html](Intro_to_R.nb.html) - Notes
 - **Introduction to plotting with RNA-seq data**
   - [Input data](https://proj-bip-prod-publicread.s3.amazonaws.com/training/R_Intro/plotting_rnaseq.zip)
   - [Notes](plotting/notes.md)
-  - scripts: [clean_names.R](plotting/clean_names.R) - clean up and sort HOMER output; [notes.R](plotting/notes.R) - main notes script; [exercise_solution.R](plotting/exercise_solution.R) - solution to exercises
+  - scripts: [clean_names.R](plotting/clean_names.R) - clean up and sort HOMER output; [notes.R](plotting/notes.R) - main notes with [exercise_solution.R](plotting/exercise_solution.R) 
 
 ## Resources
 

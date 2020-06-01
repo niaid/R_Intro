@@ -206,7 +206,7 @@ library(ggplot2)
 ggplot(diffexp, aes(x=`Log2 Fold Change`, y=`adj. p-value`)) + geom_point()
 ```
 
-![](notes_files/figure-gfm/notes-unnamed-chunk-12-1.png)<!-- -->
+![](notes_files/figure-gfm/notes-unnamed-chunk-12-1.png)
 
 For volcano plot we do -Log10 of p-value
 
@@ -236,7 +236,7 @@ diffexp$newvalue[1:4] <- 300
 ggplot(diffexp, aes(x=`Log2 Fold Change`, y=newvalue)) + geom_point()
 ```
 
-![](notes_files/figure-gfm/notes-unnamed-chunk-14-1.png)<!-- -->
+![](notes_files/figure-gfm/notes-unnamed-chunk-14-1.png)
 
 Better way is to add 1 to the p-values, so we avoid taking the log of 0.
 This is more robust, as we don’t have to check the largest value to
@@ -269,7 +269,7 @@ head(diffexp$`-Log10 adj. p`)
 ggplot(diffexp, aes(x=`Log2 Fold Change`, y=`-Log10 adj. p`)) + geom_point()
 ```
 
-![](notes_files/figure-gfm/notes-unnamed-chunk-17-1.png)<!-- -->
+![](notes_files/figure-gfm/notes-unnamed-chunk-17-1.png)
 
 **Scales and colors**
 
@@ -282,7 +282,7 @@ ggplot(diffexp, aes(x=`Log2 Fold Change`, y=`adj. p-value`)) + geom_point() + sc
 
     ## Warning: Transformation introduced infinite values in continuous y-axis
 
-![](notes_files/figure-gfm/notes-unnamed-chunk-18-1.png)<!-- -->
+![](notes_files/figure-gfm/notes-unnamed-chunk-18-1.png)
 
 We can color the points based on p-value
 
@@ -290,7 +290,7 @@ We can color the points based on p-value
 ggplot(diffexp, aes(x=`Log2 Fold Change`, y=`-Log10 adj. p`, color=`-Log10 adj. p`)) + geom_point()
 ```
 
-![](notes_files/figure-gfm/notes-unnamed-chunk-19-1.png)<!-- -->
+![](notes_files/figure-gfm/notes-unnamed-chunk-19-1.png)
 
 change the gradient scale
 
@@ -298,7 +298,7 @@ change the gradient scale
 ggplot(diffexp, aes(x=`Log2 Fold Change`, y=`-Log10 adj. p`, color=`-Log10 adj. p`)) + geom_point() + scale_color_gradient(low = "royalblue",high="goldenrod")
 ```
 
-![](notes_files/figure-gfm/notes-unnamed-chunk-20-1.png)<!-- -->
+![](notes_files/figure-gfm/notes-unnamed-chunk-20-1.png)
 
 We can color the points based on gene type
 
@@ -306,7 +306,7 @@ We can color the points based on gene type
 ggplot(diffexp, aes(x=`Log2 Fold Change`, y=`-Log10 adj. p`, color=genetype)) + geom_point()
 ```
 
-![](notes_files/figure-gfm/notes-unnamed-chunk-21-1.png)<!-- -->
+![](notes_files/figure-gfm/notes-unnamed-chunk-21-1.png)
 
 **Q:** Why the difference in the color scales?
 
@@ -326,7 +326,7 @@ unique(diffexp$genetype)
 ggplot(diffexp, aes(x=`Log2 Fold Change`, y=`-Log10 adj. p`, color=genetype)) + geom_point() + scale_color_manual(values = c("red", "blue", "green", "yellow", "purple", "brown"))
 ```
 
-![](notes_files/figure-gfm/notes-unnamed-chunk-22-1.png)<!-- -->
+![](notes_files/figure-gfm/notes-unnamed-chunk-22-1.png)
 
 **Saving plots**
 
@@ -395,7 +395,7 @@ annotate or draw the dendrogram/clustering.
 ggplot(longtpm, aes(x=sample, y=gene, fill=TPM)) + geom_tile()
 ```
 
-[view ggplot heatmap](notes_files/figure-gfm/notes-unnamed-chunk-27-1.pdf)<!-- -->
+[view ggplot heatmap](notes_files/figure-gfm/notes-unnamed-chunk-27-1.pdf)
 
 Can make cosmetic changes with `theme`.
 
@@ -405,7 +405,7 @@ Can make cosmetic changes with `theme`.
 ggplot(longtpm, aes(x=sample, y=gene, fill=TPM)) + geom_tile() + theme(axis.text.x = element_text(angle=90))
 ```
 
-[ggplot heatmap with theme](notes_files/figure-gfm/notes-unnamed-chunk-28-1.pdf)<!-- -->
+[ggplot heatmap with theme](notes_files/figure-gfm/notes-unnamed-chunk-28-1.pdf)
 
 Save your theme to a variable, so you can re-use it over and over.
 
@@ -414,7 +414,7 @@ mytheme <- theme_minimal() + theme(axis.text.x = element_text(angle=90))
 ggplot(longtpm, aes(x=sample, y=gene, fill=TPM)) + geom_tile() + mytheme
 ```
 
-[ggplot heatmap with mytheme](notes_files/figure-gfm/notes-unnamed-chunk-29-1.pdf)<!-- -->
+[ggplot heatmap with mytheme](notes_files/figure-gfm/notes-unnamed-chunk-29-1.pdf)
 
 ### More ways to plot
 
@@ -424,7 +424,7 @@ Histogram of p-values
 ggplot(diffexp, aes(x=`adj. p-value`)) + geom_histogram(binwidth = 0.01, fill="powderblue", color="grey30") + mytheme
 ```
 
-[view histogram](notes_files/figure-gfm/notes-unnamed-chunk-30-1.pdf)<!-- -->
+[view histogram](notes_files/figure-gfm/notes-unnamed-chunk-30-1.pdf)
 
 Can convert continuous scale to discrete scale by converting numerics to
 *factors*.
@@ -433,7 +433,7 @@ Can convert continuous scale to discrete scale by converting numerics to
 ggplot(diffexp[1:10,], aes(x=`Log2 Fold Change`, y=`-Log10 adj. p`, color=as.factor(`-Log10 adj. p`))) + geom_point() + mytheme
 ```
 
-[numeric to factor plot](notes_files/figure-gfm/notes-unnamed-chunk-31-1.pdf)<!-- -->
+[numeric to factor plot](notes_files/figure-gfm/notes-unnamed-chunk-31-1.pdf)
 
 ^ is silly example. But makes more sense with fewer values or by
 *binning*. Can use `cut`.
@@ -443,7 +443,7 @@ diffexp$plabel <- cut(diffexp$`-Log10 adj. p`, breaks=c(-0.31,-0.1,0), include.l
 ggplot(diffexp, aes(x=`Log2 Fold Change`, y=`-Log10 adj. p`, color=plabel)) + geom_point() + mytheme
 ```
 
-![](notes_files/figure-gfm/notes-unnamed-chunk-32-1.png)<!-- -->
+![](notes_files/figure-gfm/notes-unnamed-chunk-32-1.png)
 
 Label points with **ggrepel**
 
@@ -452,7 +452,7 @@ library(ggrepel)
 ggplot(diffexp[1:10,], aes(x=`Log2 Fold Change`, y=`-Log10 adj. p`, color=plabel)) + geom_point() + geom_text_repel(aes(label=gene))
 ```
 
-[view ggrepel labeled points](notes_files/figure-gfm/notes-unnamed-chunk-33-1.pdf)<!-- -->
+[view ggrepel labeled points](notes_files/figure-gfm/notes-unnamed-chunk-33-1.pdf)
 
 label only the top 10 points by giving `geom_text_repel` its own data
 argument. This will override the *data* argument of the main `ggplot`
@@ -462,7 +462,7 @@ function. So it will only use the first 10 rows of diffexp instead
 ggplot(diffexp, aes(x=`Log2 Fold Change`, y=`-Log10 adj. p`, color=plabel)) + geom_point() + geom_text_repel(data=diffexp[1:10,], aes(label=gene))
 ```
 
-![](notes_files/figure-gfm/notes-unnamed-chunk-34-1.png)<!-- -->
+![](notes_files/figure-gfm/notes-unnamed-chunk-34-1.png)
 
 change the color of the labels to override the `color` aesthetic in the
 main `ggplot` function.
@@ -471,11 +471,11 @@ main `ggplot` function.
 ggplot(diffexp, aes(x=`Log2 Fold Change`, y=`-Log10 adj. p`, color=plabel)) + geom_point() + geom_text_repel(data=diffexp[1:10,], aes(label=gene), color="mediumorchid", fontface="bold")
 ```
 
-![](notes_files/figure-gfm/notes-unnamed-chunk-35-1.png)<!-- -->
+![](notes_files/figure-gfm/notes-unnamed-chunk-35-1.png)
 
 ### Exercises
 
-[Solution script](exercise_solution.R)
+**Solution:** [notes page](https://proj-bip-prod-publicread.s3.amazonaws.com/training/R_Intro/exercise_solution_MIS2020.html) and [script](exercise_solution.R)
 
 1.  Plot scatterplot gene vs TPM using just the top 10 genes with each
     sample a different color.
