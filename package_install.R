@@ -1,3 +1,4 @@
+
 # ipak function: install and load multiple R packages.
 # check to see if packages are installed. Install them if they are not, then load them into the R session.
 # adapted from: https://gist.github.com/stevenworthington/3178163
@@ -8,7 +9,5 @@ ipak <- function(pkg){
   sapply(pkg, require, character.only = TRUE)
 }
 # usage
-packages <- c("tidyverse", "shiny", "knitr", "rmarkdown","Stat2Data", "ggrepel", "pheatmap")
+packages <- c("tidyverse", "shiny", "knitr", "rmarkdown","Stat2Data", "ggrepel", "pheatmap","readr", "dplyr","naniar")
 ipak(packages)
-
-
