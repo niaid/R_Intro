@@ -1,0 +1,207 @@
+---
+title: "Introduction to Rstudio (Part 1)"
+output: html_notebook
+---
+
+<br />  
+
+The workshop of introduction to Rstudio will include two parts. For the first part, we will have general introduction and introduce some useful functions to learn about our data. For the second part, we will learn manipulating data using package called dplyr. If you have any questions, please contact bioinformatics@niaid.nih.gov, myself (jingwen.gu@nih.gov) or Poorani (poorani.subramanian@nih.gov).   
+<br />   
+
+##### 0.1 Create workspace
+* create/close project
+* save script
+
+##### 0.2 Set working directory  
+* set work directory: setwd("file_path") or setwd(file.choose()) to manually select a path   
+* get work directory: getwd()  
+* use R project: path will be set to the folder of the project file.
+
+```{r eval=FALSE}
+getwd()
+```
+<br />  
+
+##### 0.3 install R packages  
+* install by command 
+   
+```{r eval=FALSE}
+install.packages("readr") #install one package
+install.packages("dplyr")
+install.packages("Stat2Data")
+install.packages("naniar")
+install.packages(c("readr", "dplyr", "Stat2Data","naniar")) # install multiple packages
+```
+* install in Packages panel  
+* manual install  
+<br />  
+
+Notes:   
+1. You only need to install the package once, call it (library the package) everytime when you want to use it.  
+2. When you want to make a comment, use "#", everything after "#"" in the line will not be executed.
+```{r}
+library(Stat2Data)  # library package before use it
+library(dplyr)
+```
+<br />   
+
+##### 0.4 Operator
+* see the full list from [manual:3.1.4 Operators](https://cran.r-project.org/doc/manuals/r-release/R-lang.pdf)  
+
+| Operator         | Description                                    |
+|------------------|------------------------------------------------|
+| `<-`             | Left assignment, binary                        |
+| `$`              | List subset, binary                            |
+| `%in%`           | Matching operator, binary (in model formulae: nesting)  |
+| `<`              | Less than, binary                              |
+| `>`              | Greater than, binary                           |
+| `==`             | Equal to, binary                               |
+| `>=`             | Greater than or equal to, binary               |
+| `<=`             | Less than or equal to, binary                  |
+| `&`              | And, binary, vectorized                        |
+| `&&`             | And, binary, not vectorized                    |
+| `|`              | Or, binary, vectorized                         |
+| `||`             | Or, binary, not vectorized                     |
+
+```{r}
+
+
+```
+<br />  
+
+##### 0.5 data type and data frame
+
+* data format
+* merge
+
+| Function         | Description                                    |
+|------------------|------------------------------------------------|
+| `c`              | Create vector                                  |
+| `data.frame`     | Create data frame                              |
+| `as.matrix`      | Transform into matrix                          |
+| `list`           | Create list                                    |
+
+
+```{r}
+# create a vector
+id <- c(seq(1,5,by=1))
+name <- c("apple","pear","strawberry","banana","watermelon")
+
+# create data frame
+fruit_menu <- data.frame(id,name);fruit_menu
+
+# create matrix
+fruit_matrix <- as.matrix(fruit_menu);fruit_matrix
+
+# create list
+fruit_list <- list(fruit_menu);fruit_list
+
+# create another data frame for merging practice
+fruit_price <- data.frame(id = c(1,2,3,5,6),price = c(3,2,4,2,10));fruit_price
+
+# merge two data sets
+all_fruit_data <- merge(fruit_menu, fruit_price, all = T, by.x = "id", by.y = "id");all_fruit_data # all rows in fruit_menu and fruit_price
+complete_menu_data <- merge(fruit_menu, fruit_price, all.x = T, by.x = "id", by.y = "id");complete_menu_data # all rows in fruit_menu
+complete_price_data <- merge(fruit_menu, fruit_price, all.y = T, by.x = "id", by.y = "id");complete_price_data # all rows in fruit_price
+```
+<br />  
+
+##### 0.6 import data   
+* use command (depend on file type)  
+* there are many other packages could help read in different types of files, such as "readxl" or others packages [listed](http://www.milanor.net/blog/read-excel-files-from-r/)  
+
+```{r eval=FALSE}  
+library(readr)
+BirdNest <- read_csv("BirdNest.csv")  # read data from csv file
+# If you did not set work directory or would like to read in file from other folder instead of working directory, specify path above
+ 
+```
+* import from "Files" panel 
+* import using file.choose()
+* import build-in R data 
+
+```{r}
+library(Stat2Data)
+data(BirdNest)  # get BirdNest data
+```
+
+<br />  
+
+##### 0.7 getting help
+```{r }  
+help(read_csv)
+```
+
+<br />  
+
+##### Introduction to **BirdNest**
+* Nest and species characteristics for North American passerines   
+* Amy R. Moore, as a student at Grinnell College in 1999, wanted to study the relationship between species characteristics and the type of nest a bird builds, using data collected from available sources. For the study, she collected data by species for 84 separate species of North American passerines. [Source](https://vincentarelbundock.github.io/Rdatasets/doc/Stat2Data/BirdNest.html)   
+<br /> 
+
+##### 0.8 basic functions to learn about your data   
+| Funtion          | Description                                    |
+|------------------|------------------------------------------------|
+| `summary()`             | Describe data                           |
+| `sapply(data, class)`   | See all variable type                   |
+| `dim()`                 | Dimension of data                       |
+| `colnames()`            | Column names                            |
+| `rownames()`            | Row names                               |
+| `complete.cases() `     | Filter on complete cases                |
+| `class()`               | Data type                               |
+| `head()`                | first six rows of the data, or with number specified, "n=10"     |
+| `!`                     | Indicates logical negation              |
+| `table() `              | Frequency table                         |
+| `unique()`              | See all unique values                   |
+| `length()`              | Report length of vector                 |
+| `is.na()`               | Check for missing values                |
+| `rbind()`               | Row bind                                |
+| `cbind()`               | Column bind                             |
+
+  
+```{r eval=FALSE}
+summary(BirdNest) # describe data
+sapply(BirdNest, class) # check the type of each variable in BirdNest
+dim(BirdNest)  # dimension
+colnames(BirdNest) 
+BirdNest[!complete.cases(BirdNest),] # return all rows with missing value in BirdNest; use "complete.cases()" for non-missings; use "!" for negation (NOT)
+class(BirdNest)  # the type of the data set 
+head(BirdNest)  # first six rows
+table(BirdNest$Location) # return all unique value with frequency in Location variable of BirdNest
+unique(BirdNest$Location) # return all unique value in factor
+length(unique(BirdNest$Location)) # return the number of unique value in factor
+table(is.na(BirdNest$Location))
+table(is.na(BirdNest$Totcare))
+```
+
+<br />  
+
+##### 0.9 creating new variable and select variables by critieria
+* Create a new variable by patterns from other variables. Other useful function are: grepl, gusb. Similar formats could be used to select variables from column names.
+```{r}
+BirdNest$cup_type <- ifelse(BirdNest$Nesttype == "cup", 1, 0); table(BirdNest$cup_type) # create binary variable to indicate "cup" type nest
+BirdNest$white_cup <- ifelse(BirdNest$Nesttype == "cup" & BirdNest$Color == 1, 1, 0); table(BirdNest$white_cup) # create binary variable to indicate "cup" and "white" nest
+BirdNest$cup_cavity <- ifelse(BirdNest$Nesttype %in% c("cup","cavity") , 1, 0); table(BirdNest$cup_cavity) # create binary variable to indicate "cup" or "cavity" type nest
+BirdNest$cu_type <- ifelse(grepl("cu",BirdNest$Nesttype)==TRUE,1,0); table(BirdNest$cu_type) # create binary variable to indicate "cu" type nest
+select1 <- BirdNest[,grepl("Co",colnames(BirdNest)) ];colnames(select1)
+select2 <- BirdNest[,colnames(BirdNest) %in% c("Common","Color") ];colnames(select2)
+
+```
+<br />    
+
+##### 0.10 missing value 
+In real analysis, missing values could be defined in different ways. We could collect the expression of missing value in the data and clean it by standard expression.
+```{r}
+example <- data.frame(id = seq(1:4),name = c("Apple","NA","Orange","Banana"));example
+
+library(naniar)
+na_strings <- c("NA")
+example_clean <- example %>%
+  replace_with_na_all(condition = ~.x %in% na_strings)
+
+example_clean
+
+```
+<br /> 
+
+In the end, the function above are handy and good to know when looking into the data. In practice, it is also good to maintain the manipulation in a tidy format. In the second part, we will introduce use pipe format and manipulate data using package dplyr.  
