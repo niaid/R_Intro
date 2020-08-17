@@ -11,7 +11,7 @@ Contact: [bioinformatics @NIAID](https://bioinformatics.niaid.nih.gov/) or email
 
 ## In this Repo
 - [package_install.R](package_install.R) - script to install the packages needed for this class.  To use, open the script in RStudio, and then click 'Source'.
-- **Introduction to R and data manipulation using dplyr**
+- **Introduction_to_Rstudio_Part_1**
   - [BirdNest.csv](BirdNest.csv) - Data
   - [Intro_to_R.nb.html](Intro_to_R.nb.html) - Notes
   - [Introduction_to_R.Rmd](Introduction_to_R.Rmd) - R notebook
