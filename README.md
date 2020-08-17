@@ -15,6 +15,7 @@ Contact: [bioinformatics @NIAID](https://bioinformatics.niaid.nih.gov/) or email
   - [BirdNest.csv](BirdNest.csv) - Data
   - [Intro_to_R.nb.html](Intro_to_R.nb.html) - Notes
   - [Introduction_to_R.Rmd](Introduction_to_R.Rmd) - R notebook
+  - [demo.Rproj](demo.Rproj) - R project
 - **Introduction to plotting with RNA-seq data**
   - [Input data](https://proj-bip-prod-publicread.s3.amazonaws.com/training/R_Intro/plotting_rnaseq.zip)
   - [Notes](plotting/notes.md)
