@@ -1,9 +1,9 @@
 
-# Introduction to R
+# Introduction to Rstudio
 
-BCBB Bioinformatics Workshops to MIS
+BCBB Bioinformatics Workshops to R Learners Group
 
-May 6, 11 & 28, 2020, online webinar.
+August 19, 2020, online webinar.
 
 Instructors: Jingwen Gu - jingwen.gu@nih.gov, Poorani Subramanian
 
@@ -14,6 +14,7 @@ Contact: [bioinformatics @NIAID](https://bioinformatics.niaid.nih.gov/) or email
 - **Introduction to R and data manipulation using dplyr**
   - [BirdNest.csv](BirdNest.csv) - Data
   - [Intro_to_R.nb.html](Intro_to_R.nb.html) - Notes
+  - [Introduction_to_R.Rmd](Introduction_to_R.Rmd) - R notebook
 - **Introduction to plotting with RNA-seq data**
   - [Input data](https://proj-bip-prod-publicread.s3.amazonaws.com/training/R_Intro/plotting_rnaseq.zip)
   - [Notes](plotting/notes.md)
