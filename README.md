@@ -1,7 +1,7 @@
 
 # Introduction to Rstudio
 
-BCBB Bioinformatics Workshops to R Learners Group
+BCBB Bioinformatics Workshops to OCICB R Learners Group
 
 August 19, 2020, online webinar.
 
