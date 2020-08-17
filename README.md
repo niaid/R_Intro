@@ -13,7 +13,7 @@ Contact: [bioinformatics @NIAID](https://bioinformatics.niaid.nih.gov/) or email
 - [package_install.R](package_install.R) - script to install the packages needed for this class.  To use, open the script in RStudio, and then click 'Source'.
 - **Introduction_to_Rstudio_Part_1**
   - [BirdNest.csv](Introduction_to_Rstudio_Part_1/BirdNest.csv) - Data
-  - [Intro_to_R.nb.html](Introduction_to_Rstudio_Part_1/Intro_to_R.nb.html) - Notes
+  - [Introduction_to_R.nb.html](Introduction_to_Rstudio_Part_1/Introduction_to_R.nb.html) - Notes
   - [Introduction_to_R.Rmd](Introduction_to_Rstudio_Part_1/Introduction_to_R.Rmd) - R notebook
   - [demo.Rproj](Introduction_to_Rstudio_Part_1/demo.Rproj) - R project
 - **Introduction to plotting with RNA-seq data**
