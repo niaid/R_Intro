@@ -1,6 +1,8 @@
 ---
 title: "Introduction to Rstudio (Part2)"
-output: html_notebook
+output:
+  pdf_document: default
+  html_notebook: default
 ---
 
 #### Use dplyr to manipulate data
@@ -183,7 +185,7 @@ BirdNest %>%
 
 Could you create a summary about the largest ratio (ratio = Nestling / Totcare) by nest type (excluding "cavity" category) and present the result in a descending order?
 
-```{r }
+```{r , echo=FALSE}
 BirdNest %>% 
   filter(!grepl("cavity",Nesttype)) %>% 
   mutate(ratio = Nestling / Totcare) %>% 

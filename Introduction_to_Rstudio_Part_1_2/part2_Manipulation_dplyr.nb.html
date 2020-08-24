@@ -1777,13 +1777,6 @@ library(dplyr)
 select &lt;- select(BirdNest, Length, Nesttype, Location, No.eggs)
 head(select)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbInRibF9kZiIsInRibCIsImRhdGEuZnJhbWUiXSwibnJvdyI6NiwibmNvbCI6NH0sInJkZiI6Ikg0c0lBQUFBQUFBQUE2VlJVVXZETUJDK3RVM25pcHVpdjZNRlVjUkhIOFNuc1FkUjJHdVd4aTVZazlLbTZ0NzgzVDZzWHRwRVhBYkM4T0Q0N3J2a3Z0eGRIdTZXbDhreUFZQVFJZ2dnSkJnQ2VYcThUMjhBb2dESkNBOG1Cai93MGprR0Vmb01QYjY5Z3Q3MjhQcHp3QXZZUWJSVFUyY0ZROVpXTm93WmZSTjZjekRySlhaVlNjNlp5UDlCNGxVdDhvTC9ESGxzaDNCNDlqZDZXeU9TdnZMRzloaTVKK1pjRm5wdDJkR0NOMXB2S3U3NFhER3FoWktXanhjcTQwWFJlTXFUV3IxblRuMktIcGl0ZDEzMzViZkFTdHE0Rmx3eXlhbW0yWE9OOWNpMlhzbFlWYVlCTEFyTWp4T3ZlRlI3aVpOV21rN3lsSzFiK1pLYS8wNzY0OEdtTm81L3hkSHdaTkJaS2VKMmc2c1IwdTJDbEhURlMwdG1PSEUvY0ZiVlFtbzNDV2FiVEN0TjNiMkVxZEpsK3RsZyt3MlZFUDVVNkFJQUFBPT0ifQ== -->
-<div data-pagedtable="false">
-<script data-pagedtable-source type="application/json">
-{"columns":[{"label":["Length"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["Nesttype"],"name":[2],"type":["chr"],"align":["left"]},{"label":["Location"],"name":[3],"type":["chr"],"align":["left"]},{"label":["No.eggs"],"name":[4],"type":["dbl"],"align":["right"]}],"data":[{"1":"20.0","2":"cup","3":"decid","4":"3.5"},{"1":"20.0","2":"cavity","3":"decid","4":"3.5"},{"1":"20.0","2":"cavity","3":"decid","4":"4.5"},{"1":"22.5","2":"cavity","3":"decid","4":"4.5"},{"1":"17.0","2":"cavity","3":"decid","4":"4.5"},{"1":"17.0","2":"cup","3":"bridge","4":"4.5"}],"options":{"columns":{"min":{},"max":[10],"total":[4]},"rows":{"min":[10],"max":[10],"total":[6]},"pages":{}}}
-  </script>
-</div>
-<!-- rnb-frame-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <ul>
@@ -1796,81 +1789,20 @@ head(select)</code></pre>
 drop &lt;- select(BirdNest,-(Species:Common))
 head(drop)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbInRibF9kZiIsInRibCIsImRhdGEuZnJhbWUiXSwibnJvdyI6NiwibmNvbCI6MTB9LCJyZGYiOiJINHNJQUFBQUFBQUFBNlZUMjByRFFCRGRwazNhQm0vb2I5alVHK0tEMkVoRkVFb1JVZkRSN1daTmczRTNKSnVxYi8wVVA5Rm5IMW8zell3MEM5NXdJWnc1czNNbWV5YlpxN1BiZmZmV0pZVFVTWU5ZcEc3cmtOZzMxK2VkSTBJYWxpWTF2ZEV1OEZrWGJlbWdxRjdUaitOUHBrVTE4WjhJb0cvZ0hlQXJnVlhxRHFEZXhFUG90MHNxcU5kR29ZT0QxRm1lUU9nd09vblV5NS9ab2tXMXF4MXdGZ1gvSU00b2pZS1FmNXBjQVJPSW05OGo2bnB2SmZrSmwxYjVQaHhhRjlBRDNEWnc1d3ZkcnFIYm1WWjFYVU4zQ25uZkwvRUUrQW5vam9IM3BoVWRrdC83cS95RnRxQ1BQQ1BsdDNNaDJiaWtldkR3R1FaY2hHb01yRFhrbVZJdkNlNjJCcEpSRlVrQnZEbVVIZy9EREx2M1pTeFRyTDBRTEI5UnhaZDd4WkVJVVhzdEZhTXBiamY3c2N4NDRCa0hicWZ5eWNORHIrckhLdVl4bjgvZlRXY3NwaGs2dzZRYlVFVzkrMVRyTlpzWmtxWk1DaTlhWkJVWDB6YkV0ZFJJck9laU9FblFZZU5jUEhUMlNIbVphekRvVllpZHBkZ3RYMm5Ob1pXTlk5WlRqZ1I2dDJNNjRqR1FOZTE0WWRoTDBrZ29kS0t6bWFla29sam5NaGxqWnVHTnpENEFpaTNKSkk4RUFBQT0ifQ== -->
-<div data-pagedtable="false">
-<script data-pagedtable-source type="application/json">
-{"columns":[{"label":["Page"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["Length"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["Nesttype"],"name":[3],"type":["chr"],"align":["left"]},{"label":["Location"],"name":[4],"type":["chr"],"align":["left"]},{"label":["No.eggs"],"name":[5],"type":["dbl"],"align":["right"]},{"label":["Color"],"name":[6],"type":["dbl"],"align":["right"]},{"label":["Incubate"],"name":[7],"type":["dbl"],"align":["right"]},{"label":["Nestling"],"name":[8],"type":["dbl"],"align":["right"]},{"label":["Totcare"],"name":[9],"type":["dbl"],"align":["right"]},{"label":["Closed."],"name":[10],"type":["dbl"],"align":["right"]}],"data":[{"1":"360","2":"20.0","3":"cup","4":"decid","5":"3.5","6":"1","7":"17.0","8":"17.0","9":"34.0","10":"0"},{"1":"368","2":"20.0","3":"cavity","4":"decid","5":"3.5","6":"1","7":"15.5","8":"17.0","9":"32.5","10":"1"},{"1":"372","2":"20.0","3":"cavity","4":"decid","5":"4.5","6":"1","7":"15.0","8":"15.0","9":"30.0","10":"1"},{"1":"372","2":"22.5","3":"cavity","4":"decid","5":"4.5","6":"1","7":"14.0","8":"16.5","9":"30.5","10":"1"},{"1":"374","2":"17.0","3":"cavity","4":"decid","5":"4.5","6":"1","7":"14.0","8":"14.0","9":"28.0","10":"1"},{"1":"378","2":"17.0","3":"cup","4":"bridge","5":"4.5","6":"0","7":"16.0","8":"15.5","9":"31.5","10":"0"}],"options":{"columns":{"min":{},"max":[10],"total":[10]},"rows":{"min":[10],"max":[10],"total":[6]},"pages":{}}}
-  </script>
-</div>
-<!-- rnb-frame-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <p><br /><br />
 Note: You may want to set some criteria for variable inclusion when you have a lot of variables in your data.</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-
-<!-- rnb-html-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbImtuaXRfYXNpcyJdLCJzaXppbmdQb2xpY3kiOltdfX0= -->
-
-<table>
-<thead>
-<tr class="header">
-<th align="left">usage</th>
-<th align="left">summary</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left">-</td>
-<td align="left">Select everything but</td>
-</tr>
-<tr class="even">
-<td align="left">:</td>
-<td align="left">Select range</td>
-</tr>
-<tr class="odd">
-<td align="left">contains()</td>
-<td align="left">Select columns whose name contains a character string</td>
-</tr>
-<tr class="even">
-<td align="left">start_with()</td>
-<td align="left">Select columns whose name starts with a string</td>
-</tr>
-<tr class="odd">
-<td align="left">ends_with()</td>
-<td align="left">Select columns whose name ends with a string</td>
-</tr>
-<tr class="even">
-<td align="left">matches()</td>
-<td align="left">Select columns whose name matches a regular expression</td>
-</tr>
-<tr class="odd">
-<td align="left">one_of()</td>
-<td align="left">Select columns whose names are in a group of names</td>
-</tr>
-</tbody>
-</table>
-
-
-<!-- rnb-html-end -->
-
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyBTZWxlY3QgdmFyaWFibGVzIGNvbnRhaW4gXCJuZXN0XCIgKGRlZmF1bHQgY2FzZSBpbnNlbnNpdGl2ZSlcbmhlYWQoc2VsZWN0KEJpcmROZXN0LCBjb250YWlucyhcIm5lc3RcIikpKVxuYGBgIn0= -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyBTZWxlY3QgdmFyaWFibGVzIGNvbnRhaW4gXCJuZXN0XCIgKGRlZmF1bHQgY2FzZSBpbnNlbnNpdGl2ZSlcbmhlYWQoc2VsZWN0KEJpcmROZXN0LCBjb250YWlucyhcIm5lc3RcIikpKVxuXG5gYGAifQ== -->
 <pre class="r"><code># Select variables contain &quot;nest&quot; (default case insensitive)
-head(select(BirdNest, contains(&quot;nest&quot;)))</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbInRibF9kZiIsInRibCIsImRhdGEuZnJhbWUiXSwibnJvdyI6NiwibmNvbCI6Mn0sInJkZiI6Ikg0c0lBQUFBQUFBQUE1VlFQVS9ETUJDOU9uV2drVnFRK0J2RWdHQmdaRUNNREloS1hZMXJpb1d4bzhRQnV2RzdHUnJPam8yS04wNnk3cjEzMzM2NFhWMVdxd29BQ3BnQ2dZSWlCTHA4dkt1dkFhWUV5UVFETSs4L01la0VnUmVQOFpVeFVJaStpYkFVL0YyNTdiOVphQUd3OElHYkN3ajI2MW4wNTEralA0MzhES0w5V1pNYS9pYTd1Q0tKNHVHOTdKemJObktmYTJVMldmR3N0UjhzTlpqN0JuN21NQXpmK1JTaGVaZW1KTEZhYzhmWmM0djF5SFpaeVlGdG5MSUdpNGovUlpvVlQ5cE1PT3FOMzJSZGk1ZmV2TlpYZmtBSWp6YVB1TnpEWkJ4Smh0aUtwcytXWnFOTU9wNXEvaVIxSkF1OE9Cek1tbFlabHk1QnRXUE9PcDd5S21GMVVzSnRzUHNCNmJyN2Vqd0NBQUE9In0= -->
-<div data-pagedtable="false">
-<script data-pagedtable-source type="application/json">
-{"columns":[{"label":["Nesttype"],"name":[1],"type":["chr"],"align":["left"]},{"label":["Nestling"],"name":[2],"type":["dbl"],"align":["right"]}],"data":[{"1":"cup","2":"17.0"},{"1":"cavity","2":"17.0"},{"1":"cavity","2":"15.0"},{"1":"cavity","2":"16.5"},{"1":"cavity","2":"14.0"},{"1":"cup","2":"15.5"}],"options":{"columns":{"min":{},"max":[10],"total":[2]},"rows":{"min":[10],"max":[10],"total":[6]},"pages":{}}}
-  </script>
-</div>
-<!-- rnb-frame-end -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuTkFcbmBgYCJ9 -->
-<pre class="r"><code>NA</code></pre>
+head(select(BirdNest, contains(&quot;nest&quot;)))
+</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
@@ -1881,31 +1813,13 @@ head(select(BirdNest, contains(&quot;nest&quot;)))</code></pre>
 <p>Use <strong>filter</strong> to select rows that meet criteria. you may use %in% when you have specified levels that would like the variable to be filtered on, however, when your criteria is blurred, you may use “grepl”, to roughly search pattern in the variable and return the rows meet criteria.</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuI1NlbGVjdCByb3dzIHdpdGggTGVuZ3RoIG1vcmUgdGhhbiAzMFxuZmlsdGVyKEJpcmROZXN0LCBMZW5ndGg+MzApXG5gYGAifQ== -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuI1NlbGVjdCByb3dzIHdpdGggTGVuZ3RoIG1vcmUgdGhhbiAzMFxuZmlsdGVyKEJpcmROZXN0LCBMZW5ndGg+MzApXG5cbiNTZWxlY3Qgcm93cyB3aXRoIE5vLmVnZ3MgbW9yZSB0aGFuIDYgYW5kIExvY2F0aW9uIGluIFwiZGVjaWRcIlxuZmlsdGVyKEJpcmROZXN0LCBOby5lZ2dzPjYgLCBMb2NhdGlvbiAlaW4lIGMoXCJkZWNpZFwiKSkgIyMgb3IgTG9jYXRpb249PVwiZGVjaWRcIiBpZiBqdXN0IG9uZSBsZXZlbFxuXG5gYGAifQ== -->
 <pre class="r"><code>#Select rows with Length more than 30
-filter(BirdNest, Length&gt;30)</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbInNwZWNfdGJsX2RmIiwidGJsX2RmIiwidGJsIiwiZGF0YS5mcmFtZSJdLCJucm93Ijo0LCJuY29sIjoxMn0sInJkZiI6Ikg0c0lBQUFBQUFBQUE0VlUzV3JiTUJSV2szajVJZTFHczdIYjNBM0dZcmFWd1dEUXV2TVliSlJRMWd4NmV5SXJ0b2dzR2YxMDljVmdqN0pIMlNQdEFVWXpPWlpDYkRZcUVPZm4rODZSdm9Qc0x4K3VUMGJYSTRSUUYvVlFCM1VENjZMZzYrTGo3QzFDdlk0TkRpd3dyT3l0SlUyc003YjdrZDA5Qnp3OUx6TENCQlk1VExFZzBqQ2lNT0hLd1kvbkJ0T1ZoTFJDbWNtWEZEZzQ3TWtsa1ZRSlNZeWFZcHRPYkJuMWhaT0Z1QlZLVjIwbFNlZ052VEY1NitqaEZaWm1PZjBNcFVzY3h3emsrcG1hem8zR0V2Q2FTSWNNWWdubEhuTVNBNk1ySVRtRjZTS1RvREpMUmVpbzZoNlZVVFVHRkpVL20vYjdMK1JXelR2OVVlZlBuRDF0MnRadHU5Z1U5N3ZObWlBaG1DWSt3SUxUMVQ4UmxkbEI3TzUxWEI4ZURad2RONjNubmYydWcvL1pYYitYcnY1Vnk3NW84VjQ3L1NmT2hvNzN2TVU3aityOGUyY2p4M3ZYNUtGN1YrT0ZCaHh5b2xBOXdMRkw5cThLT3lmaUg5V0RXT1M1NEM3cVhVSktQSEpCZUtvei8xem1SR2xkRmg0ZFhBZ01tdTRxKzNNUmtqVDFiWU5ZTUxGN2FwODROa3ZRWkw4WG96ejF0UXVoTVVnUDkyTW1GRW5DbHBxaEZOOUNyK2pRN2s0MTFNMW04NmN0R3pOUVhyWlBqaExRRU5yUExpYzJ1bXVWOUVWUmFiRkZuZXFMRGxyRkI3S1ZlR2g0ZFpOa2hqUEQxN00zMVFGYnVGNkh6dS90K2VQNnlNN0d0UXI4bU8yVUtmZmFBd1pMd2x4d1pCVnZCWWVGcEZ4N0pUYXJRaTAwZU43SS9rZDhacXNOM2YwRkp1Z3BWY2dFQUFBPSJ9 -->
-<div data-pagedtable="false">
-<script data-pagedtable-source type="application/json">
-{"columns":[{"label":["Species"],"name":[1],"type":["chr"],"align":["left"]},{"label":["Common"],"name":[2],"type":["chr"],"align":["left"]},{"label":["Page"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["Length"],"name":[4],"type":["dbl"],"align":["right"]},{"label":["Nesttype"],"name":[5],"type":["chr"],"align":["left"]},{"label":["Location"],"name":[6],"type":["chr"],"align":["left"]},{"label":["No.eggs"],"name":[7],"type":["dbl"],"align":["right"]},{"label":["Color"],"name":[8],"type":["dbl"],"align":["right"]},{"label":["Incubate"],"name":[9],"type":["dbl"],"align":["right"]},{"label":["Nestling"],"name":[10],"type":["dbl"],"align":["right"]},{"label":["Totcare"],"name":[11],"type":["dbl"],"align":["right"]},{"label":["Closed."],"name":[12],"type":["dbl"],"align":["right"]}],"data":[{"1":"Aphelocoma coerulescens","2":"Scrub Jay","3":"404","4":"30.5","5":"cup","6":"decid","7":"4.5","8":"1","9":"16","10":"18.5","11":"34.5","12":"0"},{"1":"Nucifraga columbiana","2":"Clark's Nutcracker","3":"410","4":"31.5","5":"cup","6":"conif","7":"3.0","8":"1","9":"17","10":"19.5","11":"36.5","12":"0"},{"1":"Perisoreus canadensis","2":"Cray Jay","3":"410","4":"30.5","5":"cup","6":"decid","7":"3.5","8":"1","9":"17","10":"15.0","11":"32.0","12":"0"},{"1":"Toxostoma redivivum","2":"California Thrasher","3":"476","4":"30.5","5":"cup","6":"shrub","7":"3.5","8":"1","9":"14","10":"13.0","11":"27.0","12":"0"}],"options":{"columns":{"min":{},"max":[10],"total":[12]},"rows":{"min":[10],"max":[10],"total":[4]},"pages":{}}}
-  </script>
-</div>
-<!-- rnb-frame-end -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuXG4jU2VsZWN0IHJvd3Mgd2l0aCBOby5lZ2dzIG1vcmUgdGhhbiA2IGFuZCBMb2NhdGlvbiBpbiBcImRlY2lkXCJcbmZpbHRlcihCaXJkTmVzdCwgTm8uZWdncz42ICwgTG9jYXRpb24gJWluJSBjKFwiZGVjaWRcIikpICMjIG9yIExvY2F0aW9uPT1cImRlY2lkXCIgaWYganVzdCBvbmUgbGV2ZWxcbmBgYCJ9 -->
-<pre class="r"><code>
+filter(BirdNest, Length&gt;30)
+
 #Select rows with No.eggs more than 6 and Location in &quot;decid&quot;
-filter(BirdNest, No.eggs&gt;6 , Location %in% c(&quot;decid&quot;)) ## or Location==&quot;decid&quot; if just one level</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbInNwZWNfdGJsX2RmIiwidGJsX2RmIiwidGJsIiwiZGF0YS5mcmFtZSJdLCJucm93IjozLCJuY29sIjoxMn0sInJkZiI6Ikg0c0lBQUFBQUFBQUE0MVQzMnZiTUJCV25UaHBUZHI5Z2cxR0gveFl4bXdHWXpCR1lXRVpZNE1TeXByUlB1NGlhN2FJWWhsSjNwYnRwWC95L29FMU84ZTYwUGloekNDZjdqNTlwL3QwMHVmM1Z5K2pxNGd4MW1OOUZyQmVpRk1XZnBsOVNGNHoxZy9RMlVQZ29MRS9jZEVqbkl4dzNQZU1Cbmg0RHFhMk1UZ2pPVlJTcWRvU2NpR2RnNWlEMFVxV29yU1NrQWN6bzNPbHM1VVR5QlNaTGp0Skg3OVR3QmNKSnF4RUZrOEt5UmVRQ2VIUko1ZUZkQ0taR3dIV0lUNnRYUUdPRng2T1B1cmFpdmpTaUNidFVaTjIvT3U2VWNiR3YyTnZ2ekwvdGZpejFoay85L2FFNEoyeUJoeStTN2U2MDl0bGhKbmdNcnZEb1FLTy9jWlB2VDNlRnJEQjMvNXBuYTdkOGs5MkN5ZEJXL3hGUjJEYXdVOTkvSTIzcC8rNy84NHRDVXRZQ3V2UFlPU0R3NHNLcFFwcS9tQ2lsMHZzZU92MXp5R252ZzdPUkprN2F1UCtWRmpuVmhXaCsyZWFnNU5iNW5DcVU1SG5sRGFjYUtVTnJmMVU4bm9PVHR6T2haY3dKKzVNTzd5WEJBOG5TbHVScFIwMUIwYi9TRW5SSVk3Z0duL3I5ZnB2VnpaWFlFazJCYU1NSEtUZkRQTFJ1K2xRaHJwcXRDQXBhRjVWMkNIdm1VN2dYbDAybFdRSkwrcHlrYnhxTnRqQTdYZm81NzFiODFHN1piRDJxVUk2Wmp4bGZJOVV1NEs1VU40NVFzVWJ3V2xsWk9sSUNVWnQ2clFEV2hkeHJTaXkwY1p1L2dGQnIxUjlUQVFBQUE9PSJ9 -->
-<div data-pagedtable="false">
-<script data-pagedtable-source type="application/json">
-{"columns":[{"label":["Species"],"name":[1],"type":["chr"],"align":["left"]},{"label":["Common"],"name":[2],"type":["chr"],"align":["left"]},{"label":["Page"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["Length"],"name":[4],"type":["dbl"],"align":["right"]},{"label":["Nesttype"],"name":[5],"type":["chr"],"align":["left"]},{"label":["Location"],"name":[6],"type":["chr"],"align":["left"]},{"label":["No.eggs"],"name":[7],"type":["dbl"],"align":["right"]},{"label":["Color"],"name":[8],"type":["dbl"],"align":["right"]},{"label":["Incubate"],"name":[9],"type":["dbl"],"align":["right"]},{"label":["Nestling"],"name":[10],"type":["dbl"],"align":["right"]},{"label":["Totcare"],"name":[11],"type":["dbl"],"align":["right"]},{"label":["Closed."],"name":[12],"type":["dbl"],"align":["right"]}],"data":[{"1":"Parus atricapillus","2":"Black-capped Chickadee","3":"424","4":"13","5":"cavity","6":"decid","7":"7.0","8":"1","9":"12","10":"16","11":"28","12":"1"},{"1":"Sitta carolinensis","2":"White-breasted Nuthatch","3":"434","4":"14","5":"cavity","6":"decid","7":"6.5","8":"1","9":"12","10":"14","11":"26","12":"1"},{"1":"Troglodytes aedon","2":"House Wren","3":"438","4":"12","5":"cavity","6":"decid","7":"7.0","8":"1","9":"13","10":"15","11":"28","12":"1"}],"options":{"columns":{"min":{},"max":[10],"total":[12]},"rows":{"min":[10],"max":[10],"total":[3]},"pages":{}}}
-  </script>
-</div>
-<!-- rnb-frame-end -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuTkFcbmBgYCJ9 -->
-<pre class="r"><code>NA</code></pre>
+filter(BirdNest, No.eggs&gt;6 , Location %in% c(&quot;decid&quot;)) ## or Location==&quot;decid&quot; if just one level
+</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
@@ -1913,18 +1827,9 @@ filter(BirdNest, No.eggs&gt;6 , Location %in% c(&quot;decid&quot;)) ## or Locati
 <p><strong>Question:</strong> Could you filter the rows with levels contains “Jay” in Common column? (hint: use grepl function)</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZmlsdGVyKEJpcmROZXN0ICxncmVwbChcIkpheVwiLENvbW1vbikpXG5gYGAifQ== -->
-<pre class="r"><code>filter(BirdNest ,grepl(&quot;Jay&quot;,Common))</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbInNwZWNfdGJsX2RmIiwidGJsX2RmIiwidGJsIiwiZGF0YS5mcmFtZSJdLCJucm93Ijo0LCJuY29sIjoxMn0sInJkZiI6Ikg0c0lBQUFBQUFBQUE0VlQwVzdUTUJUMTBvU3VVVGNRRTRMSC9rQ2p3UVJDU0VDMklCQm9taW8ycEQzaU9sNWk0ZGlSNDJqTEc1L0NwL0JKZkFCYWNaSjdxemFBWnNtNnZ1ZWNlKzFqMlovZlhSNkZseUVoWkVSODRwRlI0SllrK0hMeGZ2NlNFTjl6eVk0akptMjhjYUlEdDVpNitjQk5INGpIeDJYT3BXYTZvRE9tdWFrbHJ4aFhGZEJQUGpTRjBpWVh5dEVOVlpyeE1xZXlSdjRnNlVCaHJlT05xQ3kxRktoSEMrNEFiWGhkelJoVk5IVmRSVFhZZm5MT1RMMmNmYUlOQU9GQ3FFYXJEV1QzUk5aOE0wOE1iYnFja1AyMlZkekVyVzhTTjE4aGZvZjRnOERvZFc4QWZ3WHhOVVRBQjBjYnNicThlN2xkRTZTY2lSUVRwcFc0K21mU3kvQmNEL3ZOLzRwVFBGYXZlL3VyVC80WDEvME9vZjRRL0QwbFczR3Rld2I4YytDUElFWUQzWEhjNHljL0lZSXUzdGFSTzhmV2t3d1VMVGkraHltQTQvUFNYUTNINTNVdjBVV2hGV1QrZ21ZY21WT3VNcHZqbXpqamxiVk5pZXp1cVdiVWluWGwrRXhIUE11d2JaQm9xUTFxUHlwV0w2bmxtNzJrVUJuV1htakxxRUY2bkVoZDhUUWF1SmtZZlIyaG96MDN2Zlp5VjZ2Vjc2RnRKbW1GdGhFTVUvZHZvaXZqNmwxMk95Z1o2N0wxNG9xODlnc0hnK0lkTXdEdTE2bzlTVHBuZWEyK3pWKzBHM1IwUC9aZzdXK3NwLzJXM2dwYUJYak43cGFGUXUrQnBFc3VJZGwzamp2RFVXbUVzdWpFb1ZWa3RhV29DNW1XaUhUZXlPMGYxUFBHZGJrRUFBQT0ifQ== -->
-<div data-pagedtable="false">
-<script data-pagedtable-source type="application/json">
-{"columns":[{"label":["Species"],"name":[1],"type":["chr"],"align":["left"]},{"label":["Common"],"name":[2],"type":["chr"],"align":["left"]},{"label":["Page"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["Length"],"name":[4],"type":["dbl"],"align":["right"]},{"label":["Nesttype"],"name":[5],"type":["chr"],"align":["left"]},{"label":["Location"],"name":[6],"type":["chr"],"align":["left"]},{"label":["No.eggs"],"name":[7],"type":["dbl"],"align":["right"]},{"label":["Color"],"name":[8],"type":["dbl"],"align":["right"]},{"label":["Incubate"],"name":[9],"type":["dbl"],"align":["right"]},{"label":["Nestling"],"name":[10],"type":["dbl"],"align":["right"]},{"label":["Totcare"],"name":[11],"type":["dbl"],"align":["right"]},{"label":["Closed."],"name":[12],"type":["dbl"],"align":["right"]}],"data":[{"1":"Aphelocoma coerulescens","2":"Scrub Jay","3":"404","4":"30.5","5":"cup","6":"decid","7":"4.5","8":"1","9":"16.0","10":"18.5","11":"34.5","12":"0"},{"1":"Gymnorhina cyanocephalus","2":"Pinyon Jay","3":"406","4":"26.5","5":"cup","6":"conif","7":"4.5","8":"1","9":"16.5","10":"21.0","11":"37.5","12":"0"},{"1":"Cyanocitta cristata","2":"Blue Jay","3":"408","4":"29.5","5":"cup","6":"conif","7":"4.5","8":"1","9":"17.0","10":"19.0","11":"36.0","12":"0"},{"1":"Perisoreus canadensis","2":"Cray Jay","3":"410","4":"30.5","5":"cup","6":"decid","7":"3.5","8":"1","9":"17.0","10":"15.0","11":"32.0","12":"0"}],"options":{"columns":{"min":{},"max":[10],"total":[12]},"rows":{"min":[10],"max":[10],"total":[4]},"pages":{}}}
-  </script>
-</div>
-<!-- rnb-frame-end -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuTkFcbmBgYCJ9 -->
-<pre class="r"><code>NA</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZmlsdGVyKEJpcmROZXN0ICxncmVwbChcIkpheVwiLENvbW1vbikpXG5cbmBgYCJ9 -->
+<pre class="r"><code>filter(BirdNest ,grepl(&quot;Jay&quot;,Common))
+</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
@@ -1935,80 +1840,17 @@ filter(BirdNest, No.eggs&gt;6 , Location %in% c(&quot;decid&quot;)) ## or Locati
 <p>When you want to create new columns based on the values in existing columns, for example, do calculation using existing variables, we’ll use the dplyr function mutate().</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuaGVhZChtdXRhdGUoQmlyZE5lc3QsIHJhdGlvID0gSW5jdWJhdGUvVG90Y2FyZSkpXG5gYGAifQ== -->
-<pre class="r"><code>head(mutate(BirdNest, ratio = Incubate/Totcare))</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuaGVhZChtdXRhdGUoQmlyZE5lc3QsIHJhdGlvID0gSW5jdWJhdGUvVG90Y2FyZSkpXG5oZWFkKG11dGF0ZShCaXJkTmVzdCwgcmF0aW8gPSBJbmN1YmF0ZS9Ub3RjYXJlLCBpbnZlcnNlID0gMS9yYXRpbykpXG5oZWFkKG11dGF0ZShCaXJkTmVzdCwgY3Vtc3VtX3RvdGFsID0gY3Vtc3VtKFRvdGNhcmUpKSlcbmhlYWQobXV0YXRlKEJpcmROZXN0LCBub3JfTmVzdCA9IE5lc3RsaW5nL21lYW4oTmVzdGxpbmcsIG5hLnJtPVQpKSkgIyBuYS5ybT1UIHJlbW92ZXMgdGhlIG1pc3NpbmcgdmFsdWUgd2hlbiBjYWxjdWxhdGluZyBtZWFuIFxuYGBgIn0= -->
+<pre class="r"><code>head(mutate(BirdNest, ratio = Incubate/Totcare))
+head(mutate(BirdNest, ratio = Incubate/Totcare, inverse = 1/ratio))
+head(mutate(BirdNest, cumsum_total = cumsum(Totcare)))
+head(mutate(BirdNest, nor_Nest = Nestling/mean(Nestling, na.rm=T))) # na.rm=T removes the missing value when calculating mean </code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbInRibF9kZiIsInRibCIsImRhdGEuZnJhbWUiXSwibnJvdyI6NiwibmNvbCI6MTN9LCJyZGYiOiJINHNJQUFBQUFBQUFBNlZVelU0Yk1SQTJJWnRBMUVENi8zUEtBM1FYRUZYYlF3V2hVS1FLaWxDaEVxY1d4MnV5RnNaZWViM1FQVlRpUWc5OWlyNVlLMjdsMkhNUHBEWTdEb2xGVzZGYXV4clBmUDdHTTJQTnZGM1ptVy9zTkJCQzQ2aUtLbWc4TUZzVXZOdGVEWjhqVkswWVpjd0FrMVorTklkdW0wM1QvQzN6MXdDNHVWMG9MRVNldFRWc0FIajRwbUF5TGdUT05NM2FQTmVVSFZLaEZYTUg3cG9EV0pIRVVBa1RWT0dNVU9IQU81Y2crT1g1RU5GQmVaY3Frbk8yUnhXQTAxdTRrRXF3ckowbWtuYXBGMjdybFkxSGlmWWFFNzB1VXpIWUgyM2xQRTF5RlhZcDU0ekc3VlZlRUt4Sk1uQjhieWxMUXAxSXJLOUNIN3hVOGtpRVJOSHNTdnorU3A3dEZ5SEJhWG9WUE9YQzJuUkJUOW1nTzRmSDlrVlE1d2lCN0hoeUYrUlhCS3ZrUFlIenZud0svdWJRaVBTS05FN3lGTFkxZ2crWkxxNnRYYmdZOVJyRWxMRDRQNVJhVjdHNGQxbWNHNUNFazdmK0xoMXY4V2VwL0VzT3JmSStWN1Faa0JISXg1NmMvUU52enVQTkhvL3laanplRXRnN25WSXVnTDRBdkJlZ0x4NlA4Snh5M2Z3V1R3SC9mbkwyL3VUc3cwRC90dnQ1N2N1bkh3UDlkS25hTXA4M0lRS0JEMmlHeWpkdmdyRytsWm9IcEs1emE4dnk0RUFLMEtxYjJMd21JT3RVOUhRQzJzU0dhU05kcEE2ZFdKZW1YOWlBV2QrUUVlMzFuTnRnV1hMcFdtbml0U0I1MTNUcHNDOXV1dDF4dDZVbVdEbTR2c3hsUnVQSXVWTDJIaSsxU2RQYmtVdlBEc0NLclhpLzMvL2wxNEJ3bkxrYU9HTWp4aHBIZThyd2pYYnVVZW95dFlrWlVzV08xOEFqanluUE1KMExHMGtjbWdFbzlzTm45b0lMdUZ4TjJOZUc5czN5eWtvZlhBV3U1cWJrWnZDNjJEazJzOC9OSXp2TmJNSlJxcGpRTGhOanpTSXROWGJuR2tSeVo3bklEWjMvQm5uMzdGdFZCZ0FBIn0= -->
-<div data-pagedtable="false">
-<script data-pagedtable-source type="application/json">
-{"columns":[{"label":["Species"],"name":[1],"type":["chr"],"align":["left"]},{"label":["Common"],"name":[2],"type":["chr"],"align":["left"]},{"label":["Page"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["Length"],"name":[4],"type":["dbl"],"align":["right"]},{"label":["Nesttype"],"name":[5],"type":["chr"],"align":["left"]},{"label":["Location"],"name":[6],"type":["chr"],"align":["left"]},{"label":["No.eggs"],"name":[7],"type":["dbl"],"align":["right"]},{"label":["Color"],"name":[8],"type":["dbl"],"align":["right"]},{"label":["Incubate"],"name":[9],"type":["dbl"],"align":["right"]},{"label":["Nestling"],"name":[10],"type":["dbl"],"align":["right"]},{"label":["Totcare"],"name":[11],"type":["dbl"],"align":["right"]},{"label":["Closed."],"name":[12],"type":["dbl"],"align":["right"]},{"label":["ratio"],"name":[13],"type":["dbl"],"align":["right"]}],"data":[{"1":"Tyrannus tyrannus","2":"Eastern Kingbird","3":"360","4":"20.0","5":"cup","6":"decid","7":"3.5","8":"1","9":"17.0","10":"17.0","11":"34.0","12":"0","13":"0.5000000"},{"1":"Myiodynastes luteiventris","2":"Sulphur-bellied Flycatcher","3":"368","4":"20.0","5":"cavity","6":"decid","7":"3.5","8":"1","9":"15.5","10":"17.0","11":"32.5","12":"1","13":"0.4769231"},{"1":"Myiarchus cinerascens","2":"Ash-thoated Flycatcher","3":"372","4":"20.0","5":"cavity","6":"decid","7":"4.5","8":"1","9":"15.0","10":"15.0","11":"30.0","12":"1","13":"0.5000000"},{"1":"Myiarchus tyrannulus","2":"Brown-crested Flycatcher","3":"372","4":"22.5","5":"cavity","6":"decid","7":"4.5","8":"1","9":"14.0","10":"16.5","11":"30.5","12":"1","13":"0.4590164"},{"1":"Myarchus tuberculifer","2":"Dusky-capped Flycatcher","3":"374","4":"17.0","5":"cavity","6":"decid","7":"4.5","8":"1","9":"14.0","10":"14.0","11":"28.0","12":"1","13":"0.5000000"},{"1":"Sayornis phoebe","2":"Eastern Phoebe","3":"378","4":"17.0","5":"cup","6":"bridge","7":"4.5","8":"0","9":"16.0","10":"15.5","11":"31.5","12":"0","13":"0.5079365"}],"options":{"columns":{"min":{},"max":[10],"total":[13]},"rows":{"min":[10],"max":[10],"total":[6]},"pages":{}}}
-  </script>
-</div>
-<!-- rnb-frame-end -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuaGVhZChtdXRhdGUoQmlyZE5lc3QsIHJhdGlvID0gSW5jdWJhdGUvVG90Y2FyZSwgaW52ZXJzZSA9IDEvcmF0aW8pKVxuYGBgIn0= -->
-<pre class="r"><code>head(mutate(BirdNest, ratio = Incubate/Totcare, inverse = 1/ratio))</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbInRibF9kZiIsInRibCIsImRhdGEuZnJhbWUiXSwibnJvdyI6NiwibmNvbCI6MTR9LCJyZGYiOiJINHNJQUFBQUFBQUFBNlZVelU0VVFSQnVscDFkMk1pQy8raHBIOEFaSVJyMVlOaEZrTVNBaEFnbW5KVGVubWFudzJ6M3BLZG5jUTRtWFBCZ2ZBaWZ3a2ZnSll5R214dzllMkR0WWFxVzNRbHFpSk9aVkgvOTlWZGRWVDFkcjVhM0g5UzJhNFNRY1ZJbUpUTHUyQ0Z4WG0rdHVFOElLWmNzR0xQRVpHYmYyVVhYN2FCdXZ4bjdWWUM0dXBWcUttVVNOd3dNZ0xqek1oWEtUeVdORFk4YllXSzQ2SEZwdE1BRk4rMENxbGxncFV4SXJtbk11RVR5eGprSmZzTmtTSWhVMHVhYUphSFk1UnJJNlUyYUtpMUYzSWdDeGR1OEVPN004eXdlTFJ1clFuYmFRdnN3ZjNjekNhTWcwVzZiaDZIZ2ZtTWxUQmsxTEJnNHZyVVlCNjRKRkRVWHNiUFB0TnFYTHRNOHZwQy92WnpFZTZuTGFCUmRSTmN4ckEwTU9xdHpwZFU3eUU2RXRQWUoyRmJCN29EOVRPREpkUTloZmRFK0FuL3paTVFXaWpUT2tnaUdGVVo3d3FTWFJtY3VScjA2UG1mQy93OVFhV3ZoZDg2TGN3V1NRSHZ0N3haMXpaODUrSmNkZXZMOXNHajN3WHBnN3hYczNCOTA4d1hkM01HbzduNUJ0d2p6clZadUZ3QXZnTzRwNE9iQmlBN0JaZk5ySGdQLy9mRGt6ZUhKMndIK3R2Tmg5ZVA3SHdOOHZGaWVzZThnVG5EU0lrZnpuOWpzMFFDUGRiOTh0Uy9pWmgvakhPa3NqcVJkSHBQOFg2bkRaSFV6c2dmUDhjWlhsbFMzcXlTZzhnYTFmd0V3YTF4MlRBQm9ZdDFlUDVOR3lFNnNLWHZQeEVCWlhWY2U3M1RRcmJPa1FvVlhjT0tGWkVuYjN1NWhYNkh0RXFqZFVvWlJqWFIxS1ZReDl6MTBwYk45a0JPeXgzWE1DNWxPMmhiaFliWlQ5aXRsQmVuMys3K0tKV0VoamJFa09GbnpxYUhlcnJaNmkwNExrcXFLc2p5dHFKUjFhYWNnSHRPRmllbEVacEg0cnUyamNzOTluRzF3UnVmUEZJd3JRK042dm1XcEQ2NGNQQUo3QXJaL1krd2h0UzBVMjFyV0ZMT0V2VWdMYVRBVE94dDdSaG1LNjJwTWhUaHpsaHM1L1ExR25oNDVuQVlBQUE9PSJ9 -->
-<div data-pagedtable="false">
-<script data-pagedtable-source type="application/json">
-{"columns":[{"label":["Species"],"name":[1],"type":["chr"],"align":["left"]},{"label":["Common"],"name":[2],"type":["chr"],"align":["left"]},{"label":["Page"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["Length"],"name":[4],"type":["dbl"],"align":["right"]},{"label":["Nesttype"],"name":[5],"type":["chr"],"align":["left"]},{"label":["Location"],"name":[6],"type":["chr"],"align":["left"]},{"label":["No.eggs"],"name":[7],"type":["dbl"],"align":["right"]},{"label":["Color"],"name":[8],"type":["dbl"],"align":["right"]},{"label":["Incubate"],"name":[9],"type":["dbl"],"align":["right"]},{"label":["Nestling"],"name":[10],"type":["dbl"],"align":["right"]},{"label":["Totcare"],"name":[11],"type":["dbl"],"align":["right"]},{"label":["Closed."],"name":[12],"type":["dbl"],"align":["right"]},{"label":["ratio"],"name":[13],"type":["dbl"],"align":["right"]},{"label":["inverse"],"name":[14],"type":["dbl"],"align":["right"]}],"data":[{"1":"Tyrannus tyrannus","2":"Eastern Kingbird","3":"360","4":"20.0","5":"cup","6":"decid","7":"3.5","8":"1","9":"17.0","10":"17.0","11":"34.0","12":"0","13":"0.5000000","14":"2.000000"},{"1":"Myiodynastes luteiventris","2":"Sulphur-bellied Flycatcher","3":"368","4":"20.0","5":"cavity","6":"decid","7":"3.5","8":"1","9":"15.5","10":"17.0","11":"32.5","12":"1","13":"0.4769231","14":"2.096774"},{"1":"Myiarchus cinerascens","2":"Ash-thoated Flycatcher","3":"372","4":"20.0","5":"cavity","6":"decid","7":"4.5","8":"1","9":"15.0","10":"15.0","11":"30.0","12":"1","13":"0.5000000","14":"2.000000"},{"1":"Myiarchus tyrannulus","2":"Brown-crested Flycatcher","3":"372","4":"22.5","5":"cavity","6":"decid","7":"4.5","8":"1","9":"14.0","10":"16.5","11":"30.5","12":"1","13":"0.4590164","14":"2.178571"},{"1":"Myarchus tuberculifer","2":"Dusky-capped Flycatcher","3":"374","4":"17.0","5":"cavity","6":"decid","7":"4.5","8":"1","9":"14.0","10":"14.0","11":"28.0","12":"1","13":"0.5000000","14":"2.000000"},{"1":"Sayornis phoebe","2":"Eastern Phoebe","3":"378","4":"17.0","5":"cup","6":"bridge","7":"4.5","8":"0","9":"16.0","10":"15.5","11":"31.5","12":"0","13":"0.5079365","14":"1.968750"}],"options":{"columns":{"min":{},"max":[10],"total":[14]},"rows":{"min":[10],"max":[10],"total":[6]},"pages":{}}}
-  </script>
-</div>
-<!-- rnb-frame-end -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuaGVhZChtdXRhdGUoQmlyZE5lc3QsIGN1bXN1bV90b3RhbCA9IGN1bXN1bShUb3RjYXJlKSkpXG5gYGAifQ== -->
-<pre class="r"><code>head(mutate(BirdNest, cumsum_total = cumsum(Totcare)))</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbInRibF9kZiIsInRibCIsImRhdGEuZnJhbWUiXSwibnJvdyI6NiwibmNvbCI6MTN9LCJyZGYiOiJINHNJQUFBQUFBQUFBNlZVMjA0Yk1SQTFJWnRBUklEZUwwLzVnTzRDb21yN1VFRm9LRkpWaXFKQ0pkN0E4WnFzaFdPdmZBbmR0M3dLbjlKUDZuTWZTTDNaTVNTcnRCWHFTcXZqbWVNejlvdzE4M1gvZEx0eDJrQUlMYUlxcXFERndDMVI4TzNrSUh5SFVMWGlqQVZITE9mNDNXMTY1QlpOOTYrN3Z3YkVnNU5NWVNHc2JobFlBUEhpUzhaa25BbXNEZFV0YmcxbFF5cU1ZbjdERTdjQks1STRLV0dDS3F3SkZaNThmRWRDWEc2bmhKNnlQYXFJNWV5Q0tpRFhqbkVtbFdDNmxTYVM5bWpwdXVzZjgvc28wZnJNUkwvSFZBeitsOGVXcDRsVllZOXl6bWpjT3VBWndZWWt0NEdmN3Vra05JbkVaaDc3L0lPU1Z5SWtpdXE1L0xOOXF5K3prT0EwblVldittdDEvYVZYODB1M2g2UDhSVkQ3Q2dHMlMzZ09lSTNnSzNTdllYOFozMEM4TFRTRHBTSXRFcHZDc2tid2tKbnMzdFlreEd6VUlLYUV4ZjloMUhxS3hmMjc0cXhBRWg0Zi9oMjlidmRuWWZ3THA3N2lQRiswRGNBSThGVUpOLytnMnlycE5rZXp1bzJTYmcvODdYYUJPMkR2Z080OTJMdWpHWjAzN3AyZlA2OTdYZUJwcThDekh3V1M4d0w3WFpETlRJaEE0QUhWcUhqekpqanJ4Nmw3UU9vN3Q5YVJnNEVVWUZXNzJMMG1NSWRVOUUwQzF0S1JheU9UcFo1ZE9wU3VYOWl0c240a0k5cnYrN0JCUjNMcFcybnBreUMyNTdwME9oWjMzZTYxSjlJUXJEeGQ3M0NwYVJ5QnVVTHNRTnZCbVpFRzgxS0d5NjdGSTU5bFBnY3JlZUhINC9HdmNpa0l4OXFYd2pzYk1UWTR1bEJPNzZ5YmtxUXUwencvSjZya1V6WW9pUmRVeWJGbVJYNlRPSFJ6VUZ5R2IvTURKblR4TldGZG0xbzNpeU1yWXdnVitOSzd5cnY1NisvT3NSdUJmaXpsUXkxUE9Fb1ZFOFpuNHJ3Nktpb0VIaUs1OTB4eVF6ZS9BUTdUL0twY0JnQUEifQ== -->
-<div data-pagedtable="false">
-<script data-pagedtable-source type="application/json">
-{"columns":[{"label":["Species"],"name":[1],"type":["chr"],"align":["left"]},{"label":["Common"],"name":[2],"type":["chr"],"align":["left"]},{"label":["Page"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["Length"],"name":[4],"type":["dbl"],"align":["right"]},{"label":["Nesttype"],"name":[5],"type":["chr"],"align":["left"]},{"label":["Location"],"name":[6],"type":["chr"],"align":["left"]},{"label":["No.eggs"],"name":[7],"type":["dbl"],"align":["right"]},{"label":["Color"],"name":[8],"type":["dbl"],"align":["right"]},{"label":["Incubate"],"name":[9],"type":["dbl"],"align":["right"]},{"label":["Nestling"],"name":[10],"type":["dbl"],"align":["right"]},{"label":["Totcare"],"name":[11],"type":["dbl"],"align":["right"]},{"label":["Closed."],"name":[12],"type":["dbl"],"align":["right"]},{"label":["cumsum_total"],"name":[13],"type":["dbl"],"align":["right"]}],"data":[{"1":"Tyrannus tyrannus","2":"Eastern Kingbird","3":"360","4":"20.0","5":"cup","6":"decid","7":"3.5","8":"1","9":"17.0","10":"17.0","11":"34.0","12":"0","13":"34.0"},{"1":"Myiodynastes luteiventris","2":"Sulphur-bellied Flycatcher","3":"368","4":"20.0","5":"cavity","6":"decid","7":"3.5","8":"1","9":"15.5","10":"17.0","11":"32.5","12":"1","13":"66.5"},{"1":"Myiarchus cinerascens","2":"Ash-thoated Flycatcher","3":"372","4":"20.0","5":"cavity","6":"decid","7":"4.5","8":"1","9":"15.0","10":"15.0","11":"30.0","12":"1","13":"96.5"},{"1":"Myiarchus tyrannulus","2":"Brown-crested Flycatcher","3":"372","4":"22.5","5":"cavity","6":"decid","7":"4.5","8":"1","9":"14.0","10":"16.5","11":"30.5","12":"1","13":"127.0"},{"1":"Myarchus tuberculifer","2":"Dusky-capped Flycatcher","3":"374","4":"17.0","5":"cavity","6":"decid","7":"4.5","8":"1","9":"14.0","10":"14.0","11":"28.0","12":"1","13":"155.0"},{"1":"Sayornis phoebe","2":"Eastern Phoebe","3":"378","4":"17.0","5":"cup","6":"bridge","7":"4.5","8":"0","9":"16.0","10":"15.5","11":"31.5","12":"0","13":"186.5"}],"options":{"columns":{"min":{},"max":[10],"total":[13]},"rows":{"min":[10],"max":[10],"total":[6]},"pages":{}}}
-  </script>
-</div>
-<!-- rnb-frame-end -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuaGVhZChtdXRhdGUoQmlyZE5lc3QsIG5vcl9OZXN0ID0gTmVzdGxpbmcvbWVhbihOZXN0bGluZywgbmEucm09VCkpKSAjIG5hLnJtPVQgcmVtb3ZlcyB0aGUgbWlzc2luZyB2YWx1ZSB3aGVuIGNhbGN1bGF0aW5nIG1lYW4gXG5gYGAifQ== -->
-<pre class="r"><code>head(mutate(BirdNest, nor_Nest = Nestling/mean(Nestling, na.rm=T))) # na.rm=T removes the missing value when calculating mean </code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbInRibF9kZiIsInRibCIsImRhdGEuZnJhbWUiXSwibnJvdyI6NiwibmNvbCI6MTN9LCJyZGYiOiJINHNJQUFBQUFBQUFBNlZVUVU4VU1SUXV5ODR1Yk5nRkZVUTltRDE0WkFhSVJqMFlkbkdSYUVSQ1pFM3dwTjFPMldrbzdhVFRBZWZHelgvZzBaaDQ4dVRKby8vQmt3ZC9nVEV4SWtjUHJDM1R3bTZER3VJa2s2L3ZmZjFlMzN0TjMrT2xqZXVWalFvQVlCZ1VRUUVNZTJvSnZDZnRaZjgyQU1XQ01vWVVNYXJ4aGRwMFFTMnE2cDlRZjhrUTU5cVpnSXlsU1YyYWhTRXVQOG9JRHpNR0U0bVRPazBsSmp1WVNVSHNoaW0xQVFvVUtTa2lEQXVZSU13c09YbENtcmcwN1JOYUt1MWdnVkpLTnJFdzVQZzZ6TGhnSktuSEVjY2Q3S1E3Y1UvbkkxajlJV0hkRGhHaDhWOVpUMmtjcGNMdllFb0pEdXZMTkVOUW91ZzQ4TVhGSlBKbHhLRThqYjEwVi9CZDVpT0JrMVA1NmFVMDJjcDhCT1A0TkxwbTAxcXpTZGQwMHMyZFBYMGpvTGtMRERZZGZHN3dEVEJmcnJ0aDlydDQwOFNiQndQb05Ha1lwYkZabGhEY0lUSTdzM1VVWWpDcUYySkV3djh3U2gxQnd1NUpjOFpNRVJiUC94MnRyckdmRy8vQ3ZpOC96elp0MW1CZ2NNYkJ1VC9vNWgzZDNONmdidGJSTFJwL3M1bmpnckVYak82T3NSdDdBenBybkxXK3hzRm5RR3RQdng3ai91c1BrMlB2M2pjTzd2dXZxdCsvTkg2VXJuNmFmbnV0OFhQbTViZnExRWRuUW5nTWJ1TUU1SGRlTmM3eWVxd3VFTnVYVzJyeDdXM09qRlZjZytvMkRiT0NXVmRHeGhwWlZjOUlackZsUjFhNGVpL2tXRmxlNVFIdWRtMVlyOFVwdDA5cDVBRkRhVWU5MHY1WVZMMTJxMjF6aWFDd2RMbEZlWUxEd081bVhEelRDcWU2VWZXOEExdWhub0VGM2ZSZXIvZkxiUU9pTUxGdHNNNUtDQ1VNTm9YU0srdlFrWlI1ckd0VG9vS2VzSjRqSGhLT1l6eGxPcFBRVnpPUWJmbTM5QUZIZFA1VnpiclV0NjdtUnhaNkpwUm4yNjY2cm1hdnpaMUNOZjdzU05JRFRSY2N4SUl3YVN0UjNpU1FYRUs3cjRJNHRaNmoyc0RoYjhUcnVZaFlCZ0FBIn0= -->
-<div data-pagedtable="false">
-<script data-pagedtable-source type="application/json">
-{"columns":[{"label":["Species"],"name":[1],"type":["chr"],"align":["left"]},{"label":["Common"],"name":[2],"type":["chr"],"align":["left"]},{"label":["Page"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["Length"],"name":[4],"type":["dbl"],"align":["right"]},{"label":["Nesttype"],"name":[5],"type":["chr"],"align":["left"]},{"label":["Location"],"name":[6],"type":["chr"],"align":["left"]},{"label":["No.eggs"],"name":[7],"type":["dbl"],"align":["right"]},{"label":["Color"],"name":[8],"type":["dbl"],"align":["right"]},{"label":["Incubate"],"name":[9],"type":["dbl"],"align":["right"]},{"label":["Nestling"],"name":[10],"type":["dbl"],"align":["right"]},{"label":["Totcare"],"name":[11],"type":["dbl"],"align":["right"]},{"label":["Closed."],"name":[12],"type":["dbl"],"align":["right"]},{"label":["nor_Nest"],"name":[13],"type":["dbl"],"align":["right"]}],"data":[{"1":"Tyrannus tyrannus","2":"Eastern Kingbird","3":"360","4":"20.0","5":"cup","6":"decid","7":"3.5","8":"1","9":"17.0","10":"17.0","11":"34.0","12":"0","13":"1.1772465"},{"1":"Myiodynastes luteiventris","2":"Sulphur-bellied Flycatcher","3":"368","4":"20.0","5":"cavity","6":"decid","7":"3.5","8":"1","9":"15.5","10":"17.0","11":"32.5","12":"1","13":"1.1772465"},{"1":"Myiarchus cinerascens","2":"Ash-thoated Flycatcher","3":"372","4":"20.0","5":"cavity","6":"decid","7":"4.5","8":"1","9":"15.0","10":"15.0","11":"30.0","12":"1","13":"1.0387469"},{"1":"Myiarchus tyrannulus","2":"Brown-crested Flycatcher","3":"372","4":"22.5","5":"cavity","6":"decid","7":"4.5","8":"1","9":"14.0","10":"16.5","11":"30.5","12":"1","13":"1.1426216"},{"1":"Myarchus tuberculifer","2":"Dusky-capped Flycatcher","3":"374","4":"17.0","5":"cavity","6":"decid","7":"4.5","8":"1","9":"14.0","10":"14.0","11":"28.0","12":"1","13":"0.9694971"},{"1":"Sayornis phoebe","2":"Eastern Phoebe","3":"378","4":"17.0","5":"cup","6":"bridge","7":"4.5","8":"0","9":"16.0","10":"15.5","11":"31.5","12":"0","13":"1.0733718"}],"options":{"columns":{"min":{},"max":[10],"total":[13]},"rows":{"min":[10],"max":[10],"total":[6]},"pages":{}}}
-  </script>
-</div>
-<!-- rnb-frame-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <p>Note: create variables with criteria</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-
-<!-- rnb-html-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbImtuaXRfYXNpcyJdLCJzaXppbmdQb2xpY3kiOltdfX0= -->
-
-<table>
-<thead>
-<tr class="header">
-<th align="left">usage</th>
-<th align="left">summary</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left">pmin(), pmax()</td>
-<td align="left">Elementwise minimum or maximum</td>
-</tr>
-<tr class="even">
-<td align="left">cummin(), cummax()</td>
-<td align="left">Cumulative minimum and maximum</td>
-</tr>
-<tr class="odd">
-<td align="left">cumsum(), cumprod()</td>
-<td align="left">Cumulative sum and product</td>
-</tr>
-</tbody>
-</table>
-
-
-<!-- rnb-html-end -->
-
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <p><br /></p>
@@ -2018,27 +1860,11 @@ filter(BirdNest, No.eggs&gt;6 , Location %in% c(&quot;decid&quot;)) ## or Locati
 <p>Arrange the rows of your data based according to the preferred order in the specified variable.</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyBvcmRlciB0aGUgZGF0YSBieSBhc2NlbmRpbmcgbGVuZ3RoXG5oZWFkKGFycmFuZ2UoQmlyZE5lc3QsIExlbmd0aCkpXG5gYGAifQ== -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyBvcmRlciB0aGUgZGF0YSBieSBhc2NlbmRpbmcgbGVuZ3RoXG5oZWFkKGFycmFuZ2UoQmlyZE5lc3QsIExlbmd0aCkpXG5oZWFkKGFycmFuZ2UoQmlyZE5lc3QsIExlbmd0aCwgTm8uZWdncykpIFxuYGBgIn0= -->
 <pre class="r"><code># order the data by ascending length
-head(arrange(BirdNest, Length))</code></pre>
+head(arrange(BirdNest, Length))
+head(arrange(BirdNest, Length, No.eggs)) </code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbInRibF9kZiIsInRibCIsImRhdGEuZnJhbWUiXSwibnJvdyI6NiwibmNvbCI6MTJ9LCJyZGYiOiJINHNJQUFBQUFBQUFBNTFVMzIvVE1CRE91cWJkcXYyQ3djUUREd0VCNG1FcElJUTBrTkRLaXBnUTB6UjFBKzMxNm5pcE5kZU9IQWVvMk1QK1pKNTVXTGswdnJCWjQ0ZUlaSDIrKy95ZGZSZWZCMitQbjNlT08wRVF6QWZOb0JITWh6Z053bzlINytLdElHZzIwSmhEWXJIRXI3aG9IU2RMT05ad3RCeXhPdUJwSVlzOHlzRWF5TUM1bHcrRnRSQmxrM1FNbkp3M2FDMER5VlZTU0NMVzN4UkdaR0NRT3BId1dUQ2U1WTVhcXdJeFVKQndsUXZ5cng5b0tYUm1oWVJvekNXb3dvQjN0STFkTFZFVE02Ty9LSjVFSDRSS0piZU9YVG5BczAyaS9jS093TEtSODk0YUZNUEpieFN0VDl3a1FqbnI5b0FuOGRCd3lDMnU5TUxjMlpIQVRtTUxRaUs1cTVBcVdXN0tqY3RRdmJOZzl2Vys5U284aTV6dCt5dXNkZmNkLzhERGh3NGZYVVd2Sk8wTTZ3NnF6b2hoc2Uza2VuSXh6L0RBQXYvVnRhdm5XWkY1MFVPbWxUajV1NUdQVERIOEEwTzUzbk81M0hVWU9ienBjTVBoV3AzclRMZjl2VEwrRmV2OVloZnZpY1BIWG8zSjN2UjBUODhyL3d0dkhkblB6cS80YTkyMjQzZDZGVzQ1bS95dm5lN1YvK1gzNjd2U3lxR0NNYytENnRjdDBiOC96RGdUbkxxcjFkZmpzYWFyM2p5QWxCT3p4MVZxNlo0djdQUGMya2xHN01LZXhvc3VhbVY3WDNkNW1sTFlzSytsTnJUMnZXTEZFQ3kvSEV0aXg1SDJTR1BYR0tMYmZhbHpublM5YkJheFZidVUwVEtPUmxtMDZYVDZ3MCtiU2NncGJYSjJFckRRUFRHb1IrdkNrN1RMOTBVckZEWEtweS8weEhQR2M2d1dxanhKRXJOUm9VN2psK1VHTTdyNmx0MjhkV20rVkczWm1McFFJWlVacXl3VTVSNUtHSEpxdzVYeWNTb1Q3bVpHMU4zYVFXL2V0ZHJXN2RwaFdwSm5sbHR3OFJNNlhSaHM4UVVBQUE9PSJ9 -->
-<div data-pagedtable="false">
-<script data-pagedtable-source type="application/json">
-{"columns":[{"label":["Species"],"name":[1],"type":["chr"],"align":["left"]},{"label":["Common"],"name":[2],"type":["chr"],"align":["left"]},{"label":["Page"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["Length"],"name":[4],"type":["dbl"],"align":["right"]},{"label":["Nesttype"],"name":[5],"type":["chr"],"align":["left"]},{"label":["Location"],"name":[6],"type":["chr"],"align":["left"]},{"label":["No.eggs"],"name":[7],"type":["dbl"],"align":["right"]},{"label":["Color"],"name":[8],"type":["dbl"],"align":["right"]},{"label":["Incubate"],"name":[9],"type":["dbl"],"align":["right"]},{"label":["Nestling"],"name":[10],"type":["dbl"],"align":["right"]},{"label":["Totcare"],"name":[11],"type":["dbl"],"align":["right"]},{"label":["Closed."],"name":[12],"type":["dbl"],"align":["right"]}],"data":[{"1":"Regulus satrapa","2":"Golden-crowned Kinglet","3":"448","4":"9.0","5":"pendant","6":"conif","7":"8.5","8":"1","9":"14.5","10":"16.5","11":"31.0","12":"1"},{"1":"Sitta pygmaea","2":"Pygmy Nuthatch","3":"436","4":"10.0","5":"cavity","6":"conif","7":"7.0","8":"1","9":"15.5","10":"21.0","11":"36.5","12":"1"},{"1":"Regulus calendula","2":"Ruby-crowned Kinglet","3":"450","4":"10.0","5":"pendant","6":"conif","7":"8.0","8":"1","9":"12.0","10":"12.0","11":"24.0","12":"1"},{"1":"Auriparus flaviceps","2":"Verdin","3":"432","4":"10.5","5":"spherical","6":"shrub","7":"4.5","8":"1","9":"10.0","10":"21.0","11":"31.0","12":"1"},{"1":"Sitta canadensis","2":"Red-breasted Nuthatch","3":"436","4":"11.0","5":"cavity","6":"conif","7":"5.5","8":"1","9":"12.0","10":"17.5","11":"29.5","12":"1"},{"1":"Polioptila melanura","2":"Black-tailed Gnatcatcher","3":"452","4":"11.0","5":"cup","6":"shrub","7":"4.0","8":"1","9":"14.0","10":"12.0","11":"26.0","12":"0"}],"options":{"columns":{"min":{},"max":[10],"total":[12]},"rows":{"min":[10],"max":[10],"total":[6]},"pages":{}}}
-  </script>
-</div>
-<!-- rnb-frame-end -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuaGVhZChhcnJhbmdlKEJpcmROZXN0LCBMZW5ndGgsIE5vLmVnZ3MpKSBcbmBgYCJ9 -->
-<pre class="r"><code>head(arrange(BirdNest, Length, No.eggs)) </code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbInRibF9kZiIsInRibCIsImRhdGEuZnJhbWUiXSwibnJvdyI6NiwibmNvbCI6MTJ9LCJyZGYiOiJINHNJQUFBQUFBQUFBNDFVejIvVE1CVE8ycVcvMUc2RHdjU0JRMENBT0N3RmhKQUdFbHBaRVJOaXFxcHVvRjFkeDB1dHVYYmtPRURGRHZ1VE9YTlllV244b3NVYVlwR2l6Ky83L0QzbnZlUmw4dkgwZGVlMDQzbGUzVnYzYWw3ZGg2WG5mejM1Rk81NTNub05nalVRMmpuK2hFM2JzT2pDdlFWM3d3cWJFeFpuSWt1RGxCaE5FbUxwM2pFM2hnVEpJcDRUaHVRZDNFdUpZRExLQkFyYkh6TE5FNkpCT2hQa082Y3NTVkVhSzhGVllyZ2d3WndKSWpPTnJxM2lERW9raVpoTWVlbzgyczZoRWlDRVZLc2Zra1hCRnk1andZeFZOOGJ3Ykl0Z2xKa1pNWFJtMlh1VGJMcjRoNlB4amVtSVN4czlPQkNFbm9lR2NBRTdEeVVreWZNd2JmWDdFeGFGVTgxSWFrQXZqNEdEODFTREMyOTFEWDROQ3J3SWJHejVpMEZGTDMyUHJmN0V3YWNXbjFYUmFVa3pnYjRUV1ZaRW9kbG1jYlBZVGhPb2hzTzdza1NkWm9sanJHYjNxWkw4N1A5Qk90UFo5TWFnMklhMVBySzFQTFFZV0x4cmNjdmlUbG5yeXJmL3V3aHVpK1Y1b2MzM3d1SnpwOGU3VmI3MHZid3MrRGVPejQxZlhWWjkrNVkvR0JTNFoyUGszMWw4WC9YZG9oNG5yb3l5TDhtYzRheDA4ZDBmSjR4eWhsUFhHS3I1WE9HbnZqNG1NVVBsaU1uWTRMaTBSaXcxWnBHZzJqcFNNQVc4ZERaSHFzL2lHTlA2UXlVVURranJzNlRabEJoMlBaZUFpVVB2aVlLUjBpZzNoMEtsTE9vNzFiUmhWUHRZVVEvdVd0NnM1WEw1eHkyYkNwSmkyVWgySW1KSS8weURINklyeDlMTS96dEtncW1XLy9wOHg3eW1IV0l6ay9tVFJDR2RaZkk4ZkpzZnNKS0xxMmZYald2cmJuRmtiV2xUK2RobTZES1hXTHN2eUpUaEdHN2tQNmU4NEg2aWVUbXRIV0RUdmxHbUhOY09WUUtaVlczZTFWOFVNQmFlOFFVQUFBPT0ifQ== -->
-<div data-pagedtable="false">
-<script data-pagedtable-source type="application/json">
-{"columns":[{"label":["Species"],"name":[1],"type":["chr"],"align":["left"]},{"label":["Common"],"name":[2],"type":["chr"],"align":["left"]},{"label":["Page"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["Length"],"name":[4],"type":["dbl"],"align":["right"]},{"label":["Nesttype"],"name":[5],"type":["chr"],"align":["left"]},{"label":["Location"],"name":[6],"type":["chr"],"align":["left"]},{"label":["No.eggs"],"name":[7],"type":["dbl"],"align":["right"]},{"label":["Color"],"name":[8],"type":["dbl"],"align":["right"]},{"label":["Incubate"],"name":[9],"type":["dbl"],"align":["right"]},{"label":["Nestling"],"name":[10],"type":["dbl"],"align":["right"]},{"label":["Totcare"],"name":[11],"type":["dbl"],"align":["right"]},{"label":["Closed."],"name":[12],"type":["dbl"],"align":["right"]}],"data":[{"1":"Regulus satrapa","2":"Golden-crowned Kinglet","3":"448","4":"9.0","5":"pendant","6":"conif","7":"8.5","8":"1","9":"14.5","10":"16.5","11":"31.0","12":"1"},{"1":"Sitta pygmaea","2":"Pygmy Nuthatch","3":"436","4":"10.0","5":"cavity","6":"conif","7":"7.0","8":"1","9":"15.5","10":"21.0","11":"36.5","12":"1"},{"1":"Regulus calendula","2":"Ruby-crowned Kinglet","3":"450","4":"10.0","5":"pendant","6":"conif","7":"8.0","8":"1","9":"12.0","10":"12.0","11":"24.0","12":"1"},{"1":"Auriparus flaviceps","2":"Verdin","3":"432","4":"10.5","5":"spherical","6":"shrub","7":"4.5","8":"1","9":"10.0","10":"21.0","11":"31.0","12":"1"},{"1":"Polioptila melanura","2":"Black-tailed Gnatcatcher","3":"452","4":"11.0","5":"cup","6":"shrub","7":"4.0","8":"1","9":"14.0","10":"12.0","11":"26.0","12":"0"},{"1":"Sitta canadensis","2":"Red-breasted Nuthatch","3":"436","4":"11.0","5":"cavity","6":"conif","7":"5.5","8":"1","9":"12.0","10":"17.5","11":"29.5","12":"1"}],"options":{"columns":{"min":{},"max":[10],"total":[12]},"rows":{"min":[10],"max":[10],"total":[6]},"pages":{}}}
-  </script>
-</div>
-<!-- rnb-frame-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <p><br /></p>
@@ -2049,65 +1875,20 @@ head(arrange(BirdNest, Length))</code></pre>
 <p>Note: ctrl+shift+m for the <strong>%&gt;%</strong> symbol for Mac.</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuaGVhZChzZWxlY3QoQmlyZE5lc3QsIExlbmd0aCwgTmVzdHR5cGUsIExvY2F0aW9uLCBOby5lZ2dzKSlcbmBgYCJ9 -->
-<pre class="r"><code>head(select(BirdNest, Length, Nesttype, Location, No.eggs))</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbInRibF9kZiIsInRibCIsImRhdGEuZnJhbWUiXSwibnJvdyI6NiwibmNvbCI6NH0sInJkZiI6Ikg0c0lBQUFBQUFBQUE2VlJVVXZETUJDK3RVM25paHREZjBlTFF4RWZmUkNmeGg1RVlhOVpHcnRnVFVxYnFudnpkL3V3ZW1rVGNSRUVNWERjZlpmY2QvZGQ3bTdXNThrNkFZQVFJZ2dnSkJnQ2ViaS9UYThBb2dEQkNDOG14ci9obzFNTUlyUVpXbng5QWYzNTRTL2ZCNytBQTQ5bmJ1b3NZY2pheW9ZeG95OUM3LzZNZW9wRFZwSnpKdkovZ0hoVGk3emdYeUtQclFqblQzNzMzdGFJcE0rOHNUTkdyc1dTeTBKdkxUcGE4VWJyWGNVZFhpcEd0VkRTNHZGS1pid29Hbzk1VXF2WHpMRlAwUUt6OWE3clB2d1JXRWtiTjRKTEpqblZOSHVzc1I3UjNpc1pxOG9NZ0VXQitYSGlGWTlxTHpGdnBaa2tUOW0ybFUvcDRzeDA2TytITTdWeC9DMk9ocDVCWjdtSVd3N3VSa2kzREZMU0RTOHRtS0hrWG5GVzFVSnFKd1d6VGFhVnB1NWR3bFRwTXIwNDJIOENFOTNIdmVrQ0FBQT0ifQ== -->
-<div data-pagedtable="false">
-<script data-pagedtable-source type="application/json">
-{"columns":[{"label":["Length"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["Nesttype"],"name":[2],"type":["chr"],"align":["left"]},{"label":["Location"],"name":[3],"type":["chr"],"align":["left"]},{"label":["No.eggs"],"name":[4],"type":["dbl"],"align":["right"]}],"data":[{"1":"20.0","2":"cup","3":"decid","4":"3.5"},{"1":"20.0","2":"cavity","3":"decid","4":"3.5"},{"1":"20.0","2":"cavity","3":"decid","4":"4.5"},{"1":"22.5","2":"cavity","3":"decid","4":"4.5"},{"1":"17.0","2":"cavity","3":"decid","4":"4.5"},{"1":"17.0","2":"cup","3":"bridge","4":"4.5"}],"options":{"columns":{"min":{},"max":[10],"total":[4]},"rows":{"min":[10],"max":[10],"total":[6]},"pages":{}}}
-  </script>
-</div>
-<!-- rnb-frame-end -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyBlcXVhbHMgdG9cbmhlYWQoQmlyZE5lc3QgJT4lIHNlbGVjdChMZW5ndGgsIE5lc3R0eXBlLCBMb2NhdGlvbiwgTm8uZWdncykpXG5gYGAifQ== -->
-<pre class="r"><code># equals to
-head(BirdNest %&gt;% select(Length, Nesttype, Location, No.eggs))</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbInRibF9kZiIsInRibCIsImRhdGEuZnJhbWUiXSwibnJvdyI6NiwibmNvbCI6NH0sInJkZiI6Ikg0c0lBQUFBQUFBQUE2VlJVVXZETUJDK3RVM25paHREZjBlTFF4RWZmUkNmeGg1RVlhOVpHcnRnVFVxYnFudnpkL3V3ZW1rVGNSRUVNWERjZlpmY2QvZGQ3bTdXNThrNkFZQVFJZ2dnSkJnQ2ViaS9UYThBb2dEQkNDOG14ci9obzFNTUlyUVpXbng5QWYzNTRTL2ZCNytBQTQ5bmJ1b3NZY2pheW9ZeG95OUM3LzZNZW9wRFZwSnpKdkovZ0hoVGk3emdYeUtQclFqblQzNzMzdGFJcE0rOHNUTkdyc1dTeTBKdkxUcGE4VWJyWGNVZFhpcEd0VkRTNHZGS1pid29Hbzk1VXF2WHpMRlAwUUt6OWE3clB2d1JXRWtiTjRKTEpqblZOSHVzc1I3UjNpc1pxOG9NZ0VXQitYSGlGWTlxTHpGdnBaa2tUOW0ybFUvcDRzeDA2TytITTdWeC9DMk9ocDVCWjdtSVd3N3VSa2kzREZMU0RTOHRtS0hrWG5GVzFVSnFKd1d6VGFhVnB1NWR3bFRwTXIwNDJIOENFOTNIdmVrQ0FBQT0ifQ== -->
-<div data-pagedtable="false">
-<script data-pagedtable-source type="application/json">
-{"columns":[{"label":["Length"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["Nesttype"],"name":[2],"type":["chr"],"align":["left"]},{"label":["Location"],"name":[3],"type":["chr"],"align":["left"]},{"label":["No.eggs"],"name":[4],"type":["dbl"],"align":["right"]}],"data":[{"1":"20.0","2":"cup","3":"decid","4":"3.5"},{"1":"20.0","2":"cavity","3":"decid","4":"3.5"},{"1":"20.0","2":"cavity","3":"decid","4":"4.5"},{"1":"22.5","2":"cavity","3":"decid","4":"4.5"},{"1":"17.0","2":"cavity","3":"decid","4":"4.5"},{"1":"17.0","2":"cup","3":"bridge","4":"4.5"}],"options":{"columns":{"min":{},"max":[10],"total":[4]},"rows":{"min":[10],"max":[10],"total":[6]},"pages":{}}}
-  </script>
-</div>
-<!-- rnb-frame-end -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuXG5oZWFkKGZpbHRlcihCaXJkTmVzdCwgTm8uZWdncz42ICwgTG9jYXRpb24gJWluJSBjKFwiZGVjaWRcIikpKVxuYGBgIn0= -->
-<pre class="r"><code>
-head(filter(BirdNest, No.eggs&gt;6 , Location %in% c(&quot;decid&quot;)))</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbInRibF9kZiIsInRibCIsImRhdGEuZnJhbWUiXSwibnJvdyI6MywibmNvbCI6MTJ9LCJyZGYiOiJINHNJQUFBQUFBQUFBNDFUVVcvVE1CRDIwcWJkb200YUlJR0U5cERIQ1pFSXhBdENrNmdvUWlCTjFjU0t0a2RjNTBpc3VuRmtPMERoWlQrWlA4REtwZkZWYXg0bUlqbm51OC9mK1Q2Zi9mbjk5YXZvT21LTTlWaWZCYXdYNHBTRlgyWWZrdGVNOVFOMDloQTRhT3hQWFBRSUp5TWN4NTdSQUE4dnVLbHR6SjJSZ2xkU3Fkb1NjaW1kNDdIZ1JpdFpRbWtsSVE5bVJ1ZEtaeXNIeUlSTWw1MmtqOThwTGhZSkpxd2dpeWVGRkF1ZUFYajB5VlVoSFNSekE5dzZ4S2UxSzdnVGhZZWpqN3EyRUY4WmFOSWVOV25IdjI0YVpXejhPL2IySy9OZml6OXJuZkZ6YjA4SjNpbHJJUGgzNlZiM2VydU1NQU1oczNzY0t1REViL3pVMjVOdEFSdjg3Wi9XNmRvdC8zUzNjQksweFY5MEJLWWQvTXpIMzNoNzlyLzc3OXlTc09STHNQNE1SajQ0dkt4UUtsRHpCeE85WEdMSFc2OS93WFBxNitBY3l0eFJHL2VuWUoxYlZZVHVuMnZCbmR3eWgxT2RRcDVUMm5DaWxUYTA5bE1wNmpsM2NEY1hYc0tjdURQdDhGNFNQSndvYlNGTE8yb09qUDZSa3FKREhNRU4vdGJyOWQrdWJLRzRKZGtVakRMdWVQck5JQis5Mnc1bHFLdEdDNUtDNWxXRkhmS2U2UVNPNjdLcEpFdEVVWmVMNUdYVHoyaUR0OStobi9mdXpFZnRuc0hhNXdycG5QR1k4VUZTOFlyUFFYbm5DQ1Z2RktlVmthVWpLUmkxcWRPTzA3cElhRVdSalRoMit3K1QrMjJnVFFRQUFBPT0ifQ== -->
-<div data-pagedtable="false">
-<script data-pagedtable-source type="application/json">
-{"columns":[{"label":["Species"],"name":[1],"type":["chr"],"align":["left"]},{"label":["Common"],"name":[2],"type":["chr"],"align":["left"]},{"label":["Page"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["Length"],"name":[4],"type":["dbl"],"align":["right"]},{"label":["Nesttype"],"name":[5],"type":["chr"],"align":["left"]},{"label":["Location"],"name":[6],"type":["chr"],"align":["left"]},{"label":["No.eggs"],"name":[7],"type":["dbl"],"align":["right"]},{"label":["Color"],"name":[8],"type":["dbl"],"align":["right"]},{"label":["Incubate"],"name":[9],"type":["dbl"],"align":["right"]},{"label":["Nestling"],"name":[10],"type":["dbl"],"align":["right"]},{"label":["Totcare"],"name":[11],"type":["dbl"],"align":["right"]},{"label":["Closed."],"name":[12],"type":["dbl"],"align":["right"]}],"data":[{"1":"Parus atricapillus","2":"Black-capped Chickadee","3":"424","4":"13","5":"cavity","6":"decid","7":"7.0","8":"1","9":"12","10":"16","11":"28","12":"1"},{"1":"Sitta carolinensis","2":"White-breasted Nuthatch","3":"434","4":"14","5":"cavity","6":"decid","7":"6.5","8":"1","9":"12","10":"14","11":"26","12":"1"},{"1":"Troglodytes aedon","2":"House Wren","3":"438","4":"12","5":"cavity","6":"decid","7":"7.0","8":"1","9":"13","10":"15","11":"28","12":"1"}],"options":{"columns":{"min":{},"max":[10],"total":[12]},"rows":{"min":[10],"max":[10],"total":[3]},"pages":{}}}
-  </script>
-</div>
-<!-- rnb-frame-end -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyBlcXVhbHMgdG9cbmhlYWQoQmlyZE5lc3QgJT4lIGZpbHRlciggTm8uZWdncz42ICwgTG9jYXRpb24gJWluJSBjKFwiZGVjaWRcIikpKVxuYGBgIn0= -->
-<pre class="r"><code># equals to
-head(BirdNest %&gt;% filter( No.eggs&gt;6 , Location %in% c(&quot;decid&quot;)))</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbInRibF9kZiIsInRibCIsImRhdGEuZnJhbWUiXSwibnJvdyI6MywibmNvbCI6MTJ9LCJyZGYiOiJINHNJQUFBQUFBQUFBNDFUVVcvVE1CRDIwcWJkb200YUlJR0U5cERIQ1pFSXhBdENrNmdvUWlCTjFjU0t0a2RjNTBpc3VuRmtPMERoWlQrWlA4REtwZkZWYXg0bUlqbm51OC9mK1Q2Zi9mbjk5YXZvT21LTTlWaWZCYXdYNHBTRlgyWWZrdGVNOVFOMDloQTRhT3hQWFBRSUp5TWN4NTdSQUE4dnVLbHR6SjJSZ2xkU3Fkb1NjaW1kNDdIZ1JpdFpRbWtsSVE5bVJ1ZEtaeXNIeUlSTWw1MmtqOThwTGhZSkpxd2dpeWVGRkF1ZUFYajB5VlVoSFNSekE5dzZ4S2UxSzdnVGhZZWpqN3EyRUY4WmFOSWVOV25IdjI0YVpXejhPL2IySy9OZml6OXJuZkZ6YjA4SjNpbHJJUGgzNlZiM2VydU1NQU1oczNzY0t1REViL3pVMjVOdEFSdjg3Wi9XNmRvdC8zUzNjQksweFY5MEJLWWQvTXpIMzNoNzlyLzc3OXlTc09STHNQNE1SajQ0dkt4UUtsRHpCeE85WEdMSFc2OS93WFBxNitBY3l0eFJHL2VuWUoxYlZZVHVuMnZCbmR3eWgxT2RRcDVUMm5DaWxUYTA5bE1wNmpsM2NEY1hYc0tjdURQdDhGNFNQSndvYlNGTE8yb09qUDZSa3FKREhNRU4vdGJyOWQrdWJLRzRKZGtVakRMdWVQck5JQis5Mnc1bHFLdEdDNUtDNWxXRkhmS2U2UVNPNjdLcEpFdEVVWmVMNUdYVHoyaUR0OStobi9mdXpFZnRuc0hhNXdycG5QR1k4VUZTOFlyUFFYbm5DQ1Z2RktlVmthVWpLUmkxcWRPTzA3cElhRVdSalRoMit3K1QrMjJnVFFRQUFBPT0ifQ== -->
-<div data-pagedtable="false">
-<script data-pagedtable-source type="application/json">
-{"columns":[{"label":["Species"],"name":[1],"type":["chr"],"align":["left"]},{"label":["Common"],"name":[2],"type":["chr"],"align":["left"]},{"label":["Page"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["Length"],"name":[4],"type":["dbl"],"align":["right"]},{"label":["Nesttype"],"name":[5],"type":["chr"],"align":["left"]},{"label":["Location"],"name":[6],"type":["chr"],"align":["left"]},{"label":["No.eggs"],"name":[7],"type":["dbl"],"align":["right"]},{"label":["Color"],"name":[8],"type":["dbl"],"align":["right"]},{"label":["Incubate"],"name":[9],"type":["dbl"],"align":["right"]},{"label":["Nestling"],"name":[10],"type":["dbl"],"align":["right"]},{"label":["Totcare"],"name":[11],"type":["dbl"],"align":["right"]},{"label":["Closed."],"name":[12],"type":["dbl"],"align":["right"]}],"data":[{"1":"Parus atricapillus","2":"Black-capped Chickadee","3":"424","4":"13","5":"cavity","6":"decid","7":"7.0","8":"1","9":"12","10":"16","11":"28","12":"1"},{"1":"Sitta carolinensis","2":"White-breasted Nuthatch","3":"434","4":"14","5":"cavity","6":"decid","7":"6.5","8":"1","9":"12","10":"14","11":"26","12":"1"},{"1":"Troglodytes aedon","2":"House Wren","3":"438","4":"12","5":"cavity","6":"decid","7":"7.0","8":"1","9":"13","10":"15","11":"28","12":"1"}],"options":{"columns":{"min":{},"max":[10],"total":[12]},"rows":{"min":[10],"max":[10],"total":[3]},"pages":{}}}
-  </script>
-</div>
-<!-- rnb-frame-end -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuXG4jIGFkZCBsYXllclxuQmlyZE5lc3QgJT4lIFxuICBmaWx0ZXIoIE5vLmVnZ3M+NiAsIExvY2F0aW9uICVpbiUgYyhcImRlY2lkXCIpKSAlPiUgXG4gIHNlbGVjdChTcGVjaWVzLCBDb21tb24sIE5vLmVnZ3MsIExvY2F0aW9uKVxuYGBgIn0= -->
-<pre class="r"><code>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuaGVhZChzZWxlY3QoQmlyZE5lc3QsIExlbmd0aCwgTmVzdHR5cGUsIExvY2F0aW9uLCBOby5lZ2dzKSlcbiMgZXF1YWxzIHRvXG5oZWFkKEJpcmROZXN0ICU+JSBzZWxlY3QoTGVuZ3RoLCBOZXN0dHlwZSwgTG9jYXRpb24sIE5vLmVnZ3MpKVxuXG5oZWFkKGZpbHRlcihCaXJkTmVzdCwgTm8uZWdncz42ICwgTG9jYXRpb24gJWluJSBjKFwiZGVjaWRcIikpKVxuIyBlcXVhbHMgdG9cbmhlYWQoQmlyZE5lc3QgJT4lIGZpbHRlciggTm8uZWdncz42ICwgTG9jYXRpb24gJWluJSBjKFwiZGVjaWRcIikpKVxuXG4jIGFkZCBsYXllclxuQmlyZE5lc3QgJT4lIFxuICBmaWx0ZXIoIE5vLmVnZ3M+NiAsIExvY2F0aW9uICVpbiUgYyhcImRlY2lkXCIpKSAlPiUgXG4gIHNlbGVjdChTcGVjaWVzLCBDb21tb24sIE5vLmVnZ3MsIExvY2F0aW9uKVxuXG5gYGAifQ== -->
+<pre class="r"><code>head(select(BirdNest, Length, Nesttype, Location, No.eggs))
+# equals to
+head(BirdNest %&gt;% select(Length, Nesttype, Location, No.eggs))
+
+head(filter(BirdNest, No.eggs&gt;6 , Location %in% c(&quot;decid&quot;)))
+# equals to
+head(BirdNest %&gt;% filter( No.eggs&gt;6 , Location %in% c(&quot;decid&quot;)))
+
 # add layer
 BirdNest %&gt;% 
   filter( No.eggs&gt;6 , Location %in% c(&quot;decid&quot;)) %&gt;% 
-  select(Species, Common, No.eggs, Location)</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbInRibF9kZiIsInRibCIsImRhdGEuZnJhbWUiXSwibnJvdyI6MywibmNvbCI6NH0sInJkZiI6Ikg0c0lBQUFBQUFBQUEzMVNVVXZETUJET3V0YTV3c1pVVUJBZitnZGFGRjk4SEU3RUJ4bmlKdHRybHNRMkxFdEttcUsrK2NmZHZIUUp1RDRZU0hOMzM5MTM5eVY5ZlZqZXhzc1lJZFJGSVFwUU53SVRSVy96eC9RT29UQUFwd05BMzU2ZmtIUUdSZ2g3NUNvc2NQcUNkVjBsMkdoT2NNbUZxQ3VQekxneE9DRllLOEVsa3hYM3lNbGNxMXdvK21VWVZES3FaSXYwL0Y1Z3NrNkJzR1EwbVJTY3JERmx6S0VYaTRJYmxxNDB3NVVCZkZxYkFodFNPRGgrVW5YRmtvVm1sblpvYWNkWHFGbmpTM2M2djlVMm9veHcrbzl6ZUNlUnhCdFdPWTdRQlh1ekVsS1psM28wVVpzTjZIUGdWR1VzenoxNC9Ld0lOdHpLUHlEdWEvV1JlZklCN09BYlBydmQ3cWM5QVJHNDhoUDRZRXl4d2RtN2hucnd0cTJTbmlwdFJ5Z0s3SE5HcmVLT2JnVkd0YlNUMEpRVXRWeW5OOWUyUTRQdjE4RFozVDkydU84WjdCeFg1QytEeVJ6K0JEKzh3Q3NtbkRNRXlZM2lyTlJjR2k4Rm9sVm1sTUUrTHlaSytFZ2pEbTEvQVdGU3BCSEdBZ0FBIn0= -->
-<div data-pagedtable="false">
-<script data-pagedtable-source type="application/json">
-{"columns":[{"label":["Species"],"name":[1],"type":["chr"],"align":["left"]},{"label":["Common"],"name":[2],"type":["chr"],"align":["left"]},{"label":["No.eggs"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["Location"],"name":[4],"type":["chr"],"align":["left"]}],"data":[{"1":"Parus atricapillus","2":"Black-capped Chickadee","3":"7.0","4":"decid"},{"1":"Sitta carolinensis","2":"White-breasted Nuthatch","3":"6.5","4":"decid"},{"1":"Troglodytes aedon","2":"House Wren","3":"7.0","4":"decid"}],"options":{"columns":{"min":{},"max":[10],"total":[4]},"rows":{"min":[10],"max":[10],"total":[3]},"pages":{}}}
-  </script>
-</div>
-<!-- rnb-frame-end -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuTkFcbmBgYCJ9 -->
-<pre class="r"><code>NA</code></pre>
+  select(Species, Common, No.eggs, Location)
+</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
@@ -2115,20 +1896,11 @@ BirdNest %&gt;%
 <p><strong>Question:</strong> Could you output top 10 observations with largest length?</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuQmlyZE5lc3QgJT4lXG4gIGFycmFuZ2UoZGVzYyhMZW5ndGgpICkgJT4lIFxuICBoZWFkKG4gPSAxMClcbmBgYCJ9 -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuQmlyZE5lc3QgJT4lXG4gIGFycmFuZ2UoZGVzYyhMZW5ndGgpICkgJT4lIFxuICBoZWFkKG4gPSAxMClcblxuYGBgIn0= -->
 <pre class="r"><code>BirdNest %&gt;%
   arrange(desc(Length) ) %&gt;% 
-  head(n = 10)</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbInRibF9kZiIsInRibCIsImRhdGEuZnJhbWUiXSwibnJvdyI6MTAsIm5jb2wiOjEyfSwicmRmIjoiSDRzSUFBQUFBQUFBQTcxVjNXN1RNQlRPdXBWMlZUZEd4d1NYdmVLL0ZXTkNqTjkxRFFLQnRtbmFpclJMWE1kTnJEcDI1Tmhqa1pqVVIrRlI5aWc4QWxkY3JqakxjV2lpVFVJSUVTbjZmTTUzdnVPYzQrajQ0TzNSUnVPbzRUak92TFBnVkp6NXFsazYxVStEZDUxTngxbW9HR1BPRUlzcG5waWdWYk5vbW5mRnZBMGdidTVwVEVjUythaU5CZFBoa0NLT2dMdTFIUVdFQ1N6Q2xDUlNNeEpqd21PZzEvYUpwTEdRUk1kdGJGU2VvYWdsVndmaVJNUXFsVXJpMFdONnJFTkx1UW5pQWxPbFRGcVRRU0ZsZDd3K285S2pYSEg3ZlJKeUlRUEtqZUpDVEtJQU1aMS95VzhaMXZLWVNtTklBbVJyb0tWblBqR2t2a1JLU0pyTGJ1elMwQkNSWUluUGhGSWlMalduNVRJa3gzZmo5cDVXV0NJOEpoS1l4VU1zOWJEOUVTWGdxTHNTSlRQMnFvc1lIUW5KS1dvUEFvbmlJTmZXKzB5VG1kRGx2aFJmZURtcXNVOTVJdmhNM0pwcmFpT2RJV1dNZU9YdzVlM1FuSVk1aHZhQkdGS2VuNjZReWdUeDlxN0FZOHI5SVpWZUdwMXUwRXUrcGYrTDAwdDZnR0Nmbm9FOUFmc3oySUNuNFAvNkhleE1uK2ZkQXY3TkZmamFZaWJxdlpnVThYa1JTNGN5ajNYMFA1YkZYYXRZY0RxeWhrY3c5UzQxNHNEOEY1ZHEvcEM1Skp2dGF4MzYxUUpzbHJCMUJWcCtKY090SDdhdFdWNXIveTNhcDV5M3R3NzdQZ2EwOXFPU2ZkL0dUVEo4Q1BhRElwL24zWUM0SjREZFV2d0c0QjNBcDRBZHB4aC9yNVMzMzh2ODI0QTlpSHNKMkFkOEJ2djJ6eko4NVJSeGMxTEk2L3p6cHpEYXF4eUZ4RTZ1Smpocmg1SDVqNGlkZE5kY0VZYkNUb1dGZmVUYjZYaHRoM0JmQlhZMDdaRllxU1N5YkgxSFlLUm9ycXp0aVM3eGZadTI2Z29tOHJIMmdXTTlSSXJNNW1KbTVsanRRQ2lNOHJGY2M1bUlpZGN0VmJOb1ptSFhWclJrM2tyYXpPbDArck5jTm1Zb3RtVmJaOE16ZDBuWFhHY2hNZFo1U1ZJVFVWcUxFVlhTcTdCYUVzL0prbU5GOC9STHZBNE9OQjkzMXRmaE5PZmdHSlpnM1poWk43TTlLMVBJVmJWOU5tMm0zQlpmWldoSW1CM2Q2ZmhQSys1R2tuSmxTekhldUt1RVFqYXVZUzVvNjdrb3pqbi9CZkc5Z0VZQ0NBQUEifQ== -->
-<div data-pagedtable="false">
-<script data-pagedtable-source type="application/json">
-{"columns":[{"label":["Species"],"name":[1],"type":["chr"],"align":["left"]},{"label":["Common"],"name":[2],"type":["chr"],"align":["left"]},{"label":["Page"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["Length"],"name":[4],"type":["dbl"],"align":["right"]},{"label":["Nesttype"],"name":[5],"type":["chr"],"align":["left"]},{"label":["Location"],"name":[6],"type":["chr"],"align":["left"]},{"label":["No.eggs"],"name":[7],"type":["dbl"],"align":["right"]},{"label":["Color"],"name":[8],"type":["dbl"],"align":["right"]},{"label":["Incubate"],"name":[9],"type":["dbl"],"align":["right"]},{"label":["Nestling"],"name":[10],"type":["dbl"],"align":["right"]},{"label":["Totcare"],"name":[11],"type":["dbl"],"align":["right"]},{"label":["Closed."],"name":[12],"type":["dbl"],"align":["right"]}],"data":[{"1":"Nucifraga columbiana","2":"Clark's Nutcracker","3":"410","4":"31.5","5":"cup","6":"conif","7":"3.0","8":"1","9":"17.0","10":"19.5","11":"36.5","12":"0"},{"1":"Aphelocoma coerulescens","2":"Scrub Jay","3":"404","4":"30.5","5":"cup","6":"decid","7":"4.5","8":"1","9":"16.0","10":"18.5","11":"34.5","12":"0"},{"1":"Perisoreus canadensis","2":"Cray Jay","3":"410","4":"30.5","5":"cup","6":"decid","7":"3.5","8":"1","9":"17.0","10":"15.0","11":"32.0","12":"0"},{"1":"Toxostoma redivivum","2":"California Thrasher","3":"476","4":"30.5","5":"cup","6":"shrub","7":"3.5","8":"1","9":"14.0","10":"13.0","11":"27.0","12":"0"},{"1":"Cyanocitta cristata","2":"Blue Jay","3":"408","4":"29.5","5":"cup","6":"conif","7":"4.5","8":"1","9":"17.0","10":"19.0","11":"36.0","12":"0"},{"1":"Toxostoma rufum","2":"Brown Thrasher","3":"470","4":"29.0","5":"cup","6":"shrub","7":"4.5","8":"1","9":"12.5","10":"11.0","11":"23.5","12":"0"},{"1":"Gymnorhina cyanocephalus","2":"Pinyon Jay","3":"406","4":"26.5","5":"cup","6":"conif","7":"4.5","8":"1","9":"16.5","10":"21.0","11":"37.5","12":"0"},{"1":"Toxostoma curvirostre","2":"Curve-billed Thrasher","3":"472","4":"26.5","5":"cup","6":"shrub","7":"3.5","8":"1","9":"13.5","10":"14.5","11":"28.0","12":"0"},{"1":"Turdus migratorius","2":"American Robin","3":"462","4":"25.5","5":"cup","6":"decid","7":"4.0","8":"0","9":"13.0","10":"15.0","11":"28.0","12":"0"},{"1":"Mimus polyglottos","2":"Northern Mockingbird","3":"468","4":"25.5","5":"cup","6":"shrub","7":"1.0","8":"1","9":"12.5","10":"12.0","11":"24.5","12":"0"}],"options":{"columns":{"min":{},"max":[10],"total":[12]},"rows":{"min":[10],"max":[10],"total":[10]},"pages":{}}}
-  </script>
-</div>
-<!-- rnb-frame-end -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuTkFcbmBgYCJ9 -->
-<pre class="r"><code>NA</code></pre>
+  head(n = 10)
+</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
@@ -2139,34 +1911,16 @@ BirdNest %&gt;%
 <p>When you want to create a summary across the data, summarise() function in dplyr package can be used. Generally, it often combines with group_by, which creates a summary by subgroups.</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyB0byBjcmVhdGUgYSBzdW1tZXJ5IGFib3V0IGF2ZXJhZ2UsIHZhcmlhbmNlIG9mIGxlbmd0LCBhbmQgY291bnQgZGlzdGluY3QgZWdnIGNvbG9yIFxuQmlyZE5lc3QgJT4lIHN1bW1hcmlzZShtZWFuX2xlbmd0aCA9IG1lYW4oTGVuZ3RoKSwgdmFyX0xlbmd0aCA9IHZhcihMZW5ndGgpLCBuX2Rpc3RpY3RfY29sb3IgPSBuX2Rpc3RpbmN0KENvbG9yKSkgIFxuYGBgIn0= -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyB0byBjcmVhdGUgYSBzdW1tZXJ5IGFib3V0IGF2ZXJhZ2UsIHZhcmlhbmNlIG9mIGxlbmd0LCBhbmQgY291bnQgZGlzdGluY3QgZWdnIGNvbG9yIFxuQmlyZE5lc3QgJT4lIHN1bW1hcmlzZShtZWFuX2xlbmd0aCA9IG1lYW4oTGVuZ3RoKSwgdmFyX0xlbmd0aCA9IHZhcihMZW5ndGgpLCBuX2Rpc3RpY3RfY29sb3IgPSBuX2Rpc3RpbmN0KENvbG9yKSkgIFxuXG4jIHRvIGNyZWF0ZSBhIHN1bW1lcnkgcmVzcGVjdGl2ZSB0byBzYW1lIGZpZWxkcyBhYm92ZSB3aXRoaW4gZWFjaCBlZ2cgY29sb3IuXG5CaXJkTmVzdCAlPiUgXG4gIGdyb3VwX2J5KENvbG9yKSAlPiUgXG4gIHN1bW1hcmlzZShtZWFuX2xlbmd0aCA9IG1lYW4oTGVuZ3RoKSwgdmFyX0xlbmd0aCA9IHZhcihMZW5ndGgpLCBuX2Rpc3RpY3RfY29sb3IgPSBuX2Rpc3RpbmN0KENvbG9yKSkgXG5cbmBgYCJ9 -->
 <pre class="r"><code># to create a summery about average, variance of lengt, and count distinct egg color 
-BirdNest %&gt;% summarise(mean_length = mean(Length), var_Length = var(Length), n_distict_color = n_distinct(Color))  </code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbInRibF9kZiIsInRibCIsImRhdGEuZnJhbWUiXSwibnJvdyI6MSwibmNvbCI6M30sInJkZiI6Ikg0c0lBQUFBQUFBQUExMVFRVTdETUJEY09EV29wcFJLaUdja0l1V0N4SVVENHNRSmdkUmJaQkpETFZ5N2NsemdDRS9nRFR5RmY3V3NnNDJDZmJCM3h6dXpPM3Q3dFRoakN3WUFPWXlBUUU0eEJIcC9kMTJjQTR3SUpobCtqUDM3aGtYSGZTWEExQU9YMWRmazlIdFMvZVVYbng5aWZtSXhQdXlKZ0lyL1Jham1LOUZoTUFzdFBYaXdFbHpYU3VnbnR3d1FlK0cydmhraVI3cHVaZWRrNCtyR0tHTVQ0YkUxcjJVVTk5M0pPMTQ3UE9rRWplSmRuQ0NDck9XT2w0OFcrWmh0RThxK1dUdHBOSktJOTA4VGNtWVRZTGJSZnBLMmFKWWIvVnhVYzk4aExBUUd5OGtHY2Y3YmsreUNGZzFhZTdnRHFVVWNYdkVIb1VJeVJjdTk0M0p0cFhiUkNxSmQ2WXpqc1k3aHZpTFNtNFB0RC91T1BKVDNBUUFBIn0= -->
-<div data-pagedtable="false">
-<script data-pagedtable-source type="application/json">
-{"columns":[{"label":["mean_length"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["var_Length"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["n_distict_color"],"name":[3],"type":["int"],"align":["right"]}],"data":[{"1":"17.6369","2":"27.56838","3":"2"}],"options":{"columns":{"min":{},"max":[10],"total":[3]},"rows":{"min":[10],"max":[10],"total":[1]},"pages":{}}}
-  </script>
-</div>
-<!-- rnb-frame-end -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuXG4jIHRvIGNyZWF0ZSBhIHN1bW1lcnkgcmVzcGVjdGl2ZSB0byBzYW1lIGZpZWxkcyBhYm92ZSB3aXRoaW4gZWFjaCBlZ2cgY29sb3IuXG5CaXJkTmVzdCAlPiUgXG4gIGdyb3VwX2J5KENvbG9yKSAlPiUgXG4gIHN1bW1hcmlzZShtZWFuX2xlbmd0aCA9IG1lYW4oTGVuZ3RoKSwgdmFyX0xlbmd0aCA9IHZhcihMZW5ndGgpLCBuX2Rpc3RpY3RfY29sb3IgPSBuX2Rpc3RpbmN0KENvbG9yKSkgXG5gYGAifQ== -->
-<pre class="r"><code>
+BirdNest %&gt;% summarise(mean_length = mean(Length), var_Length = var(Length), n_distict_color = n_distinct(Color))  
+
 # to create a summery respective to same fields above within each egg color.
 BirdNest %&gt;% 
   group_by(Color) %&gt;% 
-  summarise(mean_length = mean(Length), var_Length = var(Length), n_distict_color = n_distinct(Color)) </code></pre>
+  summarise(mean_length = mean(Length), var_Length = var(Length), n_distict_color = n_distinct(Color)) 
+</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiYHN1bW1hcmlzZSgpYCB1bmdyb3VwaW5nIG91dHB1dCAob3ZlcnJpZGUgd2l0aCBgLmdyb3Vwc2AgYXJndW1lbnQpXG4ifQ== -->
-<pre><code>`summarise()` ungrouping output (override with `.groups` argument)</code></pre>
-<!-- rnb-output-end -->
-<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbInRibF9kZiIsInRibCIsImRhdGEuZnJhbWUiXSwibnJvdyI6MiwibmNvbCI6NH0sInJkZiI6Ikg0c0lBQUFBQUFBQUF3dHlpVERtaXVCaVlHQmdabUJoWUdKZ1pnVXlHVmhEUTl4MExSZ1lXSmlBSEVhZ0JDZUlyZ0FxRWdZeVdJQ1lENGhCa21CZy93SEdnb2c3R003TzNYWTdkN3VENFpKSm5pcVRQT0hpMm5iVFg5Wk5mK2xnTnlPeFRTS3hEU2pHQ3pXSEVZSlJMR1ROUzh4TkxRWXlCTUNXUWdXZDgzUHlpNkFjN3R6VXhMejRuTlM4OUpJTXFCQlhXV0pSdkEreUNIOWVmRXBtY1VsbWNrbDhNbGd2cWkyY1JmbmxlakNid001cEFCTC8vLy8vaCs2YzVKekVZcGh6WUlKY0tZa2xpWHBwUlVEOVFCNjZGdmI4Z3BMTS9EeWdKaVpRd0xHaWFXWXNRaE1RS00wRHVTUkZOem1qTkM5YjE5QUlaQU0wZEJpZ3ptT0VoaGlNelFLeGsray8xQ3hXcUZsc3dEREl6RXVGT1Q0bk1TazFCOHJoQTNvWjdHTzlncUxNdkJLWVY0Q2l4WG9sK1NXSk1IVmN3UENDaVlBOXgvQVBBRlJUVlRNd0FnQUEifQ== -->
-<div data-pagedtable="false">
-<script data-pagedtable-source type="application/json">
-{"columns":[{"label":["Color"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["mean_length"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["var_Length"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["n_distict_color"],"name":[4],"type":["int"],"align":["right"]}],"data":[{"1":"0","2":"17.60714","3":"13.62225","4":"1"},{"1":"1","2":"17.64286","3":"30.59524","4":"1"}],"options":{"columns":{"min":{},"max":[10],"total":[4]},"rows":{"min":[10],"max":[10],"total":[2]},"pages":{}}}
-  </script>
-</div>
-<!-- rnb-frame-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <p><br /></p>
@@ -2184,16 +1938,6 @@ BirdNest %&gt;%
   group_by(Color,Nesttype) %&gt;% 
   summarise(mean_length = mean(Length), num_obs = n(), n_distict_location = n_distinct(Location))</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiYHN1bW1hcmlzZSgpYCByZWdyb3VwaW5nIG91dHB1dCBieSAnQ29sb3InIChvdmVycmlkZSB3aXRoIGAuZ3JvdXBzYCBhcmd1bWVudClcbiJ9 -->
-<pre><code>`summarise()` regrouping output by &#39;Color&#39; (override with `.groups` argument)</code></pre>
-<!-- rnb-output-end -->
-<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbImdyb3VwZWRfZGYiLCJ0YmxfZGYiLCJ0YmwiLCJkYXRhLmZyYW1lIl0sIm5yb3ciOjEwLCJuY29sIjo1fSwicmRmIjoiSDRzSUFBQUFBQUFBQTVWU3ZVN0RNQkIyMHFRL1FaUUtIb0VOMFVESndrWWtFQ01Eb2xLM3luVU1qVWp0S0hZSzNkaDVBaGg1REo2R2xZMkpzY0ZPenFWa1FPcEpwL1AzK2JQUGQrZnJpMUhnalR5RVVBTTV5RVlOVnkyUk83eTU3SjhpNU5nS1dHcWpvK09qRXUzcFhlVmQ1ZnJVdjNiMnRWbFUxaXZ2clJJMkozbVc4UWVEQ0o3SGNnR29SVEk2andrRjJDQjV1cUd1bFZJV1lTYk5NWUZ6UWpOQUhaRk9hUllUbkpoYXc0UHFnZUVKeE9BSjhMQzAwSC9SOWhvT2dBL2E3Lzd6MjJlNEQvcmpqeW9lcldyZGhoN2E0SlpPckh3SDhDRkVwNXpPcjk1YWN3ZGM2MXpnR2hYK016eVhKRmdJYUxBaHZRaEw3TjltZUVacjhvN3F1ODhVTHlDdnJhc3FpdUs3ZnE4Ujljb0hBSG5PRTI1YTJiNmlRc3BGYWthd05hT1lqUlBLN3VUVWpJTGxzekdmQ0lDN2JCekZRc1pFamhOT3NJdzVVK3l5bHJuRlU3MmpjdHZtVTY3WFptVTFvcGN6L2Rhb1Q2WTV1KzhQZ3JWdW1tbFl3Sm0xVytWMGlscUJUZlg2bUptSzNBUlBhQUtncXpwWDlzUlBzM2oxdXp6RkNsOXlpWTNPSXp3eFRGa2NXdjRBS1pVcE80d0RBQUE9In0= -->
-<div data-pagedtable="false">
-<script data-pagedtable-source type="application/json">
-{"columns":[{"label":["Color"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["Nesttype"],"name":[2],"type":["chr"],"align":["left"]},{"label":["mean_length"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["num_obs"],"name":[4],"type":["int"],"align":["right"]},{"label":["n_distict_location"],"name":[5],"type":["int"],"align":["right"]}],"data":[{"1":"0","2":"burrow","3":"13.00000","4":"2","5":"1"},{"1":"0","2":"cavity","3":"18.00000","4":"2","5":"1"},{"1":"0","2":"crevice","3":"19.50000","4":"1","5":"1"},{"1":"0","2":"cup","3":"18.33333","4":"9","5":"4"},{"1":"1","2":"cavity","3":"15.30000","4":"15","5":"4"},{"1":"1","2":"crevice","3":"17.50000","4":"2","5":"2"},{"1":"1","2":"cup","3":"19.03409","4":"44","5":"5"},{"1":"1","2":"pendant","3":"9.50000","4":"2","5":"1"},{"1":"1","2":"saucer","3":"16.87500","4":"4","5":"3"},{"1":"1","2":"spherical","3":"15.50000","4":"3","5":"2"}],"options":{"columns":{"min":{},"max":[10],"total":[5]},"rows":{"min":[10],"max":[10],"total":[10]},"pages":{}}}
-  </script>
-</div>
-<!-- rnb-frame-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <p><br /></p>
@@ -2201,31 +1945,13 @@ BirdNest %&gt;%
 <p>Could you create a summary about the largest ratio (ratio = Nestling / Totcare) by nest type (excluding “cavity” category) and present the result in a descending order?</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuQmlyZE5lc3QgJT4lIFxuICBmaWx0ZXIoIWdyZXBsKFwiY2F2aXR5XCIsTmVzdHR5cGUpKSAlPiUgXG4gIG11dGF0ZShyYXRpbyA9IE5lc3RsaW5nIC8gVG90Y2FyZSkgJT4lIFxuICBncm91cF9ieShOZXN0dHlwZSkgJT4lIFxuICBzdW1tYXJpc2UobWF4X3JhdGlvID0gbWF4KHJhdGlvLCBuYS5ybT1UKSkgJT4lXG4gIGFycmFuZ2UoZGVzYyhtYXhfcmF0aW8pKSBcbmBgYCJ9 -->
-<pre class="r"><code>BirdNest %&gt;% 
-  filter(!grepl(&quot;cavity&quot;,Nesttype)) %&gt;% 
-  mutate(ratio = Nestling / Totcare) %&gt;% 
-  group_by(Nesttype) %&gt;% 
-  summarise(max_ratio = max(ratio, na.rm=T)) %&gt;%
-  arrange(desc(max_ratio)) </code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiYHN1bW1hcmlzZSgpYCB1bmdyb3VwaW5nIG91dHB1dCAob3ZlcnJpZGUgd2l0aCBgLmdyb3Vwc2AgYXJndW1lbnQpXG4ifQ== -->
-<pre><code>`summarise()` ungrouping output (override with `.groups` argument)</code></pre>
-<!-- rnb-output-end -->
-<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbInRibF9kZiIsInRibCIsImRhdGEuZnJhbWUiXSwibnJvdyI6NiwibmNvbCI6Mn0sInJkZiI6Ikg0c0lBQUFBQUFBQUF3dHlpVERtaXVCaVlHQmdabUJoWUdKZ1pnVXlHVmhEUTl4MExSZ1lXSmlBSEVhZ0JDZUlyZ0FxRWdZeVFJSUNRTXdHbGVBc0xzaElMY3BNVHN5QkNyQWxsUllWNVpkRGVlekpSYWxsbWNtcFVDNXpjbWtCVEtZZ05TOGxNYThFcHEwNHNUUTV0UWpJNGdQeDdKK3V6WTY2dG5XdC9STUdNTEIvZEROblc3VHVkUHRIQzZwY2pxMC9iUCtRdzBtZ1JaSEQvc0g5Yk41dkcrNmpPWmMxTHpFM3RSanFWQ2FvSUlkZmFuRkpTV1VCekRHY3VZa1Y4VVdKSlpuNWFMbzVnZTdYZzVuQUN6S2hBVWo4Ly8vL0Y3bzF5VG1KeFRCcllJSmNLWWtsaVhwcFJVRDlRTjQvTkMzcytRVkFDL09BbXBoQXdjbUtwcG14Q0UxQW9EUVA1SklVM2VTTTByeHNYVU1Ua0ExZ2VRamdoYkxaa05oTUVEdVova1BOWW9XRmNXcGVlbVllelB1c09ZbEpxYkJZNHdONkdleGp2WUtpVEhpa2NBRkZpL1ZLOGt2Z3NjdVZuSjhERXdGN2p1RWZBTDJORzM1R0FnQUEifQ== -->
-<div data-pagedtable="false">
-<script data-pagedtable-source type="application/json">
-{"columns":[{"label":["Nesttype"],"name":[1],"type":["chr"],"align":["left"]},{"label":["max_ratio"],"name":[2],"type":["dbl"],"align":["right"]}],"data":[{"1":"spherical","2":"0.6774194"},{"1":"burrow","2":"0.6250000"},{"1":"crevice","2":"0.5890411"},{"1":"cup","2":"0.5820896"},{"1":"pendant","2":"0.5322581"},{"1":"saucer","2":"0.5272727"}],"options":{"columns":{"min":{},"max":[10],"total":[2]},"rows":{"min":[10],"max":[10],"total":[6]},"pages":{}}}
-  </script>
-</div>
-<!-- rnb-frame-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
 </div>
 </div>
 
-<div id="rmd-source-code">LS0tCnRpdGxlOiAiSW50cm9kdWN0aW9uIHRvIFJzdHVkaW8gKFBhcnQyKSIKb3V0cHV0OiBodG1sX25vdGVib29rCi0tLQoKIyMjIyBVc2UgZHBseXIgdG8gbWFuaXB1bGF0ZSBkYXRhCgojIyMjIyAwLiBpbXBvcnQgZGF0YQpgYGB7ciBldmFsPUZBTFNFfSAgCmxpYnJhcnkocmVhZHIpCkJpcmROZXN0IDwtIHJlYWRfY3N2KCJCaXJkTmVzdC5jc3YiKSAgIyByZWFkIGRhdGEgZnJvbSBjc3YgZmlsZQojIElmIHlvdSBkaWQgbm90IHNldCB3b3JrIGRpcmVjdG9yeSBvciB3b3VsZCBsaWtlIHRvIHJlYWQgaW4gZmlsZSBmcm9tIG90aGVyIGZvbGRlciBpbnN0ZWFkIG9mIHdvcmtpbmcgZGlyZWN0b3J5LCBzcGVjaWZ5IHBhdGggYWJvdmUKIApgYGAKCiMjIyMjIDEuIHNlbGVjdCAKVG8gc2VsZWN0IGNvbHVtbnMgb3IgZHJvcCBjb2x1bW5zIG9mIGEgZGF0YSBmcmFtZSwgdXNlIHNlbGVjdCgpLiAKCiogU2VsZWN0IGRlc2lyZWQgdmFyaWFibGVzCmBgYHtyfQojU2VsZWN0IGZvdXIgY29sdW1uczogTGVuZ3RoLCBOZXN0dHlwZSwgTG9jYXRpb24sIE5vLmVnZ3MgZnJvbSBvcmlnaW5hbCBkYXRhLCByZXR1cm4gdGhlIGZpcnN0IHNpeCByb3dzLgpsaWJyYXJ5KGRwbHlyKQpzZWxlY3QgPC0gc2VsZWN0KEJpcmROZXN0LCBMZW5ndGgsIE5lc3R0eXBlLCBMb2NhdGlvbiwgTm8uZWdncykKaGVhZChzZWxlY3QpCmBgYAoKKiBEcm9wIHVuZGVzaXJlZCB2YXJpYWJsZXMgIApgYGB7cn0KI1JlbW92ZSB0d28gY29sdW1uczogU3BlY2llcyBhbmQgQ29tbW9uIGZyb20gb3JpZ2luYWwgZGF0YSAgCmRyb3AgPC0gc2VsZWN0KEJpcmROZXN0LC0oU3BlY2llczpDb21tb24pKQpoZWFkKGRyb3ApCmBgYAoKPGJyIC8+ICAgICAKTm90ZTogWW91IG1heSB3YW50IHRvIHNldCBzb21lIGNyaXRlcmlhIGZvciB2YXJpYWJsZSBpbmNsdXNpb24gd2hlbiB5b3UgaGF2ZSBhIGxvdCBvZiB2YXJpYWJsZXMgaW4geW91ciBkYXRhLiAgCgpgYGB7ciBlY2hvPUZBTFNFLCByZXN1bHQgPSAnYXNpcyd9CnN1bW1hcnkgPC0gYygiU2VsZWN0IGV2ZXJ5dGhpbmcgYnV0ICIsIlNlbGVjdCByYW5nZSAiLAogICAgICAiU2VsZWN0IGNvbHVtbnMgd2hvc2UgbmFtZSBjb250YWlucyBhIGNoYXJhY3RlciBzdHJpbmciLAogICAgICAiU2VsZWN0IGNvbHVtbnMgd2hvc2UgbmFtZSBzdGFydHMgd2l0aCBhIHN0cmluZyIsCiAgICAgICJTZWxlY3QgY29sdW1ucyB3aG9zZSBuYW1lIGVuZHMgd2l0aCBhIHN0cmluZyIsCiAgICAgICJTZWxlY3QgY29sdW1ucyB3aG9zZSBuYW1lIG1hdGNoZXMgYSByZWd1bGFyIGV4cHJlc3Npb24iLAogICAgICAiU2VsZWN0IGNvbHVtbnMgd2hvc2UgbmFtZXMgYXJlIGluIGEgZ3JvdXAgb2YgbmFtZXMiCikKdXNhZ2UgPC0gYygiLSIsIjoiLCJjb250YWlucygpIiwic3RhcnRfd2l0aCgpIiwiZW5kc193aXRoKCkiLCJtYXRjaGVzKCkiLCJvbmVfb2YoKSIpCgp0YWJsZSA8LSBjYmluZCh1c2FnZSxzdW1tYXJ5KQpsaWJyYXJ5KGtuaXRyKQprYWJsZSh0YWJsZSkKCmBgYAoKYGBge3J9CiMgU2VsZWN0IHZhcmlhYmxlcyBjb250YWluICJuZXN0IiAoZGVmYXVsdCBjYXNlIGluc2Vuc2l0aXZlKQpoZWFkKHNlbGVjdChCaXJkTmVzdCwgY29udGFpbnMoIm5lc3QiKSkpCgpgYGAKCjxiciAvPiAgIAogCiMjIyMjIDIuIGZpbHRlciAgClVzZSAqKmZpbHRlcioqIHRvIHNlbGVjdCByb3dzIHRoYXQgbWVldCBjcml0ZXJpYS4geW91IG1heSB1c2UgJWluJSB3aGVuIHlvdSBoYXZlIHNwZWNpZmllZCBsZXZlbHMgdGhhdCB3b3VsZCBsaWtlIHRoZSB2YXJpYWJsZSB0byBiZSBmaWx0ZXJlZCBvbiwgaG93ZXZlciwgd2hlbiB5b3VyIGNyaXRlcmlhIGlzIGJsdXJyZWQsIHlvdSBtYXkgdXNlICJncmVwbCIsIHRvIHJvdWdobHkgc2VhcmNoIHBhdHRlcm4gaW4gdGhlIHZhcmlhYmxlIGFuZCByZXR1cm4gdGhlIHJvd3MgbWVldCBjcml0ZXJpYS4gICAgCmBgYHtyfQojU2VsZWN0IHJvd3Mgd2l0aCBMZW5ndGggbW9yZSB0aGFuIDMwCmZpbHRlcihCaXJkTmVzdCwgTGVuZ3RoPjMwKQoKI1NlbGVjdCByb3dzIHdpdGggTm8uZWdncyBtb3JlIHRoYW4gNiBhbmQgTG9jYXRpb24gaW4gImRlY2lkIgpmaWx0ZXIoQmlyZE5lc3QsIE5vLmVnZ3M+NiAsIExvY2F0aW9uICVpbiUgYygiZGVjaWQiKSkgIyMgb3IgTG9jYXRpb249PSJkZWNpZCIgaWYganVzdCBvbmUgbGV2ZWwKCmBgYAoKCjxiciAvPiAgIAogIAoqKlF1ZXN0aW9uOioqCkNvdWxkIHlvdSBmaWx0ZXIgdGhlIHJvd3Mgd2l0aCBsZXZlbHMgY29udGFpbnMgIkpheSIgaW4gQ29tbW9uIGNvbHVtbj8gKGhpbnQ6IHVzZSBncmVwbCBmdW5jdGlvbikKCmBgYHtyfQpmaWx0ZXIoQmlyZE5lc3QgLGdyZXBsKCJKYXkiLENvbW1vbikpCgpgYGAKCjxiciAvPiAgCgojIyMjIyAzLiBtdXRhdGUgIApXaGVuIHlvdSB3YW50IHRvIGNyZWF0ZSBuZXcgY29sdW1ucyBiYXNlZCBvbiB0aGUgdmFsdWVzIGluIGV4aXN0aW5nIGNvbHVtbnMsIGZvciBleGFtcGxlLCBkbyBjYWxjdWxhdGlvbiB1c2luZyBleGlzdGluZyB2YXJpYWJsZXMsIHdl4oCZbGwgdXNlIHRoZSBkcGx5ciBmdW5jdGlvbiBtdXRhdGUoKS4gIAoKYGBge3J9CmhlYWQobXV0YXRlKEJpcmROZXN0LCByYXRpbyA9IEluY3ViYXRlL1RvdGNhcmUpKQpoZWFkKG11dGF0ZShCaXJkTmVzdCwgcmF0aW8gPSBJbmN1YmF0ZS9Ub3RjYXJlLCBpbnZlcnNlID0gMS9yYXRpbykpCmhlYWQobXV0YXRlKEJpcmROZXN0LCBjdW1zdW1fdG90YWwgPSBjdW1zdW0oVG90Y2FyZSkpKQpoZWFkKG11dGF0ZShCaXJkTmVzdCwgbm9yX05lc3QgPSBOZXN0bGluZy9tZWFuKE5lc3RsaW5nLCBuYS5ybT1UKSkpICMgbmEucm09VCByZW1vdmVzIHRoZSBtaXNzaW5nIHZhbHVlIHdoZW4gY2FsY3VsYXRpbmcgbWVhbiAKYGBgCgpOb3RlOiBjcmVhdGUgdmFyaWFibGVzIHdpdGggY3JpdGVyaWEgIAoKYGBge3IgZWNobz1GQUxTRSwgcmVzdWx0ID0gJ2FzaXMnfQpzdW1tYXJ5IDwtIGMoIkVsZW1lbnR3aXNlIG1pbmltdW0gb3IgbWF4aW11bSIsCiAgICAgICJDdW11bGF0aXZlIG1pbmltdW0gYW5kIG1heGltdW0gIiwKICAgICAgIkN1bXVsYXRpdmUgc3VtIGFuZCBwcm9kdWN0IikKdXNhZ2UgPC0gYygicG1pbigpLCBwbWF4KCkiLCJjdW1taW4oKSwgY3VtbWF4KCkiLCJjdW1zdW0oKSwgY3VtcHJvZCgpIikKCnRhYmxlIDwtIGNiaW5kKHVzYWdlLHN1bW1hcnkpCmxpYnJhcnkoa25pdHIpCmthYmxlKHRhYmxlKQoKYGBgCjxiciAvPiAgCgojIyMjIyA0LiBhcnJhbmdlICAKQXJyYW5nZSB0aGUgcm93cyBvZiB5b3VyIGRhdGEgYmFzZWQgYWNjb3JkaW5nIHRvIHRoZSBwcmVmZXJyZWQgb3JkZXIgaW4gdGhlIHNwZWNpZmllZCB2YXJpYWJsZS4KYGBge3J9CiMgb3JkZXIgdGhlIGRhdGEgYnkgYXNjZW5kaW5nIGxlbmd0aApoZWFkKGFycmFuZ2UoQmlyZE5lc3QsIExlbmd0aCkpCmhlYWQoYXJyYW5nZShCaXJkTmVzdCwgTGVuZ3RoLCBOby5lZ2dzKSkgCmBgYAoKPGJyIC8+ICAKCgojIyMjIyA1LiBwaXBlcyAgClBpcGVzIGNhbiBiZSB1c2VkIHdoZW4geW91IHdhbnQgdG8gbWFueSB0aGluZ3MgdG8gdGhlIHNhbWUgZGF0YSBzZXQuIEl0IHRha2VzIHRoZSBvdXRwdXQgb2Ygb25lIGZ1bmN0aW9uIGFuZCBzZW5kIGl0IGRpcmVjdGx5IHRvIHRoZSBuZXh0LiBEaWZmZXJlbnQgbGF5ZXMgY2FuIGJlIGFkZGVkIGluIHRoZSBwaXBlcy4gWW91IHdpbGwgbmVlZCB0byBjb25zaWRlciB0aGUgb3JkZXIgb2YgYWRkaW5nIHRoZSBsYXllcnMsIGJlY2F1c2UgaXQgbmVlZHMgdG8gZXhlY3V0ZSB0aGUgYW5hbHlzaXMgeW91IHBsYW4gYW5kIHNhdGlzZnkgcGlwZSBsb2dpYy4gIAoKTm90ZTogY3RybCtzaGlmdCttIGZvciB0aGUgKiolPiUqKiBzeW1ib2wgZm9yIE1hYy4gIAoKYGBge3J9CmhlYWQoc2VsZWN0KEJpcmROZXN0LCBMZW5ndGgsIE5lc3R0eXBlLCBMb2NhdGlvbiwgTm8uZWdncykpCiMgZXF1YWxzIHRvCmhlYWQoQmlyZE5lc3QgJT4lIHNlbGVjdChMZW5ndGgsIE5lc3R0eXBlLCBMb2NhdGlvbiwgTm8uZWdncykpCgpoZWFkKGZpbHRlcihCaXJkTmVzdCwgTm8uZWdncz42ICwgTG9jYXRpb24gJWluJSBjKCJkZWNpZCIpKSkKIyBlcXVhbHMgdG8KaGVhZChCaXJkTmVzdCAlPiUgZmlsdGVyKCBOby5lZ2dzPjYgLCBMb2NhdGlvbiAlaW4lIGMoImRlY2lkIikpKQoKIyBhZGQgbGF5ZXIKQmlyZE5lc3QgJT4lIAogIGZpbHRlciggTm8uZWdncz42ICwgTG9jYXRpb24gJWluJSBjKCJkZWNpZCIpKSAlPiUgCiAgc2VsZWN0KFNwZWNpZXMsIENvbW1vbiwgTm8uZWdncywgTG9jYXRpb24pCgpgYGAKCjxiciAvPiAgICAKCioqUXVlc3Rpb246KioKQ291bGQgeW91IG91dHB1dCB0b3AgMTAgb2JzZXJ2YXRpb25zIHdpdGggbGFyZ2VzdCBsZW5ndGg/IAoKYGBge3J9CkJpcmROZXN0ICU+JQogIGFycmFuZ2UoZGVzYyhMZW5ndGgpICkgJT4lIAogIGhlYWQobiA9IDEwKQoKYGBgCjxiciAvPiAgCgojIyMjIyA2LiBzdW1tYXJpc2UgIApXaGVuIHlvdSB3YW50IHRvIGNyZWF0ZSBhIHN1bW1hcnkgYWNyb3NzIHRoZSBkYXRhLCBzdW1tYXJpc2UoKSBmdW5jdGlvbiBpbiBkcGx5ciBwYWNrYWdlIGNhbiBiZSB1c2VkLiBHZW5lcmFsbHksIGl0IG9mdGVuIGNvbWJpbmVzIHdpdGggZ3JvdXBfYnksIHdoaWNoIGNyZWF0ZXMgYSBzdW1tYXJ5IGJ5IHN1Ymdyb3Vwcy4gCmBgYHtyfQojIHRvIGNyZWF0ZSBhIHN1bW1lcnkgYWJvdXQgYXZlcmFnZSwgdmFyaWFuY2Ugb2YgbGVuZ3QsIGFuZCBjb3VudCBkaXN0aW5jdCBlZ2cgY29sb3IgCkJpcmROZXN0ICU+JSBzdW1tYXJpc2UobWVhbl9sZW5ndGggPSBtZWFuKExlbmd0aCksIHZhcl9MZW5ndGggPSB2YXIoTGVuZ3RoKSwgbl9kaXN0aWN0X2NvbG9yID0gbl9kaXN0aW5jdChDb2xvcikpICAKCiMgdG8gY3JlYXRlIGEgc3VtbWVyeSByZXNwZWN0aXZlIHRvIHNhbWUgZmllbGRzIGFib3ZlIHdpdGhpbiBlYWNoIGVnZyBjb2xvci4KQmlyZE5lc3QgJT4lIAogIGdyb3VwX2J5KENvbG9yKSAlPiUgCiAgc3VtbWFyaXNlKG1lYW5fbGVuZ3RoID0gbWVhbihMZW5ndGgpLCB2YXJfTGVuZ3RoID0gdmFyKExlbmd0aCksIG5fZGlzdGljdF9jb2xvciA9IG5fZGlzdGluY3QoQ29sb3IpKSAKCmBgYAo8YnIgLz4gIAoKIyMjIyMgNy4gZ3JvdXAgYnkgIApncm91cF9ieSgpIGFuZCBzdW1tYXJpc2UgdG9nZXRoZXIgY2FuIGNyZWF0ZSBhIHNwbGl0LWFwcGx5LWNvbWJpbmUgYW5hbHlzaXMuIGdyb3VwX2J5KCkgc3BsaXRzIHRoZSBkYXRhIGludG8gZ3JvdXBzLCBzdW1tYXJpc2UoKSBwcm92aWRlcyBzdW1tYXJ5IGZ1bmN0aW9uIGluIGVhY2ggZ3JvdXAgYW5kIHRoZSBzdW1tYXJ5IGZvciBlYWNoIHN1Ymdyb3VwcyBhcmUgY29tYmluZWQgYW5kIHJldHVybmVkLiAgIAoKTm90ZTogIApBZGRpbmcgbXVsdGlwbGUgdmFyaWFibGVzIGluIGdyb3VwX2J5KCkgd2lsbCByZXR1cm4gYSBzdW1tYXJ5IHdpdGggZ3JvdXBpbmcgYnkgYWRkaW5nIG9yZGVyLgpgYGB7cn0KIyBjcmVhdGUgc3VtbWFyeSBhYm91dCBtZWFuIGFuZCB2YXJpYW5jZSBvZiBsZWdudGgsIG51bWJlciBvZiBkaXN0aW5jdCBsb2NhdGlvbiBieSBjb2xvciBhbmQgbmVzdHR5cGUKQmlyZE5lc3QgJT4lIAogIGdyb3VwX2J5KENvbG9yLE5lc3R0eXBlKSAlPiUgCiAgc3VtbWFyaXNlKG1lYW5fbGVuZ3RoID0gbWVhbihMZW5ndGgpLCBudW1fb2JzID0gbigpLCBuX2Rpc3RpY3RfbG9jYXRpb24gPSBuX2Rpc3RpbmN0KExvY2F0aW9uKSkKYGBgCjxiciAvPiAgCgoqKlRha2UgaG9tZSBxdWVzdGlvbjogICoqCgpDb3VsZCB5b3UgY3JlYXRlIGEgc3VtbWFyeSBhYm91dCB0aGUgbGFyZ2VzdCByYXRpbyAocmF0aW8gPSBOZXN0bGluZyAvIFRvdGNhcmUpIGJ5IG5lc3QgdHlwZSAoZXhjbHVkaW5nICJjYXZpdHkiIGNhdGVnb3J5KSBhbmQgcHJlc2VudCB0aGUgcmVzdWx0IGluIGEgZGVzY2VuZGluZyBvcmRlcj8KCmBgYHtyIH0KQmlyZE5lc3QgJT4lIAogIGZpbHRlcighZ3JlcGwoImNhdml0eSIsTmVzdHR5cGUpKSAlPiUgCiAgbXV0YXRlKHJhdGlvID0gTmVzdGxpbmcgLyBUb3RjYXJlKSAlPiUgCiAgZ3JvdXBfYnkoTmVzdHR5cGUpICU+JSAKICBzdW1tYXJpc2UobWF4X3JhdGlvID0gbWF4KHJhdGlvLCBuYS5ybT1UKSkgJT4lCiAgYXJyYW5nZShkZXNjKG1heF9yYXRpbykpIAoKYGBgCgo=</div>
+<div id="rmd-source-code">LS0tCnRpdGxlOiAiSW50cm9kdWN0aW9uIHRvIFJzdHVkaW8gKFBhcnQyKSIKb3V0cHV0OgogIHBkZl9kb2N1bWVudDogZGVmYXVsdAogIGh0bWxfbm90ZWJvb2s6IGRlZmF1bHQKLS0tCgojIyMjIFVzZSBkcGx5ciB0byBtYW5pcHVsYXRlIGRhdGEKCiMjIyMjIDAuIGltcG9ydCBkYXRhCmBgYHtyIGV2YWw9RkFMU0V9ICAKbGlicmFyeShyZWFkcikKQmlyZE5lc3QgPC0gcmVhZF9jc3YoIkJpcmROZXN0LmNzdiIpICAjIHJlYWQgZGF0YSBmcm9tIGNzdiBmaWxlCiMgSWYgeW91IGRpZCBub3Qgc2V0IHdvcmsgZGlyZWN0b3J5IG9yIHdvdWxkIGxpa2UgdG8gcmVhZCBpbiBmaWxlIGZyb20gb3RoZXIgZm9sZGVyIGluc3RlYWQgb2Ygd29ya2luZyBkaXJlY3RvcnksIHNwZWNpZnkgcGF0aCBhYm92ZQogCmBgYAoKIyMjIyMgMS4gc2VsZWN0IApUbyBzZWxlY3QgY29sdW1ucyBvciBkcm9wIGNvbHVtbnMgb2YgYSBkYXRhIGZyYW1lLCB1c2Ugc2VsZWN0KCkuIAoKKiBTZWxlY3QgZGVzaXJlZCB2YXJpYWJsZXMKYGBge3J9CiNTZWxlY3QgZm91ciBjb2x1bW5zOiBMZW5ndGgsIE5lc3R0eXBlLCBMb2NhdGlvbiwgTm8uZWdncyBmcm9tIG9yaWdpbmFsIGRhdGEsIHJldHVybiB0aGUgZmlyc3Qgc2l4IHJvd3MuCmxpYnJhcnkoZHBseXIpCnNlbGVjdCA8LSBzZWxlY3QoQmlyZE5lc3QsIExlbmd0aCwgTmVzdHR5cGUsIExvY2F0aW9uLCBOby5lZ2dzKQpoZWFkKHNlbGVjdCkKYGBgCgoqIERyb3AgdW5kZXNpcmVkIHZhcmlhYmxlcyAgCmBgYHtyfQojUmVtb3ZlIHR3byBjb2x1bW5zOiBTcGVjaWVzIGFuZCBDb21tb24gZnJvbSBvcmlnaW5hbCBkYXRhICAKZHJvcCA8LSBzZWxlY3QoQmlyZE5lc3QsLShTcGVjaWVzOkNvbW1vbikpCmhlYWQoZHJvcCkKYGBgCgo8YnIgLz4gICAgIApOb3RlOiBZb3UgbWF5IHdhbnQgdG8gc2V0IHNvbWUgY3JpdGVyaWEgZm9yIHZhcmlhYmxlIGluY2x1c2lvbiB3aGVuIHlvdSBoYXZlIGEgbG90IG9mIHZhcmlhYmxlcyBpbiB5b3VyIGRhdGEuICAKCmBgYHtyIGVjaG89RkFMU0UsIHJlc3VsdCA9ICdhc2lzJ30Kc3VtbWFyeSA8LSBjKCJTZWxlY3QgZXZlcnl0aGluZyBidXQgIiwiU2VsZWN0IHJhbmdlICIsCiAgICAgICJTZWxlY3QgY29sdW1ucyB3aG9zZSBuYW1lIGNvbnRhaW5zIGEgY2hhcmFjdGVyIHN0cmluZyIsCiAgICAgICJTZWxlY3QgY29sdW1ucyB3aG9zZSBuYW1lIHN0YXJ0cyB3aXRoIGEgc3RyaW5nIiwKICAgICAgIlNlbGVjdCBjb2x1bW5zIHdob3NlIG5hbWUgZW5kcyB3aXRoIGEgc3RyaW5nIiwKICAgICAgIlNlbGVjdCBjb2x1bW5zIHdob3NlIG5hbWUgbWF0Y2hlcyBhIHJlZ3VsYXIgZXhwcmVzc2lvbiIsCiAgICAgICJTZWxlY3QgY29sdW1ucyB3aG9zZSBuYW1lcyBhcmUgaW4gYSBncm91cCBvZiBuYW1lcyIKKQp1c2FnZSA8LSBjKCItIiwiOiIsImNvbnRhaW5zKCkiLCJzdGFydF93aXRoKCkiLCJlbmRzX3dpdGgoKSIsIm1hdGNoZXMoKSIsIm9uZV9vZigpIikKCnRhYmxlIDwtIGNiaW5kKHVzYWdlLHN1bW1hcnkpCmxpYnJhcnkoa25pdHIpCmthYmxlKHRhYmxlKQoKYGBgCgpgYGB7cn0KIyBTZWxlY3QgdmFyaWFibGVzIGNvbnRhaW4gIm5lc3QiIChkZWZhdWx0IGNhc2UgaW5zZW5zaXRpdmUpCmhlYWQoc2VsZWN0KEJpcmROZXN0LCBjb250YWlucygibmVzdCIpKSkKCmBgYAoKPGJyIC8+ICAgCiAKIyMjIyMgMi4gZmlsdGVyICAKVXNlICoqZmlsdGVyKiogdG8gc2VsZWN0IHJvd3MgdGhhdCBtZWV0IGNyaXRlcmlhLiB5b3UgbWF5IHVzZSAlaW4lIHdoZW4geW91IGhhdmUgc3BlY2lmaWVkIGxldmVscyB0aGF0IHdvdWxkIGxpa2UgdGhlIHZhcmlhYmxlIHRvIGJlIGZpbHRlcmVkIG9uLCBob3dldmVyLCB3aGVuIHlvdXIgY3JpdGVyaWEgaXMgYmx1cnJlZCwgeW91IG1heSB1c2UgImdyZXBsIiwgdG8gcm91Z2hseSBzZWFyY2ggcGF0dGVybiBpbiB0aGUgdmFyaWFibGUgYW5kIHJldHVybiB0aGUgcm93cyBtZWV0IGNyaXRlcmlhLiAgICAKYGBge3J9CiNTZWxlY3Qgcm93cyB3aXRoIExlbmd0aCBtb3JlIHRoYW4gMzAKZmlsdGVyKEJpcmROZXN0LCBMZW5ndGg+MzApCgojU2VsZWN0IHJvd3Mgd2l0aCBOby5lZ2dzIG1vcmUgdGhhbiA2IGFuZCBMb2NhdGlvbiBpbiAiZGVjaWQiCmZpbHRlcihCaXJkTmVzdCwgTm8uZWdncz42ICwgTG9jYXRpb24gJWluJSBjKCJkZWNpZCIpKSAjIyBvciBMb2NhdGlvbj09ImRlY2lkIiBpZiBqdXN0IG9uZSBsZXZlbAoKYGBgCgoKPGJyIC8+ICAgCiAgCioqUXVlc3Rpb246KioKQ291bGQgeW91IGZpbHRlciB0aGUgcm93cyB3aXRoIGxldmVscyBjb250YWlucyAiSmF5IiBpbiBDb21tb24gY29sdW1uPyAoaGludDogdXNlIGdyZXBsIGZ1bmN0aW9uKQoKYGBge3J9CmZpbHRlcihCaXJkTmVzdCAsZ3JlcGwoIkpheSIsQ29tbW9uKSkKCmBgYAoKPGJyIC8+ICAKCiMjIyMjIDMuIG11dGF0ZSAgCldoZW4geW91IHdhbnQgdG8gY3JlYXRlIG5ldyBjb2x1bW5zIGJhc2VkIG9uIHRoZSB2YWx1ZXMgaW4gZXhpc3RpbmcgY29sdW1ucywgZm9yIGV4YW1wbGUsIGRvIGNhbGN1bGF0aW9uIHVzaW5nIGV4aXN0aW5nIHZhcmlhYmxlcywgd2XigJlsbCB1c2UgdGhlIGRwbHlyIGZ1bmN0aW9uIG11dGF0ZSgpLiAgCgpgYGB7cn0KaGVhZChtdXRhdGUoQmlyZE5lc3QsIHJhdGlvID0gSW5jdWJhdGUvVG90Y2FyZSkpCmhlYWQobXV0YXRlKEJpcmROZXN0LCByYXRpbyA9IEluY3ViYXRlL1RvdGNhcmUsIGludmVyc2UgPSAxL3JhdGlvKSkKaGVhZChtdXRhdGUoQmlyZE5lc3QsIGN1bXN1bV90b3RhbCA9IGN1bXN1bShUb3RjYXJlKSkpCmhlYWQobXV0YXRlKEJpcmROZXN0LCBub3JfTmVzdCA9IE5lc3RsaW5nL21lYW4oTmVzdGxpbmcsIG5hLnJtPVQpKSkgIyBuYS5ybT1UIHJlbW92ZXMgdGhlIG1pc3NpbmcgdmFsdWUgd2hlbiBjYWxjdWxhdGluZyBtZWFuIApgYGAKCk5vdGU6IGNyZWF0ZSB2YXJpYWJsZXMgd2l0aCBjcml0ZXJpYSAgCgpgYGB7ciBlY2hvPUZBTFNFLCByZXN1bHQgPSAnYXNpcyd9CnN1bW1hcnkgPC0gYygiRWxlbWVudHdpc2UgbWluaW11bSBvciBtYXhpbXVtIiwKICAgICAgIkN1bXVsYXRpdmUgbWluaW11bSBhbmQgbWF4aW11bSAiLAogICAgICAiQ3VtdWxhdGl2ZSBzdW0gYW5kIHByb2R1Y3QiKQp1c2FnZSA8LSBjKCJwbWluKCksIHBtYXgoKSIsImN1bW1pbigpLCBjdW1tYXgoKSIsImN1bXN1bSgpLCBjdW1wcm9kKCkiKQoKdGFibGUgPC0gY2JpbmQodXNhZ2Usc3VtbWFyeSkKbGlicmFyeShrbml0cikKa2FibGUodGFibGUpCgpgYGAKPGJyIC8+ICAKCiMjIyMjIDQuIGFycmFuZ2UgIApBcnJhbmdlIHRoZSByb3dzIG9mIHlvdXIgZGF0YSBiYXNlZCBhY2NvcmRpbmcgdG8gdGhlIHByZWZlcnJlZCBvcmRlciBpbiB0aGUgc3BlY2lmaWVkIHZhcmlhYmxlLgpgYGB7cn0KIyBvcmRlciB0aGUgZGF0YSBieSBhc2NlbmRpbmcgbGVuZ3RoCmhlYWQoYXJyYW5nZShCaXJkTmVzdCwgTGVuZ3RoKSkKaGVhZChhcnJhbmdlKEJpcmROZXN0LCBMZW5ndGgsIE5vLmVnZ3MpKSAKYGBgCgo8YnIgLz4gIAoKCiMjIyMjIDUuIHBpcGVzICAKUGlwZXMgY2FuIGJlIHVzZWQgd2hlbiB5b3Ugd2FudCB0byBtYW55IHRoaW5ncyB0byB0aGUgc2FtZSBkYXRhIHNldC4gSXQgdGFrZXMgdGhlIG91dHB1dCBvZiBvbmUgZnVuY3Rpb24gYW5kIHNlbmQgaXQgZGlyZWN0bHkgdG8gdGhlIG5leHQuIERpZmZlcmVudCBsYXllcyBjYW4gYmUgYWRkZWQgaW4gdGhlIHBpcGVzLiBZb3Ugd2lsbCBuZWVkIHRvIGNvbnNpZGVyIHRoZSBvcmRlciBvZiBhZGRpbmcgdGhlIGxheWVycywgYmVjYXVzZSBpdCBuZWVkcyB0byBleGVjdXRlIHRoZSBhbmFseXNpcyB5b3UgcGxhbiBhbmQgc2F0aXNmeSBwaXBlIGxvZ2ljLiAgCgpOb3RlOiBjdHJsK3NoaWZ0K20gZm9yIHRoZSAqKiU+JSoqIHN5bWJvbCBmb3IgTWFjLiAgCgpgYGB7cn0KaGVhZChzZWxlY3QoQmlyZE5lc3QsIExlbmd0aCwgTmVzdHR5cGUsIExvY2F0aW9uLCBOby5lZ2dzKSkKIyBlcXVhbHMgdG8KaGVhZChCaXJkTmVzdCAlPiUgc2VsZWN0KExlbmd0aCwgTmVzdHR5cGUsIExvY2F0aW9uLCBOby5lZ2dzKSkKCmhlYWQoZmlsdGVyKEJpcmROZXN0LCBOby5lZ2dzPjYgLCBMb2NhdGlvbiAlaW4lIGMoImRlY2lkIikpKQojIGVxdWFscyB0bwpoZWFkKEJpcmROZXN0ICU+JSBmaWx0ZXIoIE5vLmVnZ3M+NiAsIExvY2F0aW9uICVpbiUgYygiZGVjaWQiKSkpCgojIGFkZCBsYXllcgpCaXJkTmVzdCAlPiUgCiAgZmlsdGVyKCBOby5lZ2dzPjYgLCBMb2NhdGlvbiAlaW4lIGMoImRlY2lkIikpICU+JSAKICBzZWxlY3QoU3BlY2llcywgQ29tbW9uLCBOby5lZ2dzLCBMb2NhdGlvbikKCmBgYAoKPGJyIC8+ICAgIAoKKipRdWVzdGlvbjoqKgpDb3VsZCB5b3Ugb3V0cHV0IHRvcCAxMCBvYnNlcnZhdGlvbnMgd2l0aCBsYXJnZXN0IGxlbmd0aD8gCgpgYGB7cn0KQmlyZE5lc3QgJT4lCiAgYXJyYW5nZShkZXNjKExlbmd0aCkgKSAlPiUgCiAgaGVhZChuID0gMTApCgpgYGAKPGJyIC8+ICAKCiMjIyMjIDYuIHN1bW1hcmlzZSAgCldoZW4geW91IHdhbnQgdG8gY3JlYXRlIGEgc3VtbWFyeSBhY3Jvc3MgdGhlIGRhdGEsIHN1bW1hcmlzZSgpIGZ1bmN0aW9uIGluIGRwbHlyIHBhY2thZ2UgY2FuIGJlIHVzZWQuIEdlbmVyYWxseSwgaXQgb2Z0ZW4gY29tYmluZXMgd2l0aCBncm91cF9ieSwgd2hpY2ggY3JlYXRlcyBhIHN1bW1hcnkgYnkgc3ViZ3JvdXBzLiAKYGBge3J9CiMgdG8gY3JlYXRlIGEgc3VtbWVyeSBhYm91dCBhdmVyYWdlLCB2YXJpYW5jZSBvZiBsZW5ndCwgYW5kIGNvdW50IGRpc3RpbmN0IGVnZyBjb2xvciAKQmlyZE5lc3QgJT4lIHN1bW1hcmlzZShtZWFuX2xlbmd0aCA9IG1lYW4oTGVuZ3RoKSwgdmFyX0xlbmd0aCA9IHZhcihMZW5ndGgpLCBuX2Rpc3RpY3RfY29sb3IgPSBuX2Rpc3RpbmN0KENvbG9yKSkgIAoKIyB0byBjcmVhdGUgYSBzdW1tZXJ5IHJlc3BlY3RpdmUgdG8gc2FtZSBmaWVsZHMgYWJvdmUgd2l0aGluIGVhY2ggZWdnIGNvbG9yLgpCaXJkTmVzdCAlPiUgCiAgZ3JvdXBfYnkoQ29sb3IpICU+JSAKICBzdW1tYXJpc2UobWVhbl9sZW5ndGggPSBtZWFuKExlbmd0aCksIHZhcl9MZW5ndGggPSB2YXIoTGVuZ3RoKSwgbl9kaXN0aWN0X2NvbG9yID0gbl9kaXN0aW5jdChDb2xvcikpIAoKYGBgCjxiciAvPiAgCgojIyMjIyA3LiBncm91cCBieSAgCmdyb3VwX2J5KCkgYW5kIHN1bW1hcmlzZSB0b2dldGhlciBjYW4gY3JlYXRlIGEgc3BsaXQtYXBwbHktY29tYmluZSBhbmFseXNpcy4gZ3JvdXBfYnkoKSBzcGxpdHMgdGhlIGRhdGEgaW50byBncm91cHMsIHN1bW1hcmlzZSgpIHByb3ZpZGVzIHN1bW1hcnkgZnVuY3Rpb24gaW4gZWFjaCBncm91cCBhbmQgdGhlIHN1bW1hcnkgZm9yIGVhY2ggc3ViZ3JvdXBzIGFyZSBjb21iaW5lZCBhbmQgcmV0dXJuZWQuICAgCgpOb3RlOiAgCkFkZGluZyBtdWx0aXBsZSB2YXJpYWJsZXMgaW4gZ3JvdXBfYnkoKSB3aWxsIHJldHVybiBhIHN1bW1hcnkgd2l0aCBncm91cGluZyBieSBhZGRpbmcgb3JkZXIuCmBgYHtyfQojIGNyZWF0ZSBzdW1tYXJ5IGFib3V0IG1lYW4gYW5kIHZhcmlhbmNlIG9mIGxlZ250aCwgbnVtYmVyIG9mIGRpc3RpbmN0IGxvY2F0aW9uIGJ5IGNvbG9yIGFuZCBuZXN0dHlwZQpCaXJkTmVzdCAlPiUgCiAgZ3JvdXBfYnkoQ29sb3IsTmVzdHR5cGUpICU+JSAKICBzdW1tYXJpc2UobWVhbl9sZW5ndGggPSBtZWFuKExlbmd0aCksIG51bV9vYnMgPSBuKCksIG5fZGlzdGljdF9sb2NhdGlvbiA9IG5fZGlzdGluY3QoTG9jYXRpb24pKQpgYGAKPGJyIC8+ICAKCioqVGFrZSBob21lIHF1ZXN0aW9uOiAgKioKCkNvdWxkIHlvdSBjcmVhdGUgYSBzdW1tYXJ5IGFib3V0IHRoZSBsYXJnZXN0IHJhdGlvIChyYXRpbyA9IE5lc3RsaW5nIC8gVG90Y2FyZSkgYnkgbmVzdCB0eXBlIChleGNsdWRpbmcgImNhdml0eSIgY2F0ZWdvcnkpIGFuZCBwcmVzZW50IHRoZSByZXN1bHQgaW4gYSBkZXNjZW5kaW5nIG9yZGVyPwoKYGBge3IgLCBlY2hvPUZBTFNFfQpCaXJkTmVzdCAlPiUgCiAgZmlsdGVyKCFncmVwbCgiY2F2aXR5IixOZXN0dHlwZSkpICU+JSAKICBtdXRhdGUocmF0aW8gPSBOZXN0bGluZyAvIFRvdGNhcmUpICU+JSAKICBncm91cF9ieShOZXN0dHlwZSkgJT4lIAogIHN1bW1hcmlzZShtYXhfcmF0aW8gPSBtYXgocmF0aW8sIG5hLnJtPVQpKSAlPiUKICBhcnJhbmdlKGRlc2MobWF4X3JhdGlvKSkgCgpgYGAKCg==</div>
 
 
 
@@ -2272,7 +1998,7 @@ $(document).ready(function () {
 <!-- code folding -->
 <script>
 $(document).ready(function () {
-  window.initializeSourceEmbed("Manipulating_data_dplyr.Rmd");
+  window.initializeSourceEmbed("part2_Manipulation_dplyr.Rmd");
   window.initializeCodeFolding("show" === "show");
 });
 </script>
