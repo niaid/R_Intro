@@ -3,7 +3,7 @@
 
 BCBB Bioinformatics Workshops to OCICB R Learners Group
 
-August 19, 2020, online webinar.
+August 26, 2020, online webinar.
 
 Instructors: Jingwen Gu - jingwen.gu@nih.gov, Poorani Subramanian
 
@@ -11,11 +11,13 @@ Contact: [bioinformatics @NIAID](https://bioinformatics.niaid.nih.gov/) or email
 
 ## In this Repo
 - [package_install.R](package_install.R) - script to install the packages needed for this class.  To use, open the script in RStudio, and then click 'Source'.
-- **Introduction_to_Rstudio_Part_1**
+- **Introduction_to_Rstudio_Part_1_2**
   - [BirdNest.csv](Introduction_to_Rstudio_Part_1/BirdNest.csv) - Data
-  - [Introduction_to_R.nb.html](Introduction_to_Rstudio_Part_1/Introduction_to_R.nb.html) - Notes
-  - [Introduction_to_R.Rmd](Introduction_to_Rstudio_Part_1/Introduction_to_R.Rmd) - R notebook
-  - [demo.Rproj](Introduction_to_Rstudio_Part_1/demo.Rproj) - R project
+  - [part1_Introduction_to_R.nb.html](Introduction_to_Rstudio_Part_1_2/part1_Introduction_to_R.nb.html) - Notes
+  - [part1_Introduction_to_R.Rmd](Introduction_to_Rstudio_Part_1_2/part1_Introduction_to_R.Rmd) - R notebook
+  - [part2_Manipulation_dplyr.nb.html](Introduction_to_Rstudio_Part_1_2/part2_Manipulation_dplyr.nb.html) - Notes
+  - [part2_Manipulation_dplyr.Rmd](Introduction_to_Rstudio_Part_1_2/part2_Manipulation_dplyr.Rmd) - R notebook
+  - [demo.Rproj](Introduction_to_Rstudio_Part_1_2/demo.Rproj) - R project
 - **Introduction to plotting with RNA-seq data**
   - [Input data](https://proj-bip-prod-publicread.s3.amazonaws.com/training/R_Intro/plotting_rnaseq.zip)
   - [Notes](plotting/notes.md)
