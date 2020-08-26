@@ -1,14 +1,15 @@
 ---
 title: "Introduction to Rstudio (Part2)"
 output:
-  pdf_document: default
+  html_document:
+    df_print: paged
   html_notebook: default
 ---
 
 #### Use dplyr to manipulate data
 
 ##### 0. import data
-```{r eval=FALSE}  
+```{r }  
 library(readr)
 BirdNest <- read_csv("BirdNest.csv")  # read data from csv file
 # If you did not set work directory or would like to read in file from other folder instead of working directory, specify path above
