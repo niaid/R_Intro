@@ -1,5 +1,4 @@
-
-# Introduction to Rstudio
+# Introduction to R & Rstudio
 
 BCBB Bioinformatics Workshops to OCICB R Learners Group
 
@@ -23,17 +22,21 @@ Contact: [bioinformatics @NIAID](https://bioinformatics.niaid.nih.gov/) or email
   - [Notes](plotting/notes.md)
   - [plotting scripts](./plotting) also linked in Notes.
 
+## Previous Classes
+
+- Summer/Fall 2020 R Learners Group
+
+- [Spring 2020 MIS RNA-seq seminars](https://github.com/niaid/R_Intro/tree/MIS-2020) - [zipped archive](https://github.com/niaid/R_Intro/archive/MIS-2020.zip) of notes & scripts
+- [2019 BCBB Bioinformatics Workshops at RML](https://github.com/niaid/R_Intro/tree/RML-2019) - also can download [zipped materials](https://github.com/niaid/R_Intro/archive/RML-2019.zip)
+
 ## Resources
 
 - [R project](https://www.r-project.org/) - links to [CRAN](https://cran.r-project.org/) - repository for R packages and where you can download the R software
-  - On mac, you need admin privileges to install.  Can also install through NIAID's Self-Service or Software Center app.
 - [RStudio](https://www.rstudio.com/products/rstudio/download/#download)
 - Sean Davis [introductory R course notes](https://seandavi.github.io/ITR/) 
 - [Cookbook for R Graphs](http://www.cookbook-r.com/Graphs/) - **_super helpful_** site for learning how to make graphs in R
 - Lori Shepard [Introduction to R and Bioconductor BioC2017](https://github.com/Bioconductor/BiocIntro/tree/Bioc2017) 
+- [rseek.org](https://rseek.org) - search engine for R-related sites
+- [CRAN Task Views](https://cran.r-project.org/web/views/) & [RStudio Quick list of useful R packages](https://support.rstudio.com/hc/en-us/articles/201057987-Quick-list-of-useful-R-packages) - help for finding package for particular task/topic
 - [NIAID's RStudio Server](https://rstudio-pro.niaid.nih.gov/) 
-
-## Previous Classes
-- [Spring 2020 MIS RNA-seq seminars](https://github.com/niaid/R_Intro/tree/MIS-2020) - [zipped archive](https://github.com/niaid/R_Intro/archive/MIS-2020.zip) of notes & scripts
-- [2019 BCBB Bioinformatics Workshops at RML](https://github.com/niaid/R_Intro/tree/RML-2019) - also can download [zipped materials](https://github.com/niaid/R_Intro/archive/RML-2019.zip)
 
