@@ -2,7 +2,7 @@
 
 BCBB Bioinformatics Workshops to OCICB R Learners Group
 
-August 26, 2020, online webinar.
+August 19 & 26/September 2, 2020, online webinar.
 
 Instructors: Jingwen Gu - jingwen.gu@nih.gov, Poorani Subramanian
 
@@ -15,7 +15,7 @@ Contact: [bioinformatics @NIAID](https://bioinformatics.niaid.nih.gov/) or email
   - [BirdNest.csv](Introduction_to_Rstudio_Part_1/BirdNest.csv) - Data
   - Part1: [part1_Introduction_to_R.nb.html](part1_Introduction_to_R.nb.html) - Notes & [part1_Introduction_to_R.Rmd](part1_Introduction_to_R.Rmd) - R notebook
   - Part2: [part2_Manipulation_dplyr.nb.html](part2_Manipulation_dplyr.nb.html) - Notes & [part2_Manipulation_dplyr.Rmd](part2_Manipulation_dplyr.Rmd) - R notebook
-- **Intro to plotting with ggplot2 and others**
+- **Part 3: Plotting**
 
 ## Resources
 
