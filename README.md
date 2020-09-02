@@ -30,7 +30,7 @@ Contact: [bioinformatics @NIAID](https://bioinformatics.niaid.nih.gov/) or email
 
 ## Previous Classes
 
-- [Summer/Fall 2020  OCICB R Learners Group](https://github.com/niaid/R_Intro/tree/OCICB-2020) - [zipped materials](https://github.com/niaid/R_Intro/releases/download/OCICB-2020/Introduction_to_Rstudio_Part_1_2.zip)
+- [Summer/Fall 2020  OCICB R Learners Group](https://github.com/niaid/R_Intro/tree/OCICB-2020) - [zipped materials](https://github.com/niaid/R_Intro/archive/OCICB-2020.zip)
 
 - [Spring 2020 MIS RNA-seq seminars](https://github.com/niaid/R_Intro/tree/MIS-2020) - [zipped archive](https://github.com/niaid/R_Intro/archive/MIS-2020.zip) of notes & scripts
 - [2019 BCBB Bioinformatics Workshops at RML](https://github.com/niaid/R_Intro/tree/RML-2019) - also can download [zipped materials](https://github.com/niaid/R_Intro/archive/RML-2019.zip)
