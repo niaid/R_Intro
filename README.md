@@ -17,7 +17,7 @@ Contact: [bioinformatics @NIAID](https://bioinformatics.niaid.nih.gov/) or email
   - Part2: [part2_Manipulation_dplyr.nb.html](part2_Manipulation_dplyr.nb.html) - Notes & [part2_Manipulation_dplyr.Rmd](part2_Manipulation_dplyr.Rmd) - R notebook
 - **Part 3: Plotting**
   - [plotting_notes.R](plotting_notes.R) - R script used in the class
-  - [Notes](https://proj-bip-prod-publicread.s3.amazonaws.com/training/R_Intro/plotting_notes_OCICB2020.html) - compiled report of notes
+  - [Notes](https://proj-bip-prod-publicread.s3.amazonaws.com/training/R_Intro/plotting_notes_OCICB2020.html)
 
 ## Resources
 - [R project](https://www.r-project.org/) - links to [CRAN](https://cran.r-project.org/) - repository for R packages and where you can download the R software
