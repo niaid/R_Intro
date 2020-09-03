@@ -18,6 +18,7 @@ library(ggplot2)
 #' 1. start with ggplot function - specify data and "aesthetics"
 #' 2. add "geoms" which are the type of plot (points, lines, bars, etc)
 #' 3. add "scales" which further specify the aesthetics: axes, colors, sizes
+#' 
 
 #' *Aesthetics* map from variables in the data to components of the graph.
 ggplot(data, aes(x=Nestling, y=Totcare)) + geom_point()
@@ -143,6 +144,7 @@ ggplot(data[1:40,], aes(x=Nestling, y=Totcare, color=egglabel)) + geom_point() +
 
 
 #' Interactive plotting with **[ggiraph](https://davidgohel.github.io/ggiraph)** or **[plotly](https://plotly.com/r)** which build off of ggplot2
+
 plotly::ggplotly(p=myplot)
 
 library(ggiraph)
