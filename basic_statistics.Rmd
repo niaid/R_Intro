@@ -1,0 +1,150 @@
+---
+title: "Basic Statistics in R"
+output:
+  html_document:
+    df_print: paged
+  html_notebook: default
+---
+
+<br />
+
+##### 1. Pearson Correlation
+Pearson correlation is a statistic that measures linear correlation between two variables, given the assumption that the sample pairs are independent identically distributed and follow a bivariate normal distribution.
+```{r}
+library(Stat2Data)
+data(BirdNest) 
+plot(BirdNest$Totcare, BirdNest$Nestling)
+cor.test(BirdNest$Totcare, BirdNest$Nestling, method = "pearson")
+
+```
+<br />   
+
+##### 2. Spearman's rank correlation coefficient
+Spearman's rank 's correlation coefficient is a nonparametric measure of rank correlation (statistical dependence between the rankings of two variables). It assesses how well the relationship between two variables can be described using a monotonic function.  (Wiki)
+```{r}
+plot(BirdNest$Length, BirdNest$No.eggs)
+cor.test(BirdNest$Length, BirdNest$No.eggs, method = "spearman", exact = F)
+
+```
+<br />   
+
+##### 3. Cremer's V
+
+Cremer's V is a measure of association between two nominal variables, returns a value between 0 and 1.
+
+Recall that in the BirdNest data, egg color encoded as (0=plain/solid or 1=speckled/spotted) and closed encoded as
+1=closed nest (pendant, spherical, cavity, crevice, burrow) or 0=open nest (saucer, cup).
+
+```{r}
+library(rcompanion)
+cramerV(BirdNest$Closed.,BirdNest$Color)
+cramerV(BirdNest$Closed.,BirdNest$Location)
+cramerV(BirdNest$Closed.,BirdNest$Nesttype)
+
+```
+<br />   
+
+#### 4. Compare the means of two groups
+Two sample t-test is a parametric test for comparing the means of two groups. The null hypothesis is the mean of two groups are equal. Alternative hypothesis is that they are not equal. Significance level is set to 0.05. The process of perform a t-test in R could be found at [source](http://www.sthda.com/english/wiki/unpaired-two-samples-t-test-in-r).
+
+A useful source to look up statistical analysis about their assumption, interpretation and how to perform in different software is: http://rcompanion.org/rcompanion/b_07.html
+You may check out more about paired or unpaired t-test, comparing the means of more than two groups using Analysis of Variance (ANOVA) or nonparametric test for comparing means of two groups (Mann-Whitney U test) etc.  
+
+```{r}
+library(dplyr)
+t_test_data <- 
+  BirdNest %>% filter(Location	%in% c("ground", "shrub")) 
+
+group_by(t_test_data, Location) %>%
+    summarise(
+    count = n(),
+    mean = mean(Totcare, na.rm = TRUE),
+    sd = sd(Totcare, na.rm = TRUE)
+  )
+
+library(ggpubr)
+ggboxplot(t_test_data, x = "Location", y = "Totcare", 
+          color = "Location", palette = c("#00AFBB", "#E7B800"),
+        ylab = "Totcare", xlab = "Location")
+
+# Shapiro-Wilk normality test for conif's Totcare
+with(t_test_data, shapiro.test(Totcare[Location == "shrub"]))# p = 0.1556
+# Shapiro-Wilk normality test for ground's Totcare
+with(t_test_data, shapiro.test(Totcare[Location == "ground"])) # p = 0.1502
+
+#  F-test to test for homogeneity in variances
+res.ftest <- var.test(Totcare ~ Location, data = t_test_data) # p = 0.1698
+res.ftest
+
+# t_test
+res <- t.test(Totcare ~ Location, data = t_test_data, var.equal = TRUE)
+res # p = 0.05264
+
+res$conf.int
+
+```
+<br />   
+
+#### 5. Chi-square test
+Chi-square test used for testing independence by evaluating the closeness between observed and expected frequencies.   
+Assumption: large samples and independence of individual observation.   
+
+```{r}
+library(rcompanion)
+table <- data.frame(
+  smoker=c("Yes","No","Yes","No"),
+  lung_cancer=c("Cases","Cases","Control","Control"),
+  count=c(688,21,650,59)
+)
+
+ctable <- xtabs(count ~ smoker + lung_cancer, data=table);ctable
+chisq.test(ctable, correct = FALSE)
+
+```
+<br />
+
+#### 6. Fisher exact test
+Fisher’s exact test can be used for test of independence when $n$ is small.  
+Assumption: independence of individual observation and fixed totals. (the row and column totals are fixed, or “conditioned.”) When row or column totals are unconditioned, makes this test less powerful.  
+
+```{r}
+tea <- matrix(c(3,1,1,3),ncol=2,byrow=TRUE)
+dimnames(tea) <- list(PouringFirst=c("Milk","Tea"), GuessPouredFirst=c("Milk","Tea"))
+tea
+fisher.test(tea, alternative = "greater") # set alternative to "greater", "less", "two.sided" for one-sided or two-sided test
+
+```
+<br />   
+
+#### 7. Linear regression
+Linear regression explain the relationship between continous response and predictors. A linear regression has an equation of the form $Y= X\beta +  \epsilon$, where $X$ is the explanatory matrix with the first columns of all 1s (intercept) and $Y$ is the dependent variable. The standard multiple (linear) regression equation with p predictor variables and N observations  $y_i$ = $b_0$ + $b_1 x_{i1}$ + $b_2 x_{i2}$ + ... + $b_p x_{ip}$ + $\epsilon_{i}$, where $i$=$1,...,N.$  
+The random errors $\epsilon$ are assumed to be independently and identically normally distributed.  
+
+Example: Hourly carbon monoxide (CO) averages were recorded on summer weekdays at a measurement station in Los Angeles. The data could be downloaded from [here](http://www.statsci.org/data/general/cofreewy.txt). There are four variables, which represents for：
+
+| Variable        | Description                                    |
+|-----------------|------------------------------------------------|
+|Hour	|	hour of the day, from midnight to midnight  |
+|CO	| average summer weekday CO concentration (parts per million) | 
+|Traffic	|	average weekday traffic density (traffic count/traffic speed)  |
+|Wind	|	average perpendicular wind-speed component,  wind speed x cos(wind direction - 235 degrees) |
+
+Use CO as depedent variable, the other three variables as predictor to build a linear regression model.
+```{r}
+lm_data <- read.table("http://www.statsci.org/data/general/cofreewy.txt", header = T)
+head(lm_data)
+
+lm.fit <- lm(CO~.,lm_data)
+summary(lm.fit)
+
+lm.step <- step(lm.fit, direction = "backward")
+summary(lm.step)
+shapiro.test(lm.step$res)
+
+qqnorm(lm.step$res);qqline(lm.step$res)
+plot(lm_data)
+
+```
+
+If you are interested in the linear regression example, read more about this analysis from the [source](http://www.statsci.org/data/general/cofreewy.html).
+
