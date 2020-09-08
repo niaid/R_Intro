@@ -36,6 +36,7 @@ Recall that in the BirdNest data, egg color encoded as (0=plain/solid or 1=speck
 1=closed nest (pendant, spherical, cavity, crevice, burrow) or 0=open nest (saucer, cup).
 
 ```{r}
+#install.packages("rcompanion")
 library(rcompanion)
 cramerV(BirdNest$Closed.,BirdNest$Color)
 cramerV(BirdNest$Closed.,BirdNest$Location)
@@ -62,6 +63,7 @@ group_by(t_test_data, Location) %>%
     sd = sd(Totcare, na.rm = TRUE)
   )
 
+#install.packages("ggpubr")
 library(ggpubr)
 ggboxplot(t_test_data, x = "Location", y = "Totcare", 
           color = "Location", palette = c("#00AFBB", "#E7B800"),

@@ -1680,7 +1680,8 @@ plot(BirdNest$Totcare, BirdNest$Nestling)</code></pre>
 <h5>3. Cremer’s V</h5>
 <p>Cremer’s V is a measure of association between two nominal variables, returns a value between 0 and 1.</p>
 <p>Recall that in the BirdNest data, egg color encoded as (0=plain/solid or 1=speckled/spotted) and closed encoded as 1=closed nest (pendant, spherical, cavity, crevice, burrow) or 0=open nest (saucer, cup).</p>
-<pre class="r"><code>library(rcompanion)
+<pre class="r"><code>#install.packages(&quot;rcompanion&quot;)
+library(rcompanion)
 cramerV(BirdNest$Closed.,BirdNest$Color)</code></pre>
 <pre><code>## Cramer V 
 ##   0.0342</code></pre>
@@ -1720,7 +1721,8 @@ group_by(t_test_data, Location) %&gt;%
 {"columns":[{"label":["Location"],"name":[1],"type":["fctr"],"align":["left"]},{"label":["count"],"name":[2],"type":["int"],"align":["right"]},{"label":["mean"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["sd"],"name":[4],"type":["dbl"],"align":["right"]}],"data":[{"1":"ground","2":"19","3":"23.55263","4":"2.919735"},{"1":"shrub","2":"17","3":"25.91176","4":"4.089756"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
   </script>
 </div>
-<pre class="r"><code>library(ggpubr)</code></pre>
+<pre class="r"><code>#install.packages(&quot;ggpubr&quot;)
+library(ggpubr)</code></pre>
 <pre><code>## Loading required package: ggplot2</code></pre>
 <pre class="r"><code>ggboxplot(t_test_data, x = &quot;Location&quot;, y = &quot;Totcare&quot;, 
           color = &quot;Location&quot;, palette = c(&quot;#00AFBB&quot;, &quot;#E7B800&quot;),
