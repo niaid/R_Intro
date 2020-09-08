@@ -21,7 +21,6 @@ Contact: [bioinformatics @NIAID](https://bioinformatics.niaid.nih.gov/) or email
   
  - **Part 4: Basic Statistics in R**
   - [basic_statistics.Rmd](basic_statistics.Rmd) - Note markdown file
-  - [Notes](basic_statistics.html)
 
 ## Resources
 - [R project](https://www.r-project.org/) - links to [CRAN](https://cran.r-project.org/) - repository for R packages and where you can download the R software
