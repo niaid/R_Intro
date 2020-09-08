@@ -18,8 +18,7 @@ Contact: [bioinformatics @NIAID](https://bioinformatics.niaid.nih.gov/) or email
 - **Part 3: Plotting**
   - [plotting_notes.R](plotting_notes.R) - R script used in the class
   - [Notes](https://proj-bip-prod-publicread.s3.amazonaws.com/training/R_Intro/plotting_notes_OCICB2020.html)
-  
- - **Part 4: Basic Statistics in R**
+- **Part 4: Basic Statistics in R**
   - [basic_statistics.Rmd](basic_statistics.Rmd) - Note markdown file
 
 ## Resources
