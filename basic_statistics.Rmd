@@ -4,6 +4,7 @@ output:
   html_document:
     df_print: paged
   html_notebook: default
+  pdf_document: default
 ---
 
 <br />
@@ -28,9 +29,9 @@ cor.test(BirdNest$Length, BirdNest$No.eggs, method = "spearman", exact = F)
 ```
 <br />   
 
-##### 3. Cremer's V
+##### 3. Cramer's V
 
-Cremer's V is a measure of association between two nominal variables, returns a value between 0 and 1.
+Cramer's V is a measure of association between two nominal variables, returns a value between 0 and 1.
 
 Recall that in the BirdNest data, egg color encoded as (0=plain/solid or 1=speckled/spotted) and closed encoded as
 1=closed nest (pendant, spherical, cavity, crevice, burrow) or 0=open nest (saucer, cup).
@@ -69,7 +70,7 @@ ggboxplot(t_test_data, x = "Location", y = "Totcare",
           color = "Location", palette = c("#00AFBB", "#E7B800"),
         ylab = "Totcare", xlab = "Location")
 
-# Shapiro-Wilk normality test for conif's Totcare
+# Shapiro-Wilk normality test for shrub's Totcare
 with(t_test_data, shapiro.test(Totcare[Location == "shrub"]))# p = 0.1556
 # Shapiro-Wilk normality test for ground's Totcare
 with(t_test_data, shapiro.test(Totcare[Location == "ground"])) # p = 0.1502
@@ -119,7 +120,7 @@ fisher.test(tea, alternative = "greater") # set alternative to "greater", "less"
 <br />   
 
 #### 7. Linear regression
-Linear regression explain the relationship between continous response and predictors. A linear regression has an equation of the form $Y= X\beta +  \epsilon$, where $X$ is the explanatory matrix with the first columns of all 1s (intercept) and $Y$ is the dependent variable. The standard multiple (linear) regression equation with p predictor variables and N observations  $y_i$ = $b_0$ + $b_1 x_{i1}$ + $b_2 x_{i2}$ + ... + $b_p x_{ip}$ + $\epsilon_{i}$, where $i$=$1,...,N.$  
+Linear regression explain the relationship between continuous response and predictors. A linear regression has an equation of the form $Y= X\beta +  \epsilon$, where $X$ is the explanatory matrix with the first columns of all 1s (intercept) and $Y$ is the dependent variable. The standard multiple (linear) regression equation with p predictor variables and N observations  $y_i$ = $b_0$ + $b_1 x_{i1}$ + $b_2 x_{i2}$ + ... + $b_p x_{ip}$ + $\epsilon_{i}$, where $i$=$1,...,N.$  
 The random errors $\epsilon$ are assumed to be independently and identically normally distributed.  
 
 Example: Hourly carbon monoxide (CO) averages were recorded on summer weekdays at a measurement station in Los Angeles. The data could be downloaded from [here](http://www.statsci.org/data/general/cofreewy.txt). There are four variables, which represents for：
