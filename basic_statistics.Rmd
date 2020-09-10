@@ -149,6 +149,7 @@ qqnorm(lm.step$res);qqline(lm.step$res)
 plot(lm_data)
 
 ```
+<br /> 
 If you are interested in the linear regression example, read more about this analysis from the [source](http://www.statsci.org/data/general/cofreewy.html).
 
 <br /> 
