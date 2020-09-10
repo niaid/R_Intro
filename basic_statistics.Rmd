@@ -153,17 +153,19 @@ If you are interested in the linear regression example, read more about this ana
 
 <br /> 
 
-#### 8.Format data
-<br /> 
-Format statistical test results, use functions in "apa" package. There are limited type of statistical results could be formatted in this function, for details see [reference manual](https://cran.r-project.org/web/packages/apa/apa.pdf).
+#### 8. Format data
+"apa" and "apaTables" are helpful in formatting statistical results. You may review manual for the details of object applicable to the functions. Reference manual: [apa](https://cran.r-project.org/web/packages/apa/apa.pdf) and [apaTables](https://cran.r-project.org/web/packages/apaTables/vignettes/apaTables.html).
 ```{r}
 #install.packages("apa")
+#insatll.packcages("apaTables")
 library(apa)
-t_apa( t.test(Totcare ~ Location, data = t_test_data, var.equal = TRUE))
 #apa(t.test(Totcare ~ Location, data = t_test_data, var.equal = TRUE), format = "docx") #format to docx
 #apa(t.test(Totcare ~ Location, data = t_test_data, var.equal = TRUE), format = "latex") #format to latex
 
+t_apa(t.test(Totcare ~ Location, data = t_test_data, var.equal = TRUE))
 
+library(apaTables)
+apa.reg.table(lm.step, filename = "Table1_APA.doc", table.number = 1)
 ```
 <br />  
 
@@ -177,7 +179,7 @@ table <- table1(~  Totcare + factor(Nesttype)  | Location, data=t_test_data);tab
 <br /> 
 
 Use "finalfit" package to generate summary statistics with association between dependent and independent variables.
-```{r}
+```{r warning=FALSE}
 #install.packages("finalfit")
 library(finalfit)
 dependent = "differ.factor"

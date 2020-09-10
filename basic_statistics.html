@@ -1941,14 +1941,46 @@ summary(lm.fit)</code></pre>
 <p><br /></p>
 </div>
 <div id="format-data" class="section level4">
-<h4>8.Format data</h4>
-<p><br /> Format statistical test results, use functions in “apa” package. There are limited type of statistical results could be formatted in this function, for details see <a href="https://cran.r-project.org/web/packages/apa/apa.pdf">reference manual</a>.</p>
+<h4>8. Format data</h4>
+<p>“apa” and “apaTables” are helpful in formatting statistical results. You may review manual for the details of object applicable to the functions. Reference manual: <a href="https://cran.r-project.org/web/packages/apa/apa.pdf">apa</a> and <a href="https://cran.r-project.org/web/packages/apaTables/vignettes/apaTables.html">apaTables</a>.</p>
 <pre class="r"><code>#install.packages(&quot;apa&quot;)
+#insatll.packcages(&quot;apaTables&quot;)
 library(apa)
-t_apa( t.test(Totcare ~ Location, data = t_test_data, var.equal = TRUE))</code></pre>
+#apa(t.test(Totcare ~ Location, data = t_test_data, var.equal = TRUE), format = &quot;docx&quot;) #format to docx
+#apa(t.test(Totcare ~ Location, data = t_test_data, var.equal = TRUE), format = &quot;latex&quot;) #format to latex
+
+t_apa(t.test(Totcare ~ Location, data = t_test_data, var.equal = TRUE))</code></pre>
 <pre><code>## t(34) = -2.01, p = .053, d = -0.67</code></pre>
-<pre class="r"><code>#apa(t.test(Totcare ~ Location, data = t_test_data, var.equal = TRUE), format = &quot;docx&quot;) #format to docx
-#apa(t.test(Totcare ~ Location, data = t_test_data, var.equal = TRUE), format = &quot;latex&quot;) #format to latex</code></pre>
+<pre class="r"><code>library(apaTables)
+apa.reg.table(lm.step, filename = &quot;Table1_APA.doc&quot;, table.number = 1)</code></pre>
+<pre><code>## 
+## 
+## Table 1 
+## 
+## Regression results using CO as the criterion
+##  
+## 
+##    Predictor      b     b_95%_CI beta  beta_95%_CI sr2  sr2_95%_CI     r
+##  (Intercept) 1.27** [0.86, 1.69]                                        
+##      Traffic 0.02** [0.02, 0.02] 0.85 [0.72, 0.97] .45  [.18, .71] .96**
+##         Wind 0.17** [0.06, 0.29] 0.19 [0.06, 0.32] .02 [-.01, .05] .71**
+##                                                                         
+##                                                                         
+##                                                                         
+##              Fit
+##                 
+##                 
+##                 
+##      R2 = .950**
+##  95% CI[.88,.97]
+##                 
+## 
+## Note. A significant b-weight indicates the beta-weight and semi-partial correlation are also significant.
+## b represents unstandardized regression weights. beta indicates the standardized regression weights. 
+## sr2 represents the semi-partial correlation squared. r represents the zero-order correlation.
+## Square brackets are used to enclose the lower and upper limits of a confidence interval.
+## * indicates p &lt; .05. ** indicates p &lt; .01.
+## </code></pre>
 <p><br /></p>
 <p>Use “table1” package to generate summary statistics. See other options in <a href="http://thatdatatho.com/2018/08/20/easily-create-descriptive-summary-statistic-tables-r-studio/">Easily create descriptive summary statistics</a>.</p>
 <pre class="r"><code>#install.packages(&quot;table1&quot;)
@@ -2034,8 +2066,6 @@ colon_s %&gt;%
   summary_factorlist(dependent, explanatory, 
   p=TRUE, na_include=TRUE)</code></pre>
 <pre><code>## Note: dependent includes missing data. These are dropped.</code></pre>
-<pre><code>## Warning in chisq.test(extent.factor, differ.factor): Chi-squared approximation
-## may be incorrect</code></pre>
 <div data-pagedtable="false">
 <script data-pagedtable-source type="application/json">
 {"columns":[{"label":["label"],"name":[1],"type":["chr"],"align":["left"]},{"label":["levels"],"name":[2],"type":["chr"],"align":["left"]},{"label":["Well"],"name":[3],"type":["chr"],"align":["left"]},{"label":["Moderate"],"name":[4],"type":["chr"],"align":["left"]},{"label":["Poor"],"name":[5],"type":["chr"],"align":["left"]},{"label":["p"],"name":[6],"type":["chr"],"align":["left"]}],"data":[{"1":"Age (years)","2":"Mean (SD)","3":"60.2 (12.8)","4":"59.9 (11.7)","5":"59.0 (12.8)","6":"0.644"},{"1":"Sex","2":"Female","3":"51 (54.8)","4":"314 (47.4)","5":"73 (48.7)","6":"0.400"},{"1":"","2":"Male","3":"42 (45.2)","4":"349 (52.6)","5":"77 (51.3)","6":""},{"1":"Extent of spread","2":"Submucosa","3":"5 (5.4)","4":"12 (1.8)","5":"3 (2.0)","6":"0.081"},{"1":"","2":"Muscle","3":"12 (12.9)","4":"78 (11.8)","5":"12 (8.0)","6":""},{"1":"","2":"Serosa","3":"76 (81.7)","4":"542 (81.7)","5":"127 (84.7)","6":""},{"1":"","2":"Adjacent structures","3":"0 (0.0)","4":"31 (4.7)","5":"8 (5.3)","6":""},{"1":"Obstruction","2":"No","3":"69 (74.2)","4":"531 (80.1)","5":"114 (76.0)","6":"0.655"},{"1":"","2":"Yes","3":"19 (20.4)","4":"122 (18.4)","5":"31 (20.7)","6":""},{"1":"","2":"(Missing)","3":"5 (5.4)","4":"10 (1.5)","5":"5 (3.3)","6":""},{"1":"nodes","2":"Mean (SD)","3":"2.7 (2.2)","4":"3.6 (3.4)","5":"4.7 (4.4)","6":"<0.001"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
