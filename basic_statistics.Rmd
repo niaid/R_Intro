@@ -5,6 +5,7 @@ output:
     df_print: paged
   html_notebook: default
   pdf_document: default
+  word_document: default
 ---
 
 <br />
@@ -148,6 +149,51 @@ qqnorm(lm.step$res);qqline(lm.step$res)
 plot(lm_data)
 
 ```
-
 If you are interested in the linear regression example, read more about this analysis from the [source](http://www.statsci.org/data/general/cofreewy.html).
+
+<br /> 
+
+#### 8.Format data
+<br /> 
+Format statistical test results, use functions in "apa" package. There are limited type of statistical results could be formatted in this function, for details see [reference manual](https://cran.r-project.org/web/packages/apa/apa.pdf).
+```{r}
+#install.packages("apa")
+library(apa)
+t_apa( t.test(Totcare ~ Location, data = t_test_data, var.equal = TRUE))
+#apa(t.test(Totcare ~ Location, data = t_test_data, var.equal = TRUE), format = "docx") #format to docx
+#apa(t.test(Totcare ~ Location, data = t_test_data, var.equal = TRUE), format = "latex") #format to latex
+
+
+```
+<br />  
+
+Use "table1" package to generate summary statistics. See other options in [Easily create descriptive summary statistics](http://thatdatatho.com/2018/08/20/easily-create-descriptive-summary-statistic-tables-r-studio/).
+```{r}
+#install.packages("table1")
+library(table1)
+table <- table1(~  Totcare + factor(Nesttype)  | Location, data=t_test_data);table
+
+```
+<br /> 
+
+Use "finalfit" package to generate summary statistics with association between dependent and independent variables.
+```{r}
+#install.packages("finalfit")
+library(finalfit)
+dependent = "differ.factor"
+
+# Specify explanatory variables of interest
+explanatory = c("age", "sex.factor", 
+  "extent.factor", "obstruct.factor", 
+  "nodes")
+
+colon_s %>% 
+  summary_factorlist(dependent, explanatory, 
+  p=TRUE, na_include=TRUE)
+
+```
+
+Reference: 
+[Exporting tables and plots](https://cran.r-project.org/web/packages/finalfit/vignettes/export.html)
+
 
