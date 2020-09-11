@@ -16,12 +16,12 @@ Contact: [bioinformatics @NIAID](https://bioinformatics.niaid.nih.gov/) or email
   - Part1: [part1_Introduction_to_R.nb.html](part1_Introduction_to_R.nb.html) - Notes & [part1_Introduction_to_R.Rmd](part1_Introduction_to_R.Rmd) - R notebook
   - Part2: [part2_Manipulation_dplyr.nb.html](part2_Manipulation_dplyr.nb.html) - Notes & [part2_Manipulation_dplyr.Rmd](part2_Manipulation_dplyr.Rmd) - R notebook
 - **Part 3: Plotting**
-  - [plotting_notes.R](plotting_notes.R) - R script used in the class
-  - [Notes](https://proj-bip-prod-publicread.s3.amazonaws.com/training/R_Intro/plotting_notes_OCICB2020.html)
+  - [plotting_notes.R](plotting_notes.R) - R script used in the class & [Notes](https://proj-bip-prod-publicread.s3.amazonaws.com/training/R_Intro/plotting_notes_OCICB2020.html)
 - **Part 4: Basic Statistics in R**
-  - [basic_statistics.Rmd](basic_statistics.Rmd) - Script with Note
+  - [basic_statistics.Rmd](basic_statistics.Rmd) - Script with Note & [Notes](https://proj-bip-prod-publicread.s3.amazonaws.com/training/R_Intro/basic_statistics_OCICB2020.html)
 
 ## Resources
+
 - [R project](https://www.r-project.org/) - links to [CRAN](https://cran.r-project.org/) - repository for R packages and where you can download the R software
 - [RStudio](https://www.rstudio.com/products/rstudio/download/#download)
 - Sean Davis [introductory R course notes](https://seandavi.github.io/ITR/) 
