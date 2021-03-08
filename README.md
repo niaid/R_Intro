@@ -1,24 +1,23 @@
-# Basic Statistics in R
+#  Ongoing: Generating Data and Manipulating Objects – Part 1
 
-BCBB Bioinformatics Workshops to OCICB R Learners Group
+ACE Training
 
-August 19 & 26/September 2 & 9, 2020, online webinar.
+Mar 9 & 16, online webinar.
 
-Instructors: Jingwen Gu - jingwen.gu@nih.gov, Poorani Subramanian
+Instructors: Jingwen Gu - jingwen.gu@nih.gov, Poorani Subramanian - poorani.subramanian@nih.gov
 
 Contact: [bioinformatics @NIAID](https://bioinformatics.niaid.nih.gov/) or email: bioinformatics@niaid.nih.gov
 
 ## In this Repo
-- [package_install.R](package_install.R) - script to install the packages needed for this class.  To use, open the script in RStudio, and then click 'Source'.
-- [demo.Rproj](demo.Rproj) - R project
 - [BirdNest.csv](BirdNest.csv) - Data
-- **Introduction to Rstudio Part 1 & 2**
-  - Part1: [part1_Introduction_to_R.nb.html](part1_Introduction_to_R.nb.html) - Notes & [part1_Introduction_to_R.Rmd](part1_Introduction_to_R.Rmd) - R notebook
-  - Part2: [part2_Manipulation_dplyr.nb.html](part2_Manipulation_dplyr.nb.html) - Notes & [part2_Manipulation_dplyr.Rmd](part2_Manipulation_dplyr.Rmd) - R notebook
-- **Part 3: Plotting**
-  - [plotting_notes.R](plotting_notes.R) - R script used in the class & [Notes](https://proj-bip-prod-publicread.s3.amazonaws.com/training/R_Intro/plotting_notes_OCICB2020.html)
-- **Part 4: Basic Statistics in R**
-  - [basic_statistics.Rmd](basic_statistics.Rmd) - Script with Note & [Notes](https://proj-bip-prod-publicread.s3.amazonaws.com/training/R_Intro/basic_statistics_OCICB2020.html)
+
+- **Session 1: Generating Data and Manipulating Objects part1 & part2**
+  - Part1: [part1_Introduction_to_R.html](part1_Introduction_to_R.html) - Notes 
+  - Part2: part2_Manipulation_dplyr.html - Notes
+ 
+- **Session 2: Generating Graphics in R**
+
+- **Session 3: Introduction to Statistical Analysis in R**
 
 ## Resources
 
