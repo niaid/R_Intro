@@ -26,7 +26,8 @@ name <- c("apple","pear","strawberry","banana","watermelon")
 fruit_menu <- data.frame(id,name);fruit_menu
 
 # create matrix
-fruit_matrix <- matrix(fruit_menu);fruit_matrix
+fruit_matrix <- as.matrix(fruit_menu);fruit_matrix
+num_mat <- matrix(c(1:9),ncol=3)
 
 # create list
 fruit_list <- list(fruit_menu);fruit_list
