@@ -12,7 +12,7 @@ Contact: [bioinformatics @NIAID](https://bioinformatics.niaid.nih.gov/) or email
 - [BirdNest.csv](BirdNest.csv) - Data
 
 - **Session 1: Generating Data and Manipulating Objects part1 & part2 (Mar 9, 16)**
-  - Part1: [Notes](https://nih.box.com/s/pk8brmtqns5ybijwvoybh0i7agynhdmy), [code](part1_Introduction_to_R.R)
+  - Part1: [Notes](https://nih.box.com/s/myqg0zvsaobucmh7xz8eq4k618xyc8gw), [code](part1_Introduction_to_R.R)
   - Part2: part2_Manipulation_dplyr - Notes
  
 - **Session 2: Generating Graphics in R (Mar 12, 26)**
