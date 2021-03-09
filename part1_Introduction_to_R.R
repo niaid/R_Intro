@@ -111,7 +111,7 @@ wide_data2 <- dcast(long_data, subject + sex ~ condition, value.var="measurement
 wide_data2
 
 # wide to long
-data_long <- gather(wide_data, condition, measurement, control:cond2, factor_key=TRUE) # tidyr
+data_long <- gather(wide_data, condition, measurement, cond1:control, factor_key=TRUE) # tidyr
 data_long
 
 # wide to long
