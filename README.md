@@ -14,7 +14,7 @@ Contact: [bioinformatics @NIAID](https://bioinformatics.niaid.nih.gov/) or email
   - Part1: [Notes](https://nih.box.com/s/myqg0zvsaobucmh7xz8eq4k618xyc8gw), [code](part1_Introduction_to_R.R)
   - Part2: part2_Manipulation_dplyr - Notes
 - **Session 2: Generating Graphics in R (Mar 12, 26)**
-  - Part1: [code](graphics_part1), [script to clean data](clean_data.R), [cleaned data](Supp_Meth_T1_Supp_T4_merged.txt)
+  - Part1: [code](graphics_part1.R), [script to clean data](clean_data.R), [cleaned data](Supp_Meth_T1_Supp_T4_merged.txt)
 - **Session 3: Introduction to Statistical Analysis in R (Mar 31, Apr 5)**
 
 ## Resources
