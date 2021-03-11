@@ -1,10 +1,10 @@
-#  Ongoing: Generating Data and Manipulating Objects – Part 1
+#  Ongoing: Generating Graphics in R – Part 1
 
 ACE Training
 
-Mar 9, online webinar.
+Mar 12, online webinar.
 
-Instructors: Jingwen Gu - jingwen.gu@nih.gov, Poorani Subramanian
+Instructors: Poorani Subramanian, Jingwen Gu
 
 Contact: [bioinformatics @NIAID](https://bioinformatics.niaid.nih.gov/) or email: bioinformatics@niaid.nih.gov
 
