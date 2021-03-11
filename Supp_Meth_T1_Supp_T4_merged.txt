@@ -1,0 +1,15 @@
+"Population Code"	"Population description"	"Country"	"Ethnolinguistic groups"	"Sequence Count"	"Post-QC Count"	"Approximate Seq Depth"	"Total Variants"	"Coding variants"	"Count after outlier removal"	"Novel variants"	"Shared Novel"	">2x within population"	"Novel variants per individual"
+"BOT"	"Multiethnic from Botswana"	"Botswana"	"Various (18*)"	48	48	30	21054212	445299	41	898054	89687	187959	18709
+"BRN"	"Berom from Nigeria"	"Nigeria"	"Birom-Berom"	49	49	30	18613911	392095	44	591990	75118	101167	12081
+"BSZ"	"Bantu Speakers from Zambia"	"Zambia"	"Soli/Chikunda, Tumbuka, Bemba"	41	29	30	16844958	344234	29	356051	73042	54828	12278
+"CAM"	"Bantu and Bantoid Speakers from Cameroon"	"Cameroon"	"Bamiléké,  Ngoumba, Mundani, Bassa, Beti, Eton"	50	50	30	19932376	423256	45	575676	81125	73992	11514
+"CIV"	"People living in Ivory Coast"	"Ivory Coast (CIV)"	"Baoule, Gouro, More, Senoufo, Malinke, Koyaka"	30	22	10	14755134	290028					
+"DRC"	"Kongo Speakers from DRC"	"Democratic Republic of Congo (DRC)"	"Ngongo, Mbala"	42	12	10	12212917	231416					
+"FNB"	"Fon in Benin"	"Benin"	"Fon"	50	41	30	17941242	376364	37	399472	67875	48658	9743
+"MAL"	"People living in Mali"	"Mali"	"Bambara, Fulani, Diawando, Soninke, Dogon, Songhai"	50	24	30	15510201	312895	24	320265	58045	44500	13344
+"SOT"	"Sotho from South Africa"	"South Africa"	"Sotho"	8	8	50	11658808	223248					
+"SSG"	"Soussou from Guinea"	"Guinea (GUI)"	"Soussou"	46	27	10	15777609	317000					
+"UBS"	"Ugandan Bantu Speakers"	"Uganda"	"Basoga"	33	21	10	14986885	293964					
+"UNS"	"Ugandan Nilo-Saharan"	"Uganda"	"Lugbara"	50	30	10	16191827	322988					
+"WGR"	"Gur speakers from West Africa (Kassena/Mossi)"	"Ghana/Burkina Faso"	"Kassena/Mossi"	60	57	30	15886627	323370	54	639910	74746	69002	11226
+"XHS"	"Xhosa from South Africa"	"South Africa"	"Xhosa"	8	8	50	11515027	221721					
