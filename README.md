@@ -1,8 +1,8 @@
-#  Ongoing: Generating Graphics in R – Part 1
+#  Ongoing: Generating Data and Manipulating Objects part2
 
 ACE Training
 
-Mar 12, online webinar.
+Mar 16, online webinar.
 
 Instructors: Poorani Subramanian, Jingwen Gu
 
@@ -12,7 +12,7 @@ Contact: [bioinformatics @NIAID](https://bioinformatics.niaid.nih.gov/) or email
 - [BirdNest.csv](BirdNest.csv) - Data
 - **Session 1: Generating Data and Manipulating Objects part1 & part2 (Mar 9, 16)**
   - Part1: [Notes](https://nih.box.com/s/myqg0zvsaobucmh7xz8eq4k618xyc8gw), [code](part1_Introduction_to_R.R)
-  - Part2: part2_Manipulation_dplyr - Notes
+  - Part2: part2_Manipulation_dplyr - [Notes](https://nih.box.com/s/lp0risce25dmh89bfn3lmu66o6b0lcji), [code](part2_Manipulation_dplyr.R), [notebook script](https://nih.box.com/s/5ew6zxopfe5sthtgj3l933wpcrwzclvu)
 - **Session 2: Generating Graphics in R (Mar 12, 26)**
   - Part1: [code](graphics_part1.R), [script to clean data](clean_data.R), [cleaned data](Supp_Meth_T1_Supp_T4_merged.txt)
 - **Session 3: Introduction to Statistical Analysis in R (Mar 31, Apr 5)**
