@@ -74,6 +74,10 @@ select2 <- BirdNest[,colnames(BirdNest) %in% c("Common","Color") ];colnames(sele
 
 # 0.10 missing value 
 example <- data.frame(id = seq(1:4),name = c("Apple","NA","Orange","Banana"));example
+class(example$name)
+name = c("Apple","NA","Orange","Banana");class(name)
+example$name <- as.character(example$name)
+class(example$name)
 
 library(naniar)
 na_strings <- c("NA")
