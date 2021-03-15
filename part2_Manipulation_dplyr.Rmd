@@ -1,0 +1,214 @@
+---
+title: "Generating Data and Manipulating Objects (Part2)"
+output:
+  pdf_document: default
+  html_notebook: default
+---
+
+#### Use dplyr to manipulate data
+[dplyr](https://en.wikipedia.org/wiki/Dplyr) is primarily a set of functions designed to enable dataframe manipulation in an intuitive, user-friendly way. Data analysts typically use dplyr in order to transform existing datasets into a format better suited for some particular type of analysis, or data visualization.  
+
+"tibble" refers to a data frame that has the "tbl_df" class. Tibble is the central data structure for the set of packages known as the tidyverse, including dplyr, ggplot2, tidyr, and readr.  
+
+##### 0. import data
+```{r}  
+library(readr)
+BirdNest <- read_csv("BirdNest.csv")  # read data from csv file
+# If you did not set work directory or would like to read in file from other folder instead of working directory, specify path above
+ 
+```
+
+
+##### 1. select 
+To select columns or drop columns of a data frame, use select(). 
+
+* Select desired variables
+```{r}
+# select four columns: Length, Nesttype, Location, No.eggs from original data, return the first six rows.
+library(dplyr)
+select <- select(BirdNest, Length, Nesttype, Location, No.eggs)
+head(select)
+```
+
+* Drop undesired variables  
+```{r}
+# remove two columns: Species and Common from original data  
+drop <- select(BirdNest,-(Species:Common))
+head(drop)
+```
+
+* Note: Other functions for variable selection:
+```{r echo=FALSE, result = 'asis'}
+summary <- c("Select everything but ","Select range ",
+      "Select columns whose name contains a character string",
+      "Select columns whose name starts with a string",
+      "Select columns whose name ends with a string",
+      "Select columns whose name matches a regular expression",
+      "Select columns whose names are in a group of names"
+)
+usage <- c("-",":","contains()","start_with()","ends_with()","matches()","one_of()")
+
+table <- cbind(usage,summary)
+library(knitr)
+kable(table)
+
+```
+
+
+```{r}
+# select variables contain "nest" (default case insensitive)
+head(select(BirdNest, contains("nest")))
+
+```
+
+<br />   
+ 
+##### 2. filter  
+Use **filter** to select rows that meet criteria. you may use %in% when you have specified levels that would like the variable to be filtered on, however, when your criteria is blurred, you may use "grepl", to roughly search pattern in the variable and return the rows meet criteria.    
+```{r}
+# select rows with Length more than 30
+filter(BirdNest, Length>30)
+
+# select rows with No.eggs more than 6 and Location in "decid"
+filter(BirdNest, No.eggs>6 , Location %in% c("decid")) ## or Location=="decid" if just one level
+
+```
+
+
+<br />   
+  
+**Question:**
+Could you filter the rows with levels contains "Jay" in Common column? (hint: use grepl function)
+
+```{r}
+filter(BirdNest ,grepl("Jay",Common))
+
+```
+
+<br />  
+
+##### 3. mutate  
+When you want to create new columns based on the values in existing columns, for example, do calculation using existing variables, we’ll use the dplyr function mutate().  
+
+```{r}
+head(mutate(BirdNest, ratio = Incubate/Totcare))
+head(mutate(BirdNest, ratio = Incubate/Totcare, inverse = 1/ratio))
+head(mutate(BirdNest, cumsum_total = cumsum(Totcare)))
+head(mutate(BirdNest, nor_Nest = Nestling/mean(Nestling, na.rm=T))) # na.rm=T removes the missing value when calculating mean 
+head(mutate(BirdNest, cup_type = case_when(Nesttype == "cup"~ 1, Nesttype != "cup"~ 0)))
+head(mutate(BirdNest, cup_type = ifelse(Nesttype == "cup", 1,0)))
+a <- mutate(BirdNest, totcare_gt27 = case_when(Totcare >27 ~ 1, Totcare <=27~ 0))
+table(a$totcare_gt27) # missing value is NA
+b <- mutate(BirdNest, totcare_gt27 = case_when(Totcare >27 ~ 1, Totcare <=27~ 0, TRUE ~999)) 
+table(b$totcare_gt27) # missing value is defined
+c <- mutate(BirdNest, totcare_mul = case_when(Totcare <27 ~ 0, Totcare >=30~ 2, Totcare >= 27 & Totcare <30 ~1))
+table(c$totcare_mul) # missing value is defined
+d <- mutate(BirdNest, totcare_gt27 = ifelse(Totcare >27 ,1, 0)) # become complex if multiple crtieria
+table(d$totcare_gt27)
+```
+
+Note: create variables with criteria  
+
+```{r echo=FALSE, result = 'asis'}
+summary <- c("Elementwise minimum or maximum",
+      "Cumulative minimum and maximum ",
+      "Cumulative sum and product",
+      "Conditioning on less criteria",
+      "Conditioning on more criteria")
+usage <- c("pmin(), pmax()","cummin(), cummax()","cumsum(), cumprod()","ifelse","case_when")
+
+table <- cbind(usage,summary)
+library(knitr)
+kable(table)
+
+```
+<br />  
+
+##### 4. arrange  
+Arrange the rows of your data based according to the preferred order in the specified variable. Default ascending, use "desc" for descending.
+```{r}
+# Order the data by ascending length
+head(arrange(BirdNest, Length))
+head(arrange(BirdNest, Length, No.eggs))
+
+# Order Common by descending
+head(arrange(BirdNest, desc(Common)))
+```
+
+<br />  
+
+
+##### 5. pipes  
+Pipes can be used when you want to many things to the same data set. It takes the output of one function and send it directly to the next. Different layes can be added in the pipes. You will need to consider the order of adding the layers, because it needs to execute the analysis you plan and satisfy pipe logic.  
+
+Note: ctrl+shift+m for the **%>%** symbol for Mac.  
+
+```{r}
+head(select(BirdNest, Length, Nesttype, Location, No.eggs))
+# equals to
+head(BirdNest %>% select(Length, Nesttype, Location, No.eggs))
+
+head(filter(BirdNest, No.eggs>6 , Location %in% c("decid")))
+# equals to
+head(BirdNest %>% filter( No.eggs>6 , Location %in% c("decid")))
+
+# add layer
+BirdNest %>% 
+  filter( No.eggs>6 , Location %in% c("decid")) %>% 
+  select(Species, Common, No.eggs, Location)
+
+```
+
+<br />    
+
+**Question:**
+Could you output top 10 observations with largest length? 
+
+```{r}
+BirdNest %>%
+  arrange(desc(Length) ) %>% 
+  head(n = 10)
+
+```
+<br />  
+
+##### 6. summarise  
+When you want to create a summary across the data, summarise() function in dplyr package can be used. Generally, it often combines with group_by, which creates a summary by subgroups. 
+```{r}
+# to create a summery about average, variance of length, and count distinct egg color 
+BirdNest %>% summarise(mean_length = mean(Length), var_Length = var(Length), n_distict_color = n_distinct(Color))  
+
+# to create a summery respective to same fields above within each egg color.
+BirdNest %>% 
+  group_by(Color) %>% 
+  summarise(mean_length = mean(Length), var_Length = var(Length), n_distict_color = n_distinct(Color)) 
+
+```
+<br />  
+
+##### 7. group by  
+group_by() and summarise together can create a split-apply-combine analysis. group_by() splits the data into groups, summarise() provides summary function in each group and the summary for each subgroups are combined and returned.   
+
+Note:  
+Adding multiple variables in group_by() will return a summary with grouping by adding order.
+```{r}
+# create summary about mean and variance of legnth, number of distinct location by color and nesttype
+BirdNest %>% 
+  group_by(Color,Nesttype) %>% 
+  summarise(mean_length = mean(Length), num_obs = n(), n_distict_location = n_distinct(Location))
+```
+<br />  
+
+**Take home question:  **
+
+Could you create a summary about the largest ratio (ratio = Nestling / Totcare) by nest type (excluding "cavity" category) and present the result in a descending order?
+
+```{r , echo=FALSE}
+BirdNest %>% 
+  filter(!grepl("cavity",Nesttype)) %>% 
+  mutate(ratio = Nestling / Totcare) %>% 
+  group_by(Nesttype) %>% 
+  summarise(max_ratio = max(ratio, na.rm=T)) %>%
+  arrange(desc(max_ratio)) 
+
+```
