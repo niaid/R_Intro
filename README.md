@@ -1,4 +1,4 @@
-#  Ongoing: Generating Data and Manipulating Objects part2
+#  Ongoing: Generating Graphics in R part2
 
 ACE Training
 
