@@ -49,3 +49,28 @@ row.names(mat) <- B$Family
 
 #' Non-ggplot library for "3d"
 library(scatterplot3d)
+
+
+
+#' More ggplot2 from last time!
+
+#' ## More geoms
+#' 
+#' **Boxplot or Violin plot**
+#'
+#' `geom_boxplot` or `geom_violin`
+ggplot(data, aes(x = Approximate.Seq.Depth, y=Coding.variants/Post.QC.Count)) + geom_boxplot()
+
+#' Can convert continuous scale to discrete scale by converting numerics to *characters*.
+
+#' with points - if you specify color or other parameter outside of `aes`, it will apply to all data in the plot.  Use more than one **geom**.
+ggplot(data, aes(x = as.character(Approximate.Seq.Depth), y=Coding.variants/Post.QC.Count)) + geom_boxplot()
+
+#' Order matters!  
+
+
+#'Use `geom_jitter` so you can see more points - not all on top of each other.  And remove the black outliers
+?geom_jitter
+ggplot(data, aes(x = as.character(Approximate.Seq.Depth), y=Coding.variants/Post.QC.Count))  + geom_boxplot() + geom_jitter(color="red", width = 0.25, height = 0)
+
+
