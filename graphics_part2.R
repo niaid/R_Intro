@@ -36,4 +36,16 @@ ggplotly(p0)
 #' Other kinds of plots common in Bioinformatics
 
 #' Heatmap
+A <- read.delim("example_metadata.txt")
+B <- read.delim("example_microbiome.txt")
+mat <- B[,3:12]
+row.names(mat) <- B$Family
 
+#' PCA
+
+
+#' Plot with ggplot2
+
+
+#' Non-ggplot library for "3d"
+library(scatterplot3d)
