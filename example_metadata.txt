@@ -1,0 +1,11 @@
+SampleID	TreatmentGroup	Animal	Day	Description
+A22831	Control	RhDCBC	347	SwabJejunum
+A22833	Control	RhDCBC	347	SwabRectum
+A22349	Control	RhDCVf	274	SwabCecum
+A22192	Vancomycin	RhCL4c	239	SwabRectum
+A22187	Vancomycin	RhCL4c	239	SwabIleum
+A22061	Vancomycin	RhDCAV	178	SwabTransverseColon
+A22057	Vancomycin	RhDCAV	178	SwabJejunum
+A22145	Control	RhDCKj	239	SwabIleum
+A22350	Control	RhDCVf	274	SwabTransverseColon
+7pRecSw478.1	Vancomycin	RhCL7p	478	SwabRectum
