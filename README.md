@@ -1,8 +1,8 @@
-#  Ongoing: Generating Graphics in R part2
+#  Ongoing: Statistical programming in R
 
 ACE Training
 
-Mar 16, online webinar.
+Mar 31, online webinar.
 
 Instructors: Poorani Subramanian, Jingwen Gu
 
@@ -16,6 +16,7 @@ Contact: [bioinformatics @NIAID](https://bioinformatics.niaid.nih.gov/) or email
 - **Session 2: Generating Graphics in R (Mar 12, 26)**
   - Part1: [code](graphics_part1.R), [script to clean data](clean_data.R), [cleaned data](Supp_Meth_T1_Supp_T4_merged.txt)
 - **Session 3: Introduction to Statistical Analysis in R (Mar 31, Apr 5)**
+  - [Note](https://nih.box.com/s/s0hjourowqqc4rmvd7s9o1r82ywakzlk), [code](https://nih.box.com/s/b6x0gmcsyulml9spx6kveoa55omh6fvc)
 
 ## Resources
 
