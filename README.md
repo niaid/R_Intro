@@ -32,7 +32,7 @@ Contact: [bioinformatics @NIAID](https://bioinformatics.niaid.nih.gov/) or email
 - [Spring 2020 MIS RNA-seq seminars](https://github.com/niaid/R_Intro/tree/MIS-2020) - [zipped archive](https://github.com/niaid/R_Intro/archive/MIS-2020.zip) of notes & scripts
 - [2019 BCBB Bioinformatics Workshops at RML](https://github.com/niaid/R_Intro/tree/RML-2019) - also can download [zipped materials](https://github.com/niaid/R_Intro/archive/RML-2019.zip)
   
-- **Videos**
+## Videos
 - [Generating data and manipulating objects - Part I](https://s3.amazonaws.com/proj-bip-prod-publicread/training/R_Intro/Generating_data_and_manipulating_objects_-_MSB7_subtitled.mp4)
 - [Generating data and manipulating objects - Part II](https://s3.amazonaws.com/proj-bip-prod-publicread/training/R_Intro/Generating_Data_and_Manipulating_Objects_R.subtitled_trim.mp4)
 - [Generating graphics in R - Part I](https://s3.amazonaws.com/proj-bip-prod-publicread/training/R_Intro/Generating_graphics_in_R_Part_I_MSB7102.subtitled.mp4)
